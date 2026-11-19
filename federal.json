@@ -1,0 +1,174 @@
+{
+  "taxYear": 2026,
+  "page": "https://hourfloor.com/self-employment-tax-calculator",
+  "selfEmploymentTax": {
+    "netEarningsFactor": 0.9235,
+    "socialSecurityRate": 0.124,
+    "medicareRate": 0.029,
+    "additionalMedicareRate": 0.009,
+    "socialSecurityWageBase": 184500,
+    "additionalMedicareThreshold": {
+      "single": 200000,
+      "mfj": 250000,
+      "hoh": 200000
+    }
+  },
+  "incomeTax": {
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.1
+        },
+        {
+          "over": 12400,
+          "rate": 0.12
+        },
+        {
+          "over": 50400,
+          "rate": 0.22
+        },
+        {
+          "over": 105700,
+          "rate": 0.24
+        },
+        {
+          "over": 201775,
+          "rate": 0.32
+        },
+        {
+          "over": 256225,
+          "rate": 0.35
+        },
+        {
+          "over": 640600,
+          "rate": 0.37
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.1
+        },
+        {
+          "over": 24800,
+          "rate": 0.12
+        },
+        {
+          "over": 100800,
+          "rate": 0.22
+        },
+        {
+          "over": 211400,
+          "rate": 0.24
+        },
+        {
+          "over": 403550,
+          "rate": 0.32
+        },
+        {
+          "over": 512450,
+          "rate": 0.35
+        },
+        {
+          "over": 768700,
+          "rate": 0.37
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.1
+        },
+        {
+          "over": 17700,
+          "rate": 0.12
+        },
+        {
+          "over": 67450,
+          "rate": 0.22
+        },
+        {
+          "over": 105700,
+          "rate": 0.24
+        },
+        {
+          "over": 201750,
+          "rate": 0.32
+        },
+        {
+          "over": 256200,
+          "rate": 0.35
+        },
+        {
+          "over": 640600,
+          "rate": 0.37
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 16100,
+      "mfj": 32200,
+      "hoh": 24150
+    }
+  },
+  "qbi": {
+    "rate": 0.2,
+    "threshold": {
+      "single": 201750,
+      "mfj": 403500,
+      "hoh": 201750
+    },
+    "phaseInEnd": {
+      "single": 276750,
+      "mfj": 553500,
+      "hoh": 276750
+    },
+    "minimumDeduction": 400,
+    "minimumQbiForMinimumDeduction": 1000
+  },
+  "retirement": {
+    "annualAdditionsLimit": 72000,
+    "electiveDeferralLimit": 24500,
+    "catchUp50": 8000,
+    "catchUp60to63": 11250,
+    "compensationLimit": 360000
+  },
+  "sources": [
+    {
+      "title": "IRS Rev. Proc. 2025-32 (2026 inflation adjustments)",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "SSA: 2026 Social Security changes (contribution and benefit base $184,500)",
+      "url": "https://www.ssa.gov/news/press/factsheets/colafacts2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "IRS: Questions and answers for the Additional Medicare Tax",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/questions-and-answers-for-the-additional-medicare-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "IRS Notice 2025-67 (2026 retirement plan limits)",
+      "url": "https://www.irs.gov/pub/irs-drop/n-25-67.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "IRS Publication 334, Tax Guide for Small Business",
+      "url": "https://www.irs.gov/publications/p334",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "IRS: Self-employment tax (Social Security and Medicare taxes)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "title": "IRS Publication 334, Tax Guide for Small Business (regular method: 92.35%)",
+      "url": "https://www.irs.gov/publications/p334",
+      "retrieved": "2026-11-19"
+    }
+  ]
+}

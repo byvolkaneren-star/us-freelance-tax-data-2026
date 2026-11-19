@@ -1,0 +1,115 @@
+{
+  "code": "NV",
+  "name": "Nevada",
+  "slug": "nevada",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/nevada",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Nevada has no personal income tax on wages or self-employment income (Nevada Department of Taxation, 'Income Tax in Nevada').",
+      "The Modified Business Tax applies only to employers' taxable wages; a sole proprietor or single-member LLC with no employees does not owe it. Not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: Nevada has no individual income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: Nevada has no individual income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: Nevada has no individual income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: Nevada has no individual income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No city or county income taxes in Nevada."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Not applicable (no state income tax)",
+    "dueDates": [],
+    "safeHarbor": "Not applicable",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$425 total at formation: $75 Articles of Organization + $150 Initial List of Managers or Members + $200 State Business License (Nevada Secretary of State).",
+    "annualReportFee": "$350 per year: $150 Annual List of Managers or Members + $200 State Business License renewal (late fees: $75 list, $100 license).",
+    "franchiseOrMinimumTax": "None. The $200 State Business License fee is required even for single-member LLCs; sole proprietors without an LLC generally also need a $200 state business license unless exempt.",
+    "grossReceiptsTax": "Commerce Tax applies only if Nevada gross revenue in a fiscal year (July-June) exceeds $4,000,000; the first $4,000,000 is deducted and rates vary by industry. A typical freelancer is below the threshold and has no filing requirement."
+  },
+  "sources": [
+    {
+      "title": "Nevada Department of Taxation - Income Tax in Nevada",
+      "url": "https://tax.nv.gov/about-nevada-department-of-taxation/income-tax-in-nevada/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nevada Department of Taxation - Commerce Tax",
+      "url": "https://tax.nv.gov/tax-types/commerce-tax/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nevada Secretary of State (Business Hub) - Instructions for Formation, Limited-Liability Company",
+      "url": "https://bizhub.nv.gov/cms-webhook-bff/uploads/bizhub/LLC_Formation_V4_1_9e5c396592.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nevada Secretary of State - State Business License FAQ",
+      "url": "https://www.nvsos.gov/licensing/state-business-license/state-business-license-faq",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nevada Secretary of State - Limited-Liability Company forms",
+      "url": "https://www.nvsos.gov/businesses/start-a-business/limited-liability-company",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Commerce Tax FAQs - Nevada Department of Taxation",
+      "url": "https://tax.nv.gov/faqs/commerce-tax-faqs/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Modified Business Tax - Nevada Department of Taxation",
+      "url": "https://tax.nv.gov/tax-types/modified-business-tax/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Register a Business FAQs - Nevada Department of Taxation",
+      "url": "https://tax.nv.gov/faqs/register-a-business/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Common Questions & Business Resources - City of Reno Business Licensing",
+      "url": "https://www.reno.gov/business-development/business-licensing/common-questions-business-resources.php",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

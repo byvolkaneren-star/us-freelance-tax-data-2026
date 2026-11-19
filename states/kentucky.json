@@ -1,0 +1,173 @@
+{
+  "code": "KY",
+  "name": "Kentucky",
+  "slug": "kentucky",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/kentucky",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.035
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.035
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.035
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 3360,
+      "mfj": 3360,
+      "hoh": 3360
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Flat 3.5% for tax year 2026 (HB 1 of 2025; DOR withholding page). 2026 standard deduction $3,360 (DOR announcement, KRS 141.081); 2027 will be $3,470.",
+      "Kentucky has no head-of-household status. On a joint return only one standard deduction is allowed (Form 740/740-NP instructions); spouses may instead file separately on a combined return, each claiming a deduction against their own income (not modeled; it only helps when both spouses have income).",
+      "Not modeled: family size tax credit (low income), personal tax credits for age 65+/blind, itemized deductions, Kentucky adjustments to federal AGI (e.g., pension exclusion), and the LLET credit for single-member LLC owners.",
+      "Local occupational license taxes (see localIncomeTax) are not modeled.",
+      "Kentucky uses the Internal Revenue Code as of December 31, 2024 (static conformity, DOR Individual Income Tax page); the SE-tax, SE health insurance and SEP/solo 401(k) adjustments are unaffected."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Kentucky AGI starts from federal AGI."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below AGI and is not part of Kentucky taxable income."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Many Kentucky cities, counties and some school districts levy occupational license taxes on wages and on self-employment net profits (rates and bases vary widely). They are administered locally, not by DOR, and are not universal, so they are not modeled; check your city/county occupational license office.",
+    "localities": [
+      {
+        "slug": "lexington",
+        "name": "Lexington-Fayette",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Lexington occupational license fee",
+            "rate": 0.0225
+          }
+        ],
+        "note": "Lexington-Fayette Urban County Government charges a 2.25% occupational license fee on compensation and on business net profits. Any separate school district tax is not included.",
+        "sources": [
+          {
+            "title": "Occupational license fee: rates and current forms - City of Lexington, Kentucky",
+            "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-rates-current-forms",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      }
+    ]
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Estimated payments may be required if you expect more than $5,000 of income not subject to Kentucky withholding; no payment is required if the year's estimated tax is $500 or less.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Underpayment penalty avoided if payments equal 90% of current-year tax or 100% of prior-year tax (110% if prior-year Kentucky AGI exceeded $150,000; $75,000 MFS); no penalty if the shortfall is $500 or less (Form 2210-K).",
+    "form": "Form 740-ES (or ePayment); underpayment on Form 2210-K"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$40 Articles of Organization.",
+    "annualReportFee": "$15 annual report, due by June 30 each year after formation.",
+    "franchiseOrMinimumTax": "Limited Liability Entity Tax (LLET): a single-member LLC owned by an individual must file Form 725 and pays at least the $175 minimum; owner gets a nonrefundable credit for LLET above $175 against income tax on the LLC's income. Sole proprietors are not subject to LLET.",
+    "grossReceiptsTax": "LLET is measured on gross receipts/gross profits, but businesses with total gross receipts or gross profits of $3 million or less pay only the $175 minimum (sliding scale $3M-$6M; 0.095% of gross receipts or 0.75% of gross profits above $6M)."
+  },
+  "sources": [
+    {
+      "title": "Kentucky DOR - Kentucky DOR Announces 2026 Standard Deduction",
+      "url": "https://revenue.ky.gov/News/Pages/Kentucky-DOR-Announces-2026-Standard-Deduction.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - Kentucky DOR Announces 2027 Standard Deduction",
+      "url": "https://revenue.ky.gov/News/Pages/Kentucky-DOR-Announces-2027-Standard-Deduction.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - Employer Payroll Withholding (3.5% for 2026)",
+      "url": "https://revenue.ky.gov/Business/Pages/Employer-Payroll-Withholding.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - Individual Income Tax",
+      "url": "https://revenue.ky.gov/Individual/Individual-Income-Tax/Pages/default.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - Form 2210-K (2025)",
+      "url": "https://revenue.ky.gov/Forms/2210-K%20(2025).pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - 740-ES Instructions for 2026 estimated tax (3.5%, $3,360, $500/$5,000 thresholds)",
+      "url": "https://revenue.ky.gov/Forms/740-ES%20Instructions%20(2025).pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - Corporation Income and Limited Liability Entity Tax",
+      "url": "https://revenue.ky.gov/Business/Corporation-Income-and-Limited-Liability-Entity-Tax/Pages/default.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - Form 725 Instructions (Single Member LLC Individually Owned)",
+      "url": "https://revenue.ky.gov/Forms/INSTR_Form%20725.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky Secretary of State - Business Filing Fees",
+      "url": "https://www.sos.ky.gov/bus/business-filings/Pages/Fees.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky Secretary of State - Business Filings",
+      "url": "https://www.sos.ky.gov/bus/business-filings/Pages/default.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kentucky DOR - 740-NP Packet Instructions 2025 (one standard deduction on a joint return)",
+      "url": "https://revenue.ky.gov/Forms/740-NP%20Packet%20Instructions%20(2025).pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

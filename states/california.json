@@ -1,0 +1,235 @@
+{
+  "code": "CA",
+  "name": "California",
+  "slug": "california",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/california",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.01
+        },
+        {
+          "over": 11456,
+          "rate": 0.02
+        },
+        {
+          "over": 27157,
+          "rate": 0.04
+        },
+        {
+          "over": 42861,
+          "rate": 0.06
+        },
+        {
+          "over": 59498,
+          "rate": 0.08
+        },
+        {
+          "over": 75197,
+          "rate": 0.093
+        },
+        {
+          "over": 384109,
+          "rate": 0.103
+        },
+        {
+          "over": 460927,
+          "rate": 0.113
+        },
+        {
+          "over": 768213,
+          "rate": 0.123
+        },
+        {
+          "over": 1000000,
+          "rate": 0.133
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.01
+        },
+        {
+          "over": 22912,
+          "rate": 0.02
+        },
+        {
+          "over": 54314,
+          "rate": 0.04
+        },
+        {
+          "over": 85722,
+          "rate": 0.06
+        },
+        {
+          "over": 118996,
+          "rate": 0.08
+        },
+        {
+          "over": 150394,
+          "rate": 0.093
+        },
+        {
+          "over": 768218,
+          "rate": 0.103
+        },
+        {
+          "over": 921854,
+          "rate": 0.113
+        },
+        {
+          "over": 1000000,
+          "rate": 0.123
+        },
+        {
+          "over": 1536426,
+          "rate": 0.133
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.01
+        },
+        {
+          "over": 22927,
+          "rate": 0.02
+        },
+        {
+          "over": 54316,
+          "rate": 0.04
+        },
+        {
+          "over": 70018,
+          "rate": 0.06
+        },
+        {
+          "over": 86654,
+          "rate": 0.08
+        },
+        {
+          "over": 102356,
+          "rate": 0.093
+        },
+        {
+          "over": 522385,
+          "rate": 0.103
+        },
+        {
+          "over": 626864,
+          "rate": 0.113
+        },
+        {
+          "over": 1000000,
+          "rate": 0.123
+        },
+        {
+          "over": 1044771,
+          "rate": 0.133
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 5900,
+      "mfj": 11800,
+      "hoh": 11800
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 158,
+      "mfj": 316,
+      "hoh": 158
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 rate schedules, standard deduction and exemption credits are from FTB's October 2026 Tax News '2026 Indexing' announcement (CCPI inflation 3.4%); FTB says complete 2026 tables will be posted in late December 2026.",
+      "The 1% Behavioral Health Services Tax (formerly Mental Health Services Tax) on taxable income over $1,000,000 (same threshold for all filing statuses) is folded into the brackets.",
+      "Exemption credits are reduced for federal AGI above a threshold (2025: $252,203 single, $504,411 joint, $378,310 head of household; 2026 thresholds not yet published); phase-out not modeled. Dependent exemption credit ($491 for 2026), renter's credit, CalEITC and other credits are not modeled.",
+      "California does not conform to the federal QBI deduction or HSA deduction; California alternative minimum tax is not modeled.",
+      "SB 711 (2025) and SB 1435 (2026) moved California's general IRC conformity date to January 1, 2025 for tax years beginning on or after January 1, 2025, with listed exceptions."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "California starts from federal AGI (Schedule CA adjustments); the deductible half of SE tax carries through."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Self-employed health insurance deduction carries through federal AGI (HSA contributions do not)."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted for federal AGI carry through to California."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "California does not conform to IRC 199A; there is no QBI deduction on the California return."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No California city or county levies a personal income tax. Many cities impose business license taxes, some based on gross receipts (not modeled)."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe at least $500 ($250 married/RDP filing separately) for 2026 after withholding and credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Pay the smaller of 90% of 2026 tax or 100% of 2025 tax (110% if 2025 California AGI exceeded $150,000, or $75,000 MFS). If 2026 California AGI is $1,000,000 or more ($500,000 MFS), the prior-year safe harbor is not available. Installments are 30% (Apr 15), 40% (Jun 15), 0% (Sep 15) and 30% (Jan 15) of the required annual payment.",
+    "form": "Form 540-ES (or FTB Web Pay)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$70 Articles of Organization (Form LLC-1), California Secretary of State.",
+    "annualReportFee": "$20 Statement of Information (Form LLC-12), due within 90 days of registration and every two years thereafter ($250 penalty if not filed).",
+    "franchiseOrMinimumTax": "$800 annual LLC tax, due by the 15th day of the 4th month after filing with the SOS for the first year and every year thereafter. The first-year exemption applied only to tax years beginning 2021 through 2023, so a new LLC formed in 2026 owes the $800 for its first year. A sole proprietor without an LLC owes no annual tax.",
+    "grossReceiptsTax": "LLC fee on California gross receipts: $900 ($250,000-$499,999), $2,500 ($500,000-$999,999), $6,000 ($1,000,000-$4,999,999), $11,790 ($5,000,000+); none below $250,000. No state gross receipts tax on sole proprietors."
+  },
+  "sources": [
+    {
+      "title": "Tax News October 2026 - 2026 Indexing - Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/about-ftb/newsroom/tax-news/index.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Instructions for Form 540-ES - Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/forms/2026/2026-540-es-instructions.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 California 540 Personal Income Tax Booklet - Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-540-booklet.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Limited liability company (LLC) - Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Forms, Samples and Fees - Limited Liability Companies (California Domestic) - California Secretary of State",
+      "url": "https://www.sos.ca.gov/business-programs/business-entities/forms/limited-liability-companies-california-domestic",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Limited Liability Companies - Statement of Information - California Secretary of State",
+      "url": "https://www.sos.ca.gov/business-programs/business-entities/forms/limited-liability-companies-statement-information",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

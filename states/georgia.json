@@ -1,0 +1,131 @@
+{
+  "code": "GA",
+  "name": "Georgia",
+  "slug": "georgia",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/georgia",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0499
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0499
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0499
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 15000,
+      "mfj": 30000,
+      "hoh": 15000
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Rate 4.99% for tax years beginning on or after Jan 1, 2026 (HB 463, signed May 11, 2026, amending O.C.G.A. 48-7-20(a.1)); further 0.125-point annual cuts toward 3.99% from 2027 are revenue-contingent.",
+      "Standard deduction $15,000 single/head of household/MFS and $30,000 MFJ for 2026 (HB 463 amending O.C.G.A. 48-7-27(a)(1)); scheduled to rise $375/$750 per year from 2027 subject to revenue triggers. Values come from the enacted bill; DOR 2026 Form 500 instructions were not yet published.",
+      "Georgia has no taxpayer/spouse personal exemption (only a $5,000 per-dependent exemption under O.C.G.A. 48-7-26(b) for 2026, not modeled).",
+      "Not modeled: itemized deductions, retirement income exclusion (age 62+), 2026-2028 exclusions for up to $1,750 of qualified overtime and $1,750 of cash tips, low-income credit and other credits, and Georgia additions/subtractions to federal AGI (e.g., bonus depreciation decoupling)."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Georgia taxable income starts from federal AGI (O.C.G.A. 48-7-27(a)), which already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are above-the-line and inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it never enters the Georgia base."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No Georgia city or county levies a local income tax. Many cities/counties charge business license or occupation taxes, often based on gross receipts or employee count; these vary locally and are not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you reasonably expect gross income above your exemptions plus estimated deductions plus $1,000 of income not subject to withholding (Form 500-ES instructions).",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Form 500-UET compares installments with the lesser of 100% of the preceding year's tax (12-month return) or 70% of the current year's balance due; annualized-income exception available.",
+    "form": "Form 500-ES (Individual and Fiduciary Estimated Tax); underpayment on Form 500-UET"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$110 for Articles of Organization ($100 fee + $10 service charge per the SOS fee schedule effective Sept 6, 2025; the SOS LLC filing-procedures sheet quotes $105 online).",
+    "annualReportFee": "$60 annual registration ($50 + $10 service charge), due Jan 1-Apr 1 each year.",
+    "franchiseOrMinimumTax": "None for a sole proprietor or single-member LLC disregarded for federal purposes (Georgia's corporate net worth tax applies to corporations).",
+    "grossReceiptsTax": "No state gross receipts tax; local business/occupation taxes may be based on gross receipts and vary by city/county."
+  },
+  "sources": [
+    {
+      "title": "Georgia General Assembly - HB 463 (2026) as passed",
+      "url": "https://www.legis.ga.gov/api/legislation/document/20252026/249080",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Office of the Governor - Gov. Kemp Signs Legislation Lowering Taxes (May 11, 2026)",
+      "url": "https://gov.georgia.gov/press-releases/2026-05-11/gov-kemp-signs-legislation-lowering-taxes-and-supporting-economic-growth",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Georgia DOR - 2026 Form 500-ES Estimated Tax for Individuals and Fiduciaries",
+      "url": "https://dor.georgia.gov/document/document/2026-500-es-estimated-tax-individuals-and-fiduciaries/download",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Georgia DOR - Form 500-UET Underpayment of Estimated Tax (2025+)",
+      "url": "https://dor.georgia.gov/document/document/beginning-or-after-january-1-2025-500-uet-underpayment-estimated-tax-individuals/download",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Georgia DOR - Important Tax Updates",
+      "url": "https://dor.georgia.gov/taxes/important-tax-updates",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Georgia Secretary of State - Corporations Division Filing Fees (eff. Sept 6, 2025)",
+      "url": "https://sos.ga.gov/index.php/node/1925",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Georgia Secretary of State - Filing Procedures for Forming a Georgia LLC",
+      "url": "https://sos.ga.gov/index.php/node/1895",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

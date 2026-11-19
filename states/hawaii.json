@@ -1,0 +1,264 @@
+{
+  "code": "HI",
+  "name": "Hawaii",
+  "slug": "hawaii",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/hawaii",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.014
+        },
+        {
+          "over": 9600,
+          "rate": 0.032
+        },
+        {
+          "over": 14400,
+          "rate": 0.055
+        },
+        {
+          "over": 19200,
+          "rate": 0.064
+        },
+        {
+          "over": 24000,
+          "rate": 0.068
+        },
+        {
+          "over": 36000,
+          "rate": 0.072
+        },
+        {
+          "over": 48000,
+          "rate": 0.076
+        },
+        {
+          "over": 125000,
+          "rate": 0.079
+        },
+        {
+          "over": 175000,
+          "rate": 0.0825
+        },
+        {
+          "over": 225000,
+          "rate": 0.09
+        },
+        {
+          "over": 275000,
+          "rate": 0.1
+        },
+        {
+          "over": 325000,
+          "rate": 0.11
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.014
+        },
+        {
+          "over": 19200,
+          "rate": 0.032
+        },
+        {
+          "over": 28800,
+          "rate": 0.055
+        },
+        {
+          "over": 38400,
+          "rate": 0.064
+        },
+        {
+          "over": 48000,
+          "rate": 0.068
+        },
+        {
+          "over": 72000,
+          "rate": 0.072
+        },
+        {
+          "over": 96000,
+          "rate": 0.076
+        },
+        {
+          "over": 250000,
+          "rate": 0.079
+        },
+        {
+          "over": 350000,
+          "rate": 0.0825
+        },
+        {
+          "over": 450000,
+          "rate": 0.09
+        },
+        {
+          "over": 550000,
+          "rate": 0.1
+        },
+        {
+          "over": 650000,
+          "rate": 0.11
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.014
+        },
+        {
+          "over": 14400,
+          "rate": 0.032
+        },
+        {
+          "over": 21600,
+          "rate": 0.055
+        },
+        {
+          "over": 28800,
+          "rate": 0.064
+        },
+        {
+          "over": 36000,
+          "rate": 0.068
+        },
+        {
+          "over": 54000,
+          "rate": 0.072
+        },
+        {
+          "over": 72000,
+          "rate": 0.076
+        },
+        {
+          "over": 187500,
+          "rate": 0.079
+        },
+        {
+          "over": 262500,
+          "rate": 0.0825
+        },
+        {
+          "over": 337500,
+          "rate": 0.09
+        },
+        {
+          "over": 412500,
+          "rate": 0.1
+        },
+        {
+          "over": 487500,
+          "rate": 0.11
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 8000,
+      "mfj": 16000,
+      "hoh": 12000
+    },
+    "personalExemption": {
+      "single": 1144,
+      "mfj": 2288,
+      "hoh": 1144
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Act 46 (SLH 2024): tax year 2026 brackets are the same as 2025 and the standard deduction rises to $8,000 single / $16,000 joint / $12,000 head of household (DOTAX Announcement 2024-03).",
+      "Act 24 (SLH 2026) lowers the 2nd/3rd bracket rates and adds a 13% top bracket only from tax year 2027 (DOTAX Announcement 2026-06); 2026 is unaffected.",
+      "Personal exemption $1,144 per exemption (taxpayer and spouse modeled; dependents not). Hawaii did not adopt the federal suspension of personal exemptions.",
+      "Not modeled: Hawaii's alternative 7.25% maximum rate on net capital gains, itemized deduction rules, refundable food/excise and other credits, the pension exclusion and other Hawaii adjustments to federal AGI.",
+      "Hawaii General Excise Tax (GET) on gross receipts (see businessCosts) is a major extra cost for Hawaii freelancers and is not part of the income tax calculation."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Form N-11 starts from federal AGI, which reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below AGI; Hawaii computes taxable income from federal AGI with its own deductions, so no QBI deduction applies."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Hawaii counties do not levy income taxes. All four counties add a 0.5% surcharge to the 4% General Excise Tax (gross receipts), which is not an income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe at least $500 for the year after withholding and credits, and withholding/credits will be less than the smaller of 60% of current-year tax or 100% of prior-year tax.",
+    "dueDates": [
+      "2026-04-20",
+      "2026-06-20",
+      "2026-09-20",
+      "2027-01-20"
+    ],
+    "safeHarbor": "Pay the smaller of 60% of the current-year tax or 100% of the prior-year tax (prior year must be a full 12-month return). No estimate needed if expected liability after withholding is under $500. Due dates are as printed by DOTAX; a date falling on a weekend moves to the next business day.",
+    "form": "Form N-200V (Individual Income Tax Payment Voucher)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$50 Articles of Organization (domestic LLC), plus optional $25 expedited review.",
+    "annualReportFee": "$15 annual report (yearly).",
+    "franchiseOrMinimumTax": "None for an LLC or sole proprietor.",
+    "grossReceiptsTax": "General Excise Tax 4% of gross receipts from services, plus 0.5% county surcharge in Honolulu, Hawaii, Kauai and Maui counties (4.5% total; max pass-on rate 4.712%). No small-business threshold; GET license is a one-time $20 fee. Periodic returns due the 20th of the month after the period."
+  },
+  "sources": [
+    {
+      "title": "Hawaii DOTAX Announcement 2024-03 - Act 46, SLH 2024 (brackets and standard deduction)",
+      "url": "https://files.hawaii.gov/tax/news/announce/ann24-03.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Hawaii DOTAX Announcement 2026-06 - Tax Law Changes from the 2026 Session (Act 24, Act 35)",
+      "url": "https://files.hawaii.gov/tax/news/announce/ann26-06.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Hawaii DOTAX Announcement 2025-07 - Withholding tables for 2026",
+      "url": "https://files.hawaii.gov/tax/news/announce/ann25-07.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Hawaii 2025 Form N-11 Instructions (exemptions, federal AGI, estimated tax)",
+      "url": "https://files.hawaii.gov/tax/forms/2025/n11ins.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Hawaii DOTAX - General Excise Tax (GET) Information",
+      "url": "https://tax.hawaii.gov/geninfo/get/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Hawaii DOTAX - County Surcharge on General Excise and Use Tax",
+      "url": "https://tax.hawaii.gov/geninfo/countysurcharge/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Hawaii DCCA BREG - Domestic LLC Fees",
+      "url": "https://cca.hawaii.gov/breg/registration/dllc/fees/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

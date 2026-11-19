@@ -1,0 +1,207 @@
+{
+  "code": "RI",
+  "name": "Rhode Island",
+  "slug": "rhode-island",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/rhode-island",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0375
+        },
+        {
+          "over": 82050,
+          "rate": 0.0475
+        },
+        {
+          "over": 186450,
+          "rate": 0.0599
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0375
+        },
+        {
+          "over": 82050,
+          "rate": 0.0475
+        },
+        {
+          "over": 186450,
+          "rate": 0.0599
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0375
+        },
+        {
+          "over": 82050,
+          "rate": 0.0475
+        },
+        {
+          "over": 186450,
+          "rate": 0.0599
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 11200,
+      "mfj": 22400,
+      "hoh": 16800
+    },
+    "personalExemption": {
+      "single": 5250,
+      "mfj": 10500,
+      "hoh": 5250
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Rhode Island uses one uniform rate schedule for all filing statuses; 2026 brackets, standard deductions and the $5,250 exemption are from Division of Taxation Advisory ADV 2025-22.",
+      "Standard deduction and personal exemptions phase out when modified federal AGI is between $261,000 and $290,800 for 2026 (in $7,450 steps) and are fully lost above $290,800. Modeled as a straight-line phase-out.",
+      "The new high-income surtax (1% on income over $1 million) starts in tax year 2027, not 2026; the new $330 refundable child tax credit also starts in 2027.",
+      "Rhode Island EITC, property tax relief credit, and modifications (e.g., Social Security, pension, 529) are not modeled."
+    ],
+    "standardDeductionPhaseout": {
+      "single": [
+        {
+          "from": 261000,
+          "ref": 261000,
+          "base": 11200,
+          "rate": 0.37583892617449666
+        }
+      ],
+      "mfj": [
+        {
+          "from": 261000,
+          "ref": 261000,
+          "base": 22400,
+          "rate": 0.7516778523489933
+        }
+      ],
+      "hoh": [
+        {
+          "from": 261000,
+          "ref": 261000,
+          "base": 16800,
+          "rate": 0.5637583892617449
+        }
+      ]
+    },
+    "personalExemptionPhaseout": {
+      "single": [
+        {
+          "from": 261000,
+          "ref": 261000,
+          "base": 5250,
+          "rate": 0.1761744966442953
+        }
+      ],
+      "mfj": [
+        {
+          "from": 261000,
+          "ref": 261000,
+          "base": 10500,
+          "rate": 0.3523489932885906
+        }
+      ],
+      "hoh": [
+        {
+          "from": 261000,
+          "ref": 261000,
+          "base": 5250,
+          "rate": 0.1761744966442953
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Rhode Island starts from federal AGI, so the deductible half of SE tax carries through."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The federal self-employed health insurance deduction is part of federal AGI and is not added back."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted for federal AGI carry through to Rhode Island."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The QBI deduction is taken below federal AGI, so it does not reduce Rhode Island income."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Rhode Island cities and towns do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe more than $250 after withholding and credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underestimating interest if withholding and timely estimates cover the smaller of 80% of the 2026 tax or 100% of the 2025 tax (Form RI-2210). Farmers/fishermen use 66.67%.",
+    "form": "Form RI-1040ES"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$150 Articles of Organization (Form 400, Rhode Island Department of State).",
+    "annualReportFee": "$50 annual report (Form 632), filed every year between February 1 and May 1.",
+    "franchiseOrMinimumTax": "$400 annual charge for every LLC, including single-member LLCs disregarded for federal tax (Form RI-1065), owed for any full or partial year of existence. Sole proprietors without an entity do not owe it.",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "ADV 2025-22: Inflation-adjusted amounts set for Tax Year 2026 - RI Division of Taxation",
+      "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-11/ADV_2025_22_Inflation_Adjustments.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Summary of Legislative Changes (July 22, 2026) - RI Division of Taxation",
+      "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-07/2026_summary_of_legislative_changes.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 RI-1040 Resident Instructions - RI Division of Taxation",
+      "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-12/2025%201040R%20Instructions%20122025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Form RI-2210, Underpayment of Estimated Tax by Individuals - RI Division of Taxation",
+      "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-10/2025%20RI-2210_VENDOR.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Notice 2026-01: RI filing requirements for LLCs - RI Division of Taxation",
+      "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-02/Notice_2026_01_LLC_filing_requirements.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Form 400 Articles of Organization - Rhode Island Department of State",
+      "url": "https://docs.sos.ri.gov/documents/BusinessServices/400-articles-of-organization.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Form 632 Annual Report for a Limited Liability Company - Rhode Island Department of State",
+      "url": "https://docs.sos.ri.gov/documents/BusinessServices/632-limited-liability-company-annual-report.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

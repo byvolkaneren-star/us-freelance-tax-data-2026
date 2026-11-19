@@ -1,0 +1,203 @@
+{
+  "code": "DC",
+  "name": "District of Columbia",
+  "slug": "district-of-columbia",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/district-of-columbia",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.04
+        },
+        {
+          "over": 10000,
+          "rate": 0.06
+        },
+        {
+          "over": 40000,
+          "rate": 0.065
+        },
+        {
+          "over": 60000,
+          "rate": 0.085
+        },
+        {
+          "over": 250000,
+          "rate": 0.0925
+        },
+        {
+          "over": 500000,
+          "rate": 0.0975
+        },
+        {
+          "over": 1000000,
+          "rate": 0.1075
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.04
+        },
+        {
+          "over": 10000,
+          "rate": 0.06
+        },
+        {
+          "over": 40000,
+          "rate": 0.065
+        },
+        {
+          "over": 60000,
+          "rate": 0.085
+        },
+        {
+          "over": 250000,
+          "rate": 0.0925
+        },
+        {
+          "over": 500000,
+          "rate": 0.0975
+        },
+        {
+          "over": 1000000,
+          "rate": 0.1075
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.04
+        },
+        {
+          "over": 10000,
+          "rate": 0.06
+        },
+        {
+          "over": 40000,
+          "rate": 0.065
+        },
+        {
+          "over": 60000,
+          "rate": 0.085
+        },
+        {
+          "over": 250000,
+          "rate": 0.0925
+        },
+        {
+          "over": 500000,
+          "rate": 0.0975
+        },
+        {
+          "over": 1000000,
+          "rate": 0.1075
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 16100,
+      "mfj": 32200,
+      "hoh": 24150
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Rates (same for all filing statuses) and 2026 standard deduction ($16,100 / $32,200 / $24,150) are from OTR's 2026 D-40ES worksheet (April 2026).",
+      "DC's 2026 standard deduction is unsettled: for 2025 DC decoupled from the OBBBA increase ($15,000 / $30,000 / $22,500). Congress disapproved the Council's broader decoupling act (H.J.Res. 142, signed February 18, 2026); the Council then enacted a narrower set of decoupling amendments in the July 2026 FY2027 Budget Support Act. OTR's 2026 estimated-tax worksheet uses the federal amounts shown; confirm when the 2026 D-40 is published.",
+      "Unincorporated Business Franchise Tax (UBT): a sole proprietor/single-member LLC with DC gross income over $12,000 generally must file Form D-30 and pay 8.25% on business income after a 30%-of-net-income owner salary allowance and a $5,000 exemption (minimum tax $250, or $1,000 if DC gross receipts exceed $1 million); that income is then left off the D-40. Businesses where more than 80% of gross income comes from the owner's personal services and capital is not a material income-producing factor are exempt. Not modeled.",
+      "DC has no personal exemption. Itemized deduction limitation above $200,000 AGI, DC EITC, Schedule H property tax credit and other credits are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "DC starts from federal AGI (D-40 line 4), which already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted in federal AGI carry through."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The QBI deduction is taken after federal AGI; DC has no equivalent."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "DC is a single taxing jurisdiction; there is no separate local income tax (the UBT is described in income tax notes)."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you must file a DC return and expect to owe $100 or more for 2026.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment interest if withholding, credits and estimated payments equal at least 90% of 2026 DC tax or 110% of 2025 DC tax (12-month year).",
+    "form": "Form D-40ES (or MyTax.DC.gov)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$99 Certificate (Articles) of Organization for a domestic LLC, DC Department of Licensing and Consumer Protection (DLCP).",
+    "annualReportFee": "$300 biennial report, due April 1 of the year after registration and every two years thereafter ($100 late fee).",
+    "franchiseOrMinimumTax": "Unincorporated Business Franchise Tax: 8.25% of DC taxable business income, minimum $250 ($1,000 if DC gross receipts exceed $1 million), for unincorporated businesses with gross income over $12,000; businesses deriving more than 80% of gross income from the owner's personal services with capital not material are exempt.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "2026 D-40ES Estimated Payment for Individual Income Tax - DC Office of Tax and Revenue",
+      "url": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2026_D40ES_Book_wLinks04012026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 D-40 Individual Income Tax Forms and Instructions - DC Office of Tax and Revenue",
+      "url": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D40_Book_082026_v1.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 D-30 Unincorporated Business Franchise Tax Booklet - DC Office of Tax and Revenue",
+      "url": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D30_Book_Final_wLinks_02232026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "DC Business Franchise Tax Rates - DC Office of Tax and Revenue",
+      "url": "https://otr.cfo.dc.gov/page/dc-business-franchise-tax-rates",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "D.C. Law 26-89, Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025 - DC Council Code",
+      "url": "https://code.dccouncil.gov/us/dc/council/laws/26-89",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Revenue Forecast Update, August 2026 - Office of the DC Auditor",
+      "url": "https://dcauditor.org/wp-content/uploads/2026/08/DC.Revenue.Forecast.ODCA_.8.31.26.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Corporations Division Fees - Limited Liability Company - DC DLCP",
+      "url": "https://dlcp.dc.gov/node/1621921",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

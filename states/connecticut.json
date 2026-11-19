@@ -1,0 +1,2138 @@
+{
+  "code": "CT",
+  "name": "Connecticut",
+  "slug": "connecticut",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/connecticut",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 10000,
+          "rate": 0.045
+        },
+        {
+          "over": 50000,
+          "rate": 0.055
+        },
+        {
+          "over": 100000,
+          "rate": 0.06
+        },
+        {
+          "over": 200000,
+          "rate": 0.065
+        },
+        {
+          "over": 250000,
+          "rate": 0.069
+        },
+        {
+          "over": 500000,
+          "rate": 0.0699
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 20000,
+          "rate": 0.045
+        },
+        {
+          "over": 100000,
+          "rate": 0.055
+        },
+        {
+          "over": 200000,
+          "rate": 0.06
+        },
+        {
+          "over": 400000,
+          "rate": 0.065
+        },
+        {
+          "over": 500000,
+          "rate": 0.069
+        },
+        {
+          "over": 1000000,
+          "rate": 0.0699
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 16000,
+          "rate": 0.045
+        },
+        {
+          "over": 80000,
+          "rate": 0.055
+        },
+        {
+          "over": 160000,
+          "rate": 0.06
+        },
+        {
+          "over": 320000,
+          "rate": 0.065
+        },
+        {
+          "over": 400000,
+          "rate": 0.069
+        },
+        {
+          "over": 800000,
+          "rate": 0.0699
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 15000,
+      "mfj": 24000,
+      "hoh": 19000
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Brackets, exemptions and Tables C-E are from the 2026 Form CT-1040ES (Rev. 01/26), which prints the 2026 Tax Calculation Schedule; every amount is unchanged from the 2025 Form CT-1040 TCS (Rev. 12/25). Connecticut's amounts are statutory, not inflation-indexed.",
+      "Connecticut has no standard deduction. The personal exemption (Table A: $15,000 single / $24,000 joint / $19,000 HoH) is encoded exactly as the DRS step table in personalExemptionPhaseout: it drops $1,000 for each $1,000 (or part) of Connecticut AGI above $30,000 / $48,000 / $38,000 and is zero above $44,000 / $71,000 / $56,000 (each step starts just above the printed 'more than' bound).",
+      "The 2% rate phase-out add-back (Table C: $25 / $50 / $40 per $5,000 / $5,000 / $4,000 step above AGI $56,500 / $100,500 / $78,500, capped at $250 / $500 / $400) and tax recapture (Table D: steps from AGI $105,000 / $210,000 / $168,000 up to $3,400 / $6,800 / $5,320 above $540,000 / $1,080,000 / $864,000) are encoded row for row in agiAddOnTables, using the tables' 'more than' AGI bounds, and added to the Table B bracket tax (worksheet Lines 4-7).",
+      "Personal tax credit (Table E: 75% down to 0%, e.g. 10% for single AGI $33,300-$60,000 and joint AGI $52,000-$96,000; none above $64,500 single / $100,500 joint / $78,500 HoH) is a percentage of Lines 4+5+6. Because that total depends only on AGI here, exemptionCreditPhaseout holds the resulting dollar credit as exact piecewise-linear segments (breaks at every Table A, C and E row bound and at bracket kinks). The engine matches the DRS worksheet to the cent before the worksheet's whole-dollar rounding (verified every $500 from $10,000 to $600,000 AGI plus 20,000 off-grid AGIs, all three statuses).",
+      "Not modeled: property tax credit, Connecticut EITC, pension/annuity and Social Security modifications, pass-through entity tax credit and Connecticut AMT."
+    ],
+    "personalExemptionPhaseout": {
+      "single": [
+        {
+          "from": 30000.01,
+          "ref": 30000,
+          "base": 14000,
+          "rate": 0
+        },
+        {
+          "from": 31000.01,
+          "ref": 31000,
+          "base": 13000,
+          "rate": 0
+        },
+        {
+          "from": 32000.01,
+          "ref": 32000,
+          "base": 12000,
+          "rate": 0
+        },
+        {
+          "from": 33000.01,
+          "ref": 33000,
+          "base": 11000,
+          "rate": 0
+        },
+        {
+          "from": 34000.01,
+          "ref": 34000,
+          "base": 10000,
+          "rate": 0
+        },
+        {
+          "from": 35000.01,
+          "ref": 35000,
+          "base": 9000,
+          "rate": 0
+        },
+        {
+          "from": 36000.01,
+          "ref": 36000,
+          "base": 8000,
+          "rate": 0
+        },
+        {
+          "from": 37000.01,
+          "ref": 37000,
+          "base": 7000,
+          "rate": 0
+        },
+        {
+          "from": 38000.01,
+          "ref": 38000,
+          "base": 6000,
+          "rate": 0
+        },
+        {
+          "from": 39000.01,
+          "ref": 39000,
+          "base": 5000,
+          "rate": 0
+        },
+        {
+          "from": 40000.01,
+          "ref": 40000,
+          "base": 4000,
+          "rate": 0
+        },
+        {
+          "from": 41000.01,
+          "ref": 41000,
+          "base": 3000,
+          "rate": 0
+        },
+        {
+          "from": 42000.01,
+          "ref": 42000,
+          "base": 2000,
+          "rate": 0
+        },
+        {
+          "from": 43000.01,
+          "ref": 43000,
+          "base": 1000,
+          "rate": 0
+        },
+        {
+          "from": 44000.01,
+          "ref": 44000,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "mfj": [
+        {
+          "from": 48000.01,
+          "ref": 48000,
+          "base": 23000,
+          "rate": 0
+        },
+        {
+          "from": 49000.01,
+          "ref": 49000,
+          "base": 22000,
+          "rate": 0
+        },
+        {
+          "from": 50000.01,
+          "ref": 50000,
+          "base": 21000,
+          "rate": 0
+        },
+        {
+          "from": 51000.01,
+          "ref": 51000,
+          "base": 20000,
+          "rate": 0
+        },
+        {
+          "from": 52000.01,
+          "ref": 52000,
+          "base": 19000,
+          "rate": 0
+        },
+        {
+          "from": 53000.01,
+          "ref": 53000,
+          "base": 18000,
+          "rate": 0
+        },
+        {
+          "from": 54000.01,
+          "ref": 54000,
+          "base": 17000,
+          "rate": 0
+        },
+        {
+          "from": 55000.01,
+          "ref": 55000,
+          "base": 16000,
+          "rate": 0
+        },
+        {
+          "from": 56000.01,
+          "ref": 56000,
+          "base": 15000,
+          "rate": 0
+        },
+        {
+          "from": 57000.01,
+          "ref": 57000,
+          "base": 14000,
+          "rate": 0
+        },
+        {
+          "from": 58000.01,
+          "ref": 58000,
+          "base": 13000,
+          "rate": 0
+        },
+        {
+          "from": 59000.01,
+          "ref": 59000,
+          "base": 12000,
+          "rate": 0
+        },
+        {
+          "from": 60000.01,
+          "ref": 60000,
+          "base": 11000,
+          "rate": 0
+        },
+        {
+          "from": 61000.01,
+          "ref": 61000,
+          "base": 10000,
+          "rate": 0
+        },
+        {
+          "from": 62000.01,
+          "ref": 62000,
+          "base": 9000,
+          "rate": 0
+        },
+        {
+          "from": 63000.01,
+          "ref": 63000,
+          "base": 8000,
+          "rate": 0
+        },
+        {
+          "from": 64000.01,
+          "ref": 64000,
+          "base": 7000,
+          "rate": 0
+        },
+        {
+          "from": 65000.01,
+          "ref": 65000,
+          "base": 6000,
+          "rate": 0
+        },
+        {
+          "from": 66000.01,
+          "ref": 66000,
+          "base": 5000,
+          "rate": 0
+        },
+        {
+          "from": 67000.01,
+          "ref": 67000,
+          "base": 4000,
+          "rate": 0
+        },
+        {
+          "from": 68000.01,
+          "ref": 68000,
+          "base": 3000,
+          "rate": 0
+        },
+        {
+          "from": 69000.01,
+          "ref": 69000,
+          "base": 2000,
+          "rate": 0
+        },
+        {
+          "from": 70000.01,
+          "ref": 70000,
+          "base": 1000,
+          "rate": 0
+        },
+        {
+          "from": 71000.01,
+          "ref": 71000,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "hoh": [
+        {
+          "from": 38000.01,
+          "ref": 38000,
+          "base": 18000,
+          "rate": 0
+        },
+        {
+          "from": 39000.01,
+          "ref": 39000,
+          "base": 17000,
+          "rate": 0
+        },
+        {
+          "from": 40000.01,
+          "ref": 40000,
+          "base": 16000,
+          "rate": 0
+        },
+        {
+          "from": 41000.01,
+          "ref": 41000,
+          "base": 15000,
+          "rate": 0
+        },
+        {
+          "from": 42000.01,
+          "ref": 42000,
+          "base": 14000,
+          "rate": 0
+        },
+        {
+          "from": 43000.01,
+          "ref": 43000,
+          "base": 13000,
+          "rate": 0
+        },
+        {
+          "from": 44000.01,
+          "ref": 44000,
+          "base": 12000,
+          "rate": 0
+        },
+        {
+          "from": 45000.01,
+          "ref": 45000,
+          "base": 11000,
+          "rate": 0
+        },
+        {
+          "from": 46000.01,
+          "ref": 46000,
+          "base": 10000,
+          "rate": 0
+        },
+        {
+          "from": 47000.01,
+          "ref": 47000,
+          "base": 9000,
+          "rate": 0
+        },
+        {
+          "from": 48000.01,
+          "ref": 48000,
+          "base": 8000,
+          "rate": 0
+        },
+        {
+          "from": 49000.01,
+          "ref": 49000,
+          "base": 7000,
+          "rate": 0
+        },
+        {
+          "from": 50000.01,
+          "ref": 50000,
+          "base": 6000,
+          "rate": 0
+        },
+        {
+          "from": 51000.01,
+          "ref": 51000,
+          "base": 5000,
+          "rate": 0
+        },
+        {
+          "from": 52000.01,
+          "ref": 52000,
+          "base": 4000,
+          "rate": 0
+        },
+        {
+          "from": 53000.01,
+          "ref": 53000,
+          "base": 3000,
+          "rate": 0
+        },
+        {
+          "from": 54000.01,
+          "ref": 54000,
+          "base": 2000,
+          "rate": 0
+        },
+        {
+          "from": 55000.01,
+          "ref": 55000,
+          "base": 1000,
+          "rate": 0
+        },
+        {
+          "from": 56000.01,
+          "ref": 56000,
+          "base": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "exemptionCreditPhaseout": {
+      "single": [
+        {
+          "from": 15000.01,
+          "ref": 15000,
+          "base": 0,
+          "rate": -0.015
+        },
+        {
+          "from": 18800.01,
+          "ref": 18800,
+          "base": 53.2,
+          "rate": -0.014
+        },
+        {
+          "from": 19300.01,
+          "ref": 19300,
+          "base": 55.9,
+          "rate": -0.013
+        },
+        {
+          "from": 19800.01,
+          "ref": 19800,
+          "base": 57.6,
+          "rate": -0.012
+        },
+        {
+          "from": 20300.01,
+          "ref": 20300,
+          "base": 58.3,
+          "rate": -0.011
+        },
+        {
+          "from": 20800.01,
+          "ref": 20800,
+          "base": 58,
+          "rate": -0.01
+        },
+        {
+          "from": 21300.01,
+          "ref": 21300,
+          "base": 56.7,
+          "rate": -0.009
+        },
+        {
+          "from": 21800.01,
+          "ref": 21800,
+          "base": 54.4,
+          "rate": -0.008
+        },
+        {
+          "from": 22300.01,
+          "ref": 22300,
+          "base": 51.1,
+          "rate": -0.007
+        },
+        {
+          "from": 25000.01,
+          "ref": 25000,
+          "base": 60,
+          "rate": -0.0135
+        },
+        {
+          "from": 25500.01,
+          "ref": 25500,
+          "base": 55.625,
+          "rate": -0.01125
+        },
+        {
+          "from": 26000.01,
+          "ref": 26000,
+          "base": 49,
+          "rate": -0.009
+        },
+        {
+          "from": 26500.01,
+          "ref": 26500,
+          "base": 40.125,
+          "rate": -0.00675
+        },
+        {
+          "from": 30000.01,
+          "ref": 30000,
+          "base": 70.5,
+          "rate": -0.00675
+        },
+        {
+          "from": 31000.01,
+          "ref": 31000,
+          "base": 84,
+          "rate": -0.00675
+        },
+        {
+          "from": 31300.01,
+          "ref": 31300,
+          "base": 80.29,
+          "rate": -0.0063
+        },
+        {
+          "from": 31800.01,
+          "ref": 31800,
+          "base": 77.48,
+          "rate": -0.00585
+        },
+        {
+          "from": 32000.01,
+          "ref": 32000,
+          "base": 84.5,
+          "rate": -0.00585
+        },
+        {
+          "from": 32300.01,
+          "ref": 32300,
+          "base": 79.62,
+          "rate": -0.0054
+        },
+        {
+          "from": 32800.01,
+          "ref": 32800,
+          "base": 75.46,
+          "rate": -0.00495
+        },
+        {
+          "from": 33000.01,
+          "ref": 33000,
+          "base": 81.4,
+          "rate": -0.00495
+        },
+        {
+          "from": 33300.01,
+          "ref": 33300,
+          "base": 75.35,
+          "rate": -0.0045
+        },
+        {
+          "from": 34000.01,
+          "ref": 34000,
+          "base": 83,
+          "rate": -0.0045
+        },
+        {
+          "from": 35000.01,
+          "ref": 35000,
+          "base": 92,
+          "rate": -0.0045
+        },
+        {
+          "from": 36000.01,
+          "ref": 36000,
+          "base": 101,
+          "rate": -0.0045
+        },
+        {
+          "from": 37000.01,
+          "ref": 37000,
+          "base": 110,
+          "rate": -0.0045
+        },
+        {
+          "from": 38000.01,
+          "ref": 38000,
+          "base": 119,
+          "rate": -0.0045
+        },
+        {
+          "from": 39000.01,
+          "ref": 39000,
+          "base": 128,
+          "rate": -0.0045
+        },
+        {
+          "from": 40000.01,
+          "ref": 40000,
+          "base": 137,
+          "rate": -0.0045
+        },
+        {
+          "from": 41000.01,
+          "ref": 41000,
+          "base": 146,
+          "rate": -0.0045
+        },
+        {
+          "from": 42000.01,
+          "ref": 42000,
+          "base": 155,
+          "rate": -0.0045
+        },
+        {
+          "from": 43000.01,
+          "ref": 43000,
+          "base": 164,
+          "rate": -0.0045
+        },
+        {
+          "from": 44000.01,
+          "ref": 44000,
+          "base": 173,
+          "rate": -0.0045
+        },
+        {
+          "from": 45000.01,
+          "ref": 45000,
+          "base": 177.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 50000,
+          "ref": 50000,
+          "base": 200,
+          "rate": -0.0055
+        },
+        {
+          "from": 56500.01,
+          "ref": 56500,
+          "base": 238.25,
+          "rate": -0.0055
+        },
+        {
+          "from": 60000.01,
+          "ref": 60000,
+          "base": 231.75,
+          "rate": -0.00495
+        },
+        {
+          "from": 60500.01,
+          "ref": 60500,
+          "base": 208.2,
+          "rate": -0.0044
+        },
+        {
+          "from": 61000.01,
+          "ref": 61000,
+          "base": 184.1,
+          "rate": -0.00385
+        },
+        {
+          "from": 61500.01,
+          "ref": 61500,
+          "base": 160.95,
+          "rate": -0.0033
+        },
+        {
+          "from": 62000.01,
+          "ref": 62000,
+          "base": 135.5,
+          "rate": -0.00275
+        },
+        {
+          "from": 62500.01,
+          "ref": 62500,
+          "base": 109.5,
+          "rate": -0.0022
+        },
+        {
+          "from": 63000.01,
+          "ref": 63000,
+          "base": 82.95,
+          "rate": -0.00165
+        },
+        {
+          "from": 63500.01,
+          "ref": 63500,
+          "base": 55.85,
+          "rate": -0.0011
+        },
+        {
+          "from": 64000.01,
+          "ref": 64000,
+          "base": 28.2,
+          "rate": -0.00055
+        },
+        {
+          "from": 64500.01,
+          "ref": 64500,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "mfj": [
+        {
+          "from": 24000.01,
+          "ref": 24000,
+          "base": 0,
+          "rate": -0.015
+        },
+        {
+          "from": 30000.01,
+          "ref": 30000,
+          "base": 84,
+          "rate": -0.014
+        },
+        {
+          "from": 30500.01,
+          "ref": 30500,
+          "base": 84.5,
+          "rate": -0.013
+        },
+        {
+          "from": 31000.01,
+          "ref": 31000,
+          "base": 84,
+          "rate": -0.012
+        },
+        {
+          "from": 31500.01,
+          "ref": 31500,
+          "base": 82.5,
+          "rate": -0.011
+        },
+        {
+          "from": 32000.01,
+          "ref": 32000,
+          "base": 80,
+          "rate": -0.01
+        },
+        {
+          "from": 32500.01,
+          "ref": 32500,
+          "base": 76.5,
+          "rate": -0.009
+        },
+        {
+          "from": 33000.01,
+          "ref": 33000,
+          "base": 72,
+          "rate": -0.008
+        },
+        {
+          "from": 33500.01,
+          "ref": 33500,
+          "base": 66.5,
+          "rate": -0.007
+        },
+        {
+          "from": 40000.01,
+          "ref": 40000,
+          "base": 96,
+          "rate": -0.006
+        },
+        {
+          "from": 40500.01,
+          "ref": 40500,
+          "base": 82.5,
+          "rate": -0.005
+        },
+        {
+          "from": 41000.01,
+          "ref": 41000,
+          "base": 68,
+          "rate": -0.004
+        },
+        {
+          "from": 41500.01,
+          "ref": 41500,
+          "base": 52.5,
+          "rate": -0.003
+        },
+        {
+          "from": 44000,
+          "ref": 44000,
+          "base": 60,
+          "rate": -0.00675
+        },
+        {
+          "from": 48000.01,
+          "ref": 48000,
+          "base": 93.75,
+          "rate": -0.00675
+        },
+        {
+          "from": 49000.01,
+          "ref": 49000,
+          "base": 107.25,
+          "rate": -0.00675
+        },
+        {
+          "from": 50000.01,
+          "ref": 50000,
+          "base": 112.7,
+          "rate": -0.0063
+        },
+        {
+          "from": 50500.01,
+          "ref": 50500,
+          "base": 107.575,
+          "rate": -0.00585
+        },
+        {
+          "from": 51000.01,
+          "ref": 51000,
+          "base": 107.4,
+          "rate": -0.0054
+        },
+        {
+          "from": 51500.01,
+          "ref": 51500,
+          "base": 100.925,
+          "rate": -0.00495
+        },
+        {
+          "from": 52000.01,
+          "ref": 52000,
+          "base": 98.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 53000.01,
+          "ref": 53000,
+          "base": 107.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 54000.01,
+          "ref": 54000,
+          "base": 116.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 55000.01,
+          "ref": 55000,
+          "base": 125.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 56000.01,
+          "ref": 56000,
+          "base": 134.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 57000.01,
+          "ref": 57000,
+          "base": 143.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 58000.01,
+          "ref": 58000,
+          "base": 152.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 59000.01,
+          "ref": 59000,
+          "base": 161.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 60000.01,
+          "ref": 60000,
+          "base": 170.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 61000.01,
+          "ref": 61000,
+          "base": 179.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 62000.01,
+          "ref": 62000,
+          "base": 188.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 63000.01,
+          "ref": 63000,
+          "base": 197.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 64000.01,
+          "ref": 64000,
+          "base": 206.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 65000.01,
+          "ref": 65000,
+          "base": 215.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 66000.01,
+          "ref": 66000,
+          "base": 224.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 67000.01,
+          "ref": 67000,
+          "base": 233.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 68000.01,
+          "ref": 68000,
+          "base": 242.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 69000.01,
+          "ref": 69000,
+          "base": 251.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 70000.01,
+          "ref": 70000,
+          "base": 260.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 71000.01,
+          "ref": 71000,
+          "base": 269.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 72000.01,
+          "ref": 72000,
+          "base": 274,
+          "rate": -0.0045
+        },
+        {
+          "from": 96000.01,
+          "ref": 96000,
+          "base": 343.8,
+          "rate": -0.00405
+        },
+        {
+          "from": 96500.01,
+          "ref": 96500,
+          "base": 307.4,
+          "rate": -0.0036
+        },
+        {
+          "from": 97000.01,
+          "ref": 97000,
+          "base": 270.55,
+          "rate": -0.00315
+        },
+        {
+          "from": 97500.01,
+          "ref": 97500,
+          "base": 233.25,
+          "rate": -0.0027
+        },
+        {
+          "from": 98000.01,
+          "ref": 98000,
+          "base": 195.5,
+          "rate": -0.00225
+        },
+        {
+          "from": 98500.01,
+          "ref": 98500,
+          "base": 157.3,
+          "rate": -0.0018
+        },
+        {
+          "from": 99000.01,
+          "ref": 99000,
+          "base": 118.65,
+          "rate": -0.00135
+        },
+        {
+          "from": 99500.01,
+          "ref": 99500,
+          "base": 79.55,
+          "rate": -0.0009
+        },
+        {
+          "from": 100000.01,
+          "ref": 100000,
+          "base": 40,
+          "rate": -0.00055
+        },
+        {
+          "from": 100500.01,
+          "ref": 100500,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "hoh": [
+        {
+          "from": 19000.01,
+          "ref": 19000,
+          "base": 0,
+          "rate": -0.015
+        },
+        {
+          "from": 24000.01,
+          "ref": 24000,
+          "base": 70,
+          "rate": -0.014
+        },
+        {
+          "from": 24500.01,
+          "ref": 24500,
+          "base": 71.5,
+          "rate": -0.013
+        },
+        {
+          "from": 25000.01,
+          "ref": 25000,
+          "base": 72,
+          "rate": -0.012
+        },
+        {
+          "from": 25500.01,
+          "ref": 25500,
+          "base": 71.5,
+          "rate": -0.011
+        },
+        {
+          "from": 26000.01,
+          "ref": 26000,
+          "base": 70,
+          "rate": -0.01
+        },
+        {
+          "from": 26500.01,
+          "ref": 26500,
+          "base": 67.5,
+          "rate": -0.009
+        },
+        {
+          "from": 27000.01,
+          "ref": 27000,
+          "base": 64,
+          "rate": -0.008
+        },
+        {
+          "from": 27500.01,
+          "ref": 27500,
+          "base": 59.5,
+          "rate": -0.007
+        },
+        {
+          "from": 34000.01,
+          "ref": 34000,
+          "base": 90,
+          "rate": -0.006
+        },
+        {
+          "from": 34500.01,
+          "ref": 34500,
+          "base": 77.5,
+          "rate": -0.005
+        },
+        {
+          "from": 35000.01,
+          "ref": 35000,
+          "base": 64,
+          "rate": -0.009
+        },
+        {
+          "from": 35500.01,
+          "ref": 35500,
+          "base": 51.375,
+          "rate": -0.00675
+        },
+        {
+          "from": 38000.01,
+          "ref": 38000,
+          "base": 75,
+          "rate": -0.00675
+        },
+        {
+          "from": 39000.01,
+          "ref": 39000,
+          "base": 88.5,
+          "rate": -0.00675
+        },
+        {
+          "from": 40000.01,
+          "ref": 40000,
+          "base": 102,
+          "rate": -0.00675
+        },
+        {
+          "from": 41000.01,
+          "ref": 41000,
+          "base": 115.5,
+          "rate": -0.00675
+        },
+        {
+          "from": 42000.01,
+          "ref": 42000,
+          "base": 129,
+          "rate": -0.00675
+        },
+        {
+          "from": 43000.01,
+          "ref": 43000,
+          "base": 142.5,
+          "rate": -0.00675
+        },
+        {
+          "from": 44000.01,
+          "ref": 44000,
+          "base": 145.6,
+          "rate": -0.0063
+        },
+        {
+          "from": 44500.01,
+          "ref": 44500,
+          "base": 138.125,
+          "rate": -0.00585
+        },
+        {
+          "from": 45000.01,
+          "ref": 45000,
+          "base": 135.6,
+          "rate": -0.0054
+        },
+        {
+          "from": 45500.01,
+          "ref": 45500,
+          "base": 126.775,
+          "rate": -0.00495
+        },
+        {
+          "from": 46000.01,
+          "ref": 46000,
+          "base": 122,
+          "rate": -0.0045
+        },
+        {
+          "from": 47000.01,
+          "ref": 47000,
+          "base": 131,
+          "rate": -0.0045
+        },
+        {
+          "from": 48000.01,
+          "ref": 48000,
+          "base": 140,
+          "rate": -0.0045
+        },
+        {
+          "from": 49000.01,
+          "ref": 49000,
+          "base": 149,
+          "rate": -0.0045
+        },
+        {
+          "from": 50000.01,
+          "ref": 50000,
+          "base": 158,
+          "rate": -0.0045
+        },
+        {
+          "from": 51000.01,
+          "ref": 51000,
+          "base": 167,
+          "rate": -0.0045
+        },
+        {
+          "from": 52000.01,
+          "ref": 52000,
+          "base": 176,
+          "rate": -0.0045
+        },
+        {
+          "from": 53000.01,
+          "ref": 53000,
+          "base": 185,
+          "rate": -0.0045
+        },
+        {
+          "from": 54000.01,
+          "ref": 54000,
+          "base": 194,
+          "rate": -0.0045
+        },
+        {
+          "from": 55000.01,
+          "ref": 55000,
+          "base": 203,
+          "rate": -0.0045
+        },
+        {
+          "from": 56000.01,
+          "ref": 56000,
+          "base": 212,
+          "rate": -0.0045
+        },
+        {
+          "from": 57000.01,
+          "ref": 57000,
+          "base": 216.5,
+          "rate": -0.0045
+        },
+        {
+          "from": 74000.01,
+          "ref": 74000,
+          "base": 263.7,
+          "rate": -0.00405
+        },
+        {
+          "from": 74500.01,
+          "ref": 74500,
+          "base": 236.2,
+          "rate": -0.0036
+        },
+        {
+          "from": 75000.01,
+          "ref": 75000,
+          "base": 208.25,
+          "rate": -0.00315
+        },
+        {
+          "from": 75500.01,
+          "ref": 75500,
+          "base": 179.85,
+          "rate": -0.0027
+        },
+        {
+          "from": 76000.01,
+          "ref": 76000,
+          "base": 151,
+          "rate": -0.00225
+        },
+        {
+          "from": 76500.01,
+          "ref": 76500,
+          "base": 121.7,
+          "rate": -0.0018
+        },
+        {
+          "from": 77000.01,
+          "ref": 77000,
+          "base": 91.95,
+          "rate": -0.00135
+        },
+        {
+          "from": 77500.01,
+          "ref": 77500,
+          "base": 61.75,
+          "rate": -0.0009
+        },
+        {
+          "from": 78000.01,
+          "ref": 78000,
+          "base": 31.1,
+          "rate": -0.00045
+        },
+        {
+          "from": 78500.01,
+          "ref": 78500,
+          "base": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "agiAddOnTables": {
+      "single": [
+        [
+          {
+            "agiOver": 56500,
+            "amount": 25
+          },
+          {
+            "agiOver": 61500,
+            "amount": 50
+          },
+          {
+            "agiOver": 66500,
+            "amount": 75
+          },
+          {
+            "agiOver": 71500,
+            "amount": 100
+          },
+          {
+            "agiOver": 76500,
+            "amount": 125
+          },
+          {
+            "agiOver": 81500,
+            "amount": 150
+          },
+          {
+            "agiOver": 86500,
+            "amount": 175
+          },
+          {
+            "agiOver": 91500,
+            "amount": 200
+          },
+          {
+            "agiOver": 96500,
+            "amount": 225
+          },
+          {
+            "agiOver": 101500,
+            "amount": 250
+          }
+        ],
+        [
+          {
+            "agiOver": 105000,
+            "amount": 25
+          },
+          {
+            "agiOver": 110000,
+            "amount": 50
+          },
+          {
+            "agiOver": 115000,
+            "amount": 75
+          },
+          {
+            "agiOver": 120000,
+            "amount": 100
+          },
+          {
+            "agiOver": 125000,
+            "amount": 125
+          },
+          {
+            "agiOver": 130000,
+            "amount": 150
+          },
+          {
+            "agiOver": 135000,
+            "amount": 175
+          },
+          {
+            "agiOver": 140000,
+            "amount": 200
+          },
+          {
+            "agiOver": 145000,
+            "amount": 225
+          },
+          {
+            "agiOver": 150000,
+            "amount": 250
+          },
+          {
+            "agiOver": 200000,
+            "amount": 340
+          },
+          {
+            "agiOver": 205000,
+            "amount": 430
+          },
+          {
+            "agiOver": 210000,
+            "amount": 520
+          },
+          {
+            "agiOver": 215000,
+            "amount": 610
+          },
+          {
+            "agiOver": 220000,
+            "amount": 700
+          },
+          {
+            "agiOver": 225000,
+            "amount": 790
+          },
+          {
+            "agiOver": 230000,
+            "amount": 880
+          },
+          {
+            "agiOver": 235000,
+            "amount": 970
+          },
+          {
+            "agiOver": 240000,
+            "amount": 1060
+          },
+          {
+            "agiOver": 245000,
+            "amount": 1150
+          },
+          {
+            "agiOver": 250000,
+            "amount": 1240
+          },
+          {
+            "agiOver": 255000,
+            "amount": 1330
+          },
+          {
+            "agiOver": 260000,
+            "amount": 1420
+          },
+          {
+            "agiOver": 265000,
+            "amount": 1510
+          },
+          {
+            "agiOver": 270000,
+            "amount": 1600
+          },
+          {
+            "agiOver": 275000,
+            "amount": 1690
+          },
+          {
+            "agiOver": 280000,
+            "amount": 1780
+          },
+          {
+            "agiOver": 285000,
+            "amount": 1870
+          },
+          {
+            "agiOver": 290000,
+            "amount": 1960
+          },
+          {
+            "agiOver": 295000,
+            "amount": 2050
+          },
+          {
+            "agiOver": 300000,
+            "amount": 2140
+          },
+          {
+            "agiOver": 305000,
+            "amount": 2230
+          },
+          {
+            "agiOver": 310000,
+            "amount": 2320
+          },
+          {
+            "agiOver": 315000,
+            "amount": 2410
+          },
+          {
+            "agiOver": 320000,
+            "amount": 2500
+          },
+          {
+            "agiOver": 325000,
+            "amount": 2590
+          },
+          {
+            "agiOver": 330000,
+            "amount": 2680
+          },
+          {
+            "agiOver": 335000,
+            "amount": 2770
+          },
+          {
+            "agiOver": 340000,
+            "amount": 2860
+          },
+          {
+            "agiOver": 345000,
+            "amount": 2950
+          },
+          {
+            "agiOver": 500000,
+            "amount": 3000
+          },
+          {
+            "agiOver": 505000,
+            "amount": 3050
+          },
+          {
+            "agiOver": 510000,
+            "amount": 3100
+          },
+          {
+            "agiOver": 515000,
+            "amount": 3150
+          },
+          {
+            "agiOver": 520000,
+            "amount": 3200
+          },
+          {
+            "agiOver": 525000,
+            "amount": 3250
+          },
+          {
+            "agiOver": 530000,
+            "amount": 3300
+          },
+          {
+            "agiOver": 535000,
+            "amount": 3350
+          },
+          {
+            "agiOver": 540000,
+            "amount": 3400
+          }
+        ]
+      ],
+      "mfj": [
+        [
+          {
+            "agiOver": 100500,
+            "amount": 50
+          },
+          {
+            "agiOver": 105500,
+            "amount": 100
+          },
+          {
+            "agiOver": 110500,
+            "amount": 150
+          },
+          {
+            "agiOver": 115500,
+            "amount": 200
+          },
+          {
+            "agiOver": 120500,
+            "amount": 250
+          },
+          {
+            "agiOver": 125500,
+            "amount": 300
+          },
+          {
+            "agiOver": 130500,
+            "amount": 350
+          },
+          {
+            "agiOver": 135500,
+            "amount": 400
+          },
+          {
+            "agiOver": 140500,
+            "amount": 450
+          },
+          {
+            "agiOver": 145500,
+            "amount": 500
+          }
+        ],
+        [
+          {
+            "agiOver": 210000,
+            "amount": 50
+          },
+          {
+            "agiOver": 220000,
+            "amount": 100
+          },
+          {
+            "agiOver": 230000,
+            "amount": 150
+          },
+          {
+            "agiOver": 240000,
+            "amount": 200
+          },
+          {
+            "agiOver": 250000,
+            "amount": 250
+          },
+          {
+            "agiOver": 260000,
+            "amount": 300
+          },
+          {
+            "agiOver": 270000,
+            "amount": 350
+          },
+          {
+            "agiOver": 280000,
+            "amount": 400
+          },
+          {
+            "agiOver": 290000,
+            "amount": 450
+          },
+          {
+            "agiOver": 300000,
+            "amount": 500
+          },
+          {
+            "agiOver": 400000,
+            "amount": 680
+          },
+          {
+            "agiOver": 410000,
+            "amount": 860
+          },
+          {
+            "agiOver": 420000,
+            "amount": 1040
+          },
+          {
+            "agiOver": 430000,
+            "amount": 1220
+          },
+          {
+            "agiOver": 440000,
+            "amount": 1400
+          },
+          {
+            "agiOver": 450000,
+            "amount": 1580
+          },
+          {
+            "agiOver": 460000,
+            "amount": 1760
+          },
+          {
+            "agiOver": 470000,
+            "amount": 1940
+          },
+          {
+            "agiOver": 480000,
+            "amount": 2120
+          },
+          {
+            "agiOver": 490000,
+            "amount": 2300
+          },
+          {
+            "agiOver": 500000,
+            "amount": 2480
+          },
+          {
+            "agiOver": 510000,
+            "amount": 2660
+          },
+          {
+            "agiOver": 520000,
+            "amount": 2840
+          },
+          {
+            "agiOver": 530000,
+            "amount": 3020
+          },
+          {
+            "agiOver": 540000,
+            "amount": 3200
+          },
+          {
+            "agiOver": 550000,
+            "amount": 3380
+          },
+          {
+            "agiOver": 560000,
+            "amount": 3560
+          },
+          {
+            "agiOver": 570000,
+            "amount": 3740
+          },
+          {
+            "agiOver": 580000,
+            "amount": 3920
+          },
+          {
+            "agiOver": 590000,
+            "amount": 4100
+          },
+          {
+            "agiOver": 600000,
+            "amount": 4280
+          },
+          {
+            "agiOver": 610000,
+            "amount": 4460
+          },
+          {
+            "agiOver": 620000,
+            "amount": 4640
+          },
+          {
+            "agiOver": 630000,
+            "amount": 4820
+          },
+          {
+            "agiOver": 640000,
+            "amount": 5000
+          },
+          {
+            "agiOver": 650000,
+            "amount": 5180
+          },
+          {
+            "agiOver": 660000,
+            "amount": 5360
+          },
+          {
+            "agiOver": 670000,
+            "amount": 5540
+          },
+          {
+            "agiOver": 680000,
+            "amount": 5720
+          },
+          {
+            "agiOver": 690000,
+            "amount": 5900
+          },
+          {
+            "agiOver": 1000000,
+            "amount": 6000
+          },
+          {
+            "agiOver": 1010000,
+            "amount": 6100
+          },
+          {
+            "agiOver": 1020000,
+            "amount": 6200
+          },
+          {
+            "agiOver": 1030000,
+            "amount": 6300
+          },
+          {
+            "agiOver": 1040000,
+            "amount": 6400
+          },
+          {
+            "agiOver": 1050000,
+            "amount": 6500
+          },
+          {
+            "agiOver": 1060000,
+            "amount": 6600
+          },
+          {
+            "agiOver": 1070000,
+            "amount": 6700
+          },
+          {
+            "agiOver": 1080000,
+            "amount": 6800
+          }
+        ]
+      ],
+      "hoh": [
+        [
+          {
+            "agiOver": 78500,
+            "amount": 40
+          },
+          {
+            "agiOver": 82500,
+            "amount": 80
+          },
+          {
+            "agiOver": 86500,
+            "amount": 120
+          },
+          {
+            "agiOver": 90500,
+            "amount": 160
+          },
+          {
+            "agiOver": 94500,
+            "amount": 200
+          },
+          {
+            "agiOver": 98500,
+            "amount": 240
+          },
+          {
+            "agiOver": 102500,
+            "amount": 280
+          },
+          {
+            "agiOver": 106500,
+            "amount": 320
+          },
+          {
+            "agiOver": 110500,
+            "amount": 360
+          },
+          {
+            "agiOver": 114500,
+            "amount": 400
+          }
+        ],
+        [
+          {
+            "agiOver": 168000,
+            "amount": 40
+          },
+          {
+            "agiOver": 176000,
+            "amount": 80
+          },
+          {
+            "agiOver": 184000,
+            "amount": 120
+          },
+          {
+            "agiOver": 192000,
+            "amount": 160
+          },
+          {
+            "agiOver": 200000,
+            "amount": 200
+          },
+          {
+            "agiOver": 208000,
+            "amount": 240
+          },
+          {
+            "agiOver": 216000,
+            "amount": 280
+          },
+          {
+            "agiOver": 224000,
+            "amount": 320
+          },
+          {
+            "agiOver": 232000,
+            "amount": 360
+          },
+          {
+            "agiOver": 240000,
+            "amount": 400
+          },
+          {
+            "agiOver": 320000,
+            "amount": 540
+          },
+          {
+            "agiOver": 328000,
+            "amount": 680
+          },
+          {
+            "agiOver": 336000,
+            "amount": 820
+          },
+          {
+            "agiOver": 344000,
+            "amount": 960
+          },
+          {
+            "agiOver": 352000,
+            "amount": 1100
+          },
+          {
+            "agiOver": 360000,
+            "amount": 1240
+          },
+          {
+            "agiOver": 368000,
+            "amount": 1380
+          },
+          {
+            "agiOver": 376000,
+            "amount": 1520
+          },
+          {
+            "agiOver": 384000,
+            "amount": 1660
+          },
+          {
+            "agiOver": 392000,
+            "amount": 1800
+          },
+          {
+            "agiOver": 400000,
+            "amount": 1940
+          },
+          {
+            "agiOver": 408000,
+            "amount": 2080
+          },
+          {
+            "agiOver": 416000,
+            "amount": 2220
+          },
+          {
+            "agiOver": 424000,
+            "amount": 2360
+          },
+          {
+            "agiOver": 432000,
+            "amount": 2500
+          },
+          {
+            "agiOver": 440000,
+            "amount": 2640
+          },
+          {
+            "agiOver": 448000,
+            "amount": 2780
+          },
+          {
+            "agiOver": 456000,
+            "amount": 2920
+          },
+          {
+            "agiOver": 464000,
+            "amount": 3060
+          },
+          {
+            "agiOver": 472000,
+            "amount": 3200
+          },
+          {
+            "agiOver": 480000,
+            "amount": 3340
+          },
+          {
+            "agiOver": 488000,
+            "amount": 3480
+          },
+          {
+            "agiOver": 496000,
+            "amount": 3620
+          },
+          {
+            "agiOver": 504000,
+            "amount": 3760
+          },
+          {
+            "agiOver": 512000,
+            "amount": 3900
+          },
+          {
+            "agiOver": 520000,
+            "amount": 4040
+          },
+          {
+            "agiOver": 528000,
+            "amount": 4180
+          },
+          {
+            "agiOver": 536000,
+            "amount": 4320
+          },
+          {
+            "agiOver": 544000,
+            "amount": 4460
+          },
+          {
+            "agiOver": 552000,
+            "amount": 4600
+          },
+          {
+            "agiOver": 800000,
+            "amount": 4680
+          },
+          {
+            "agiOver": 808000,
+            "amount": 4760
+          },
+          {
+            "agiOver": 816000,
+            "amount": 4840
+          },
+          {
+            "agiOver": 824000,
+            "amount": 4920
+          },
+          {
+            "agiOver": 832000,
+            "amount": 5000
+          },
+          {
+            "agiOver": 840000,
+            "amount": 5080
+          },
+          {
+            "agiOver": 848000,
+            "amount": 5160
+          },
+          {
+            "agiOver": 856000,
+            "amount": 5240
+          },
+          {
+            "agiOver": 864000,
+            "amount": 5320
+          }
+        ]
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Connecticut starts from federal AGI, which already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted in federal AGI carry through."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The QBI deduction is taken after federal AGI; Connecticut has no equivalent."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Connecticut municipalities do not levy local income taxes."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if your 2026 Connecticut income tax after withholding and any pass-through entity tax credit is $1,000 or more and you expect withholding (plus PE tax credit) to be less than your required annual payment (2026 Form CT-1040ES). Not required if you were a resident in 2025 and did not file a 2025 return because you had no Connecticut tax liability.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Required annual payment is the lesser of 90% of 2026 Connecticut income tax or 100% of 2025 Connecticut income tax (12-month return), paid in four 25% installments (66 2/3% for farmers and fishermen). Underpayment interest is 1% per month (Form CT-2210); filing and paying in full by January 31, 2027 removes interest on the January installment. Annualized-income method available.",
+    "form": "Form CT-1040ES (or myconneCT)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$120 Certificate of Organization, including appointment of registered agent (Conn. Gen. Stat. 34-243u(a)(3)).",
+    "annualReportFee": "$80 annual report for an LLC, due every year (Conn. Gen. Stat. 34-243u(a)(15)(B), years on or after July 1, 2020).",
+    "franchiseOrMinimumTax": "None: the $250 business entity tax no longer applies for income years beginning on or after January 1, 2020 (P.A. 19-117; statute text not re-read on 2026-10-22). The pass-through entity tax is elective.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "2026 Form CT-1040ES, Estimated Connecticut Income Tax Payment Coupon for Individuals (Rev. 01/26), incl. 2026 Tax Calculation Schedule Tables A-E - Connecticut DRS",
+      "url": "https://portal.ct.gov/-/media/drs/forms/2025/income/ct1040es-flat0126.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Form CT-1040 TCS, Tax Calculation Schedule (Rev. 12/25) - Connecticut DRS",
+      "url": "https://portal.ct.gov/-/media/drs/forms/2025/income/ct-1040-tcs_1225.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Form CT-1040 Resident Income Tax Return Instructions (12/2025) - Connecticut DRS",
+      "url": "https://portal.ct.gov/-/media/drs/forms/2025/income/2025-ct-1040-instructions_1225.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Connecticut DRS - Individual Income Tax Forms (current year)",
+      "url": "https://portal.ct.gov/drs/drs-forms/current-year-forms/individual-income-tax-forms",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Conn. Gen. Stat. 34-243u - LLC fees payable to the Secretary of the State (Chapter 613a)",
+      "url": "https://www.cga.ct.gov/current/pub/chap_613a.htm#sec_34-243u",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

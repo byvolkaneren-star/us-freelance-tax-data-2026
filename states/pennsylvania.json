@@ -1,0 +1,190 @@
+{
+  "code": "PA",
+  "name": "Pennsylvania",
+  "slug": "pennsylvania",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/pennsylvania",
+  "incomeTax": {
+    "type": "flat",
+    "base": "stateDefinedIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0307
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0307
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0307
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Pennsylvania taxes eight separate classes of income at a flat 3.07%; it has no standard deduction or personal exemption. Business income is PA net profit from PA-40 Schedule C, figured under PA rules rather than federal AGI.",
+      "Losses in one income class cannot offset income in another class (e.g., a business loss cannot offset wages); not modeled.",
+      "Tax Forgiveness credit (PA-40 Schedule SP) can eliminate or reduce tax for low-income households based on eligibility income and family size; not modeled.",
+      "PA allows a few deductions on Schedule O (e.g., HSA and Archer MSA contributions, PA 529 contributions); not modeled.",
+      "Married couples filing jointly are taxed at the same flat rate, so filing status does not change the rate."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "The PA Personal Income Tax Guide states the one-half of self-employment tax the IRS allows may not be deducted for Pennsylvania purposes."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "PA-40 Schedule C instructions say you may not deduct payments for your own personal coverage; Pennsylvania has no self-employed health insurance deduction."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "A self-employed person's contributions to his or her own pension plan (SEP, Keogh/solo 401(k), IRA) are not deductible in figuring PA net profits; only contributions for employees are."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Pennsylvania does not start from federal income and has no QBI deduction."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Nearly every Pennsylvania municipality and school district levies a local Earned Income Tax (EIT) on residents' wages and net profits under Act 511/Act 32. The combined resident rate is usually 1% (statutory default cap split between municipality and school district) but is higher in many places (Act 50 school districts up to 1.5%, Pittsburgh School District up to 2%, and home-rule municipalities are not bound by the cap). Philadelphia residents instead pay the city's Net Profits Tax: 3.735% for tax year 2026 (3.425% non-residents); Philadelphia also imposes the Business Income and Receipts Tax (1.395 mills on gross receipts + 5.65% of net income for 2026, with no $100,000 exemption since 2025; 60% of the net-income portion is credited against Net Profits Tax). Choose Philadelphia in the calculator to include both. A flat Local Services Tax may also apply where you work. Look up your exact rate with DCED's Act 32 address search.",
+    "modeled": {
+      "rate": 0.01,
+      "base": "stateAGI",
+      "label": "Typical local Earned Income Tax (1%, municipality + school district)"
+    },
+    "localities": [
+      {
+        "slug": "philadelphia",
+        "name": "Philadelphia",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Philadelphia Net Profits Tax / Wage Tax",
+            "rate": 0.03735
+          },
+          {
+            "kind": "birt",
+            "label": "Philadelphia Business Income & Receipts Tax",
+            "grossRate": 0.001395,
+            "netRate": 0.0565,
+            "nptCreditShare": 0.6
+          }
+        ],
+        "note": "Replaces the 1% earned income tax used for the rest of Pennsylvania. 2026 resident rates: Net Profits Tax 3.735% of net profits; BIRT 1.395 mills on gross receipts plus 5.65% of net income, with 60% of the net-income portion credited against Net Profits Tax. The $100,000 BIRT exemption no longer applies. Wage Tax is 3.74% until June 30, 2026 and 3.735% after; 3.735% is used for the year.",
+        "sources": [
+          {
+            "title": "Tax Rate History - City of Philadelphia Department of Revenue",
+            "url": "https://www.phila.gov/departments/department-of-revenue/forms-documents/regulations-rulings/tax-rate-history/",
+            "retrieved": "2026-10-23"
+          },
+          {
+            "title": "Business Income & Receipts Tax (BIRT) - City of Philadelphia",
+            "url": "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/business-income-receipts-tax-birt/",
+            "retrieved": "2026-10-23"
+          },
+          {
+            "title": "Net Profits Tax - City of Philadelphia",
+            "url": "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/net-profits-tax/",
+            "retrieved": "2026-10-23"
+          },
+          {
+            "title": "2025 Net Profits Tax return (Worksheet K, 60% BIRT credit) - City of Philadelphia",
+            "url": "https://www.phila.gov/media/20260112134300/2025-fillable-Net-Profits-Tax-NPT-form.pdf",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      }
+    ]
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe at least $430 of PA tax after withholding and credits for 2026 (i.e., $14,000 or more of income not subject to withholding).",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment penalty if timely withholding, credits and estimated payments are at least the smaller of 90% of the 2026 tax or 100% of 2025 net PA taxable income multiplied by 3.07% (full-year 2025 PA-40 filers only).",
+    "form": "PA-40 ES (I) declaration voucher with REV-414 (I) worksheet (or pay online via myPATH)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$125 Certificate of Organization (Pennsylvania Department of State).",
+    "annualReportFee": "$7 annual report for for-profit LLCs, due every year by September 30 (required since 2025).",
+    "franchiseOrMinimumTax": "None. Pennsylvania imposes no franchise, capital stock or minimum tax on sole proprietors or single-member LLCs taxed as disregarded entities.",
+    "grossReceiptsTax": "None statewide for typical freelancers. Philadelphia's Business Income and Receipts Tax (BIRT) applies to businesses operating in Philadelphia (2026: 1.395 mills on gross receipts plus 5.65% of net income; the $100,000 exemption no longer applies, and 60% of the net-income portion is credited against Net Profits Tax)."
+  },
+  "sources": [
+    {
+      "title": "Personal Income Tax - Pennsylvania Department of Revenue",
+      "url": "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/personal-income-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "PA Personal Income Tax Guide - Net Income (Loss) from the Operation of a Business, Profession or Farm (DSM-12) - PA Department of Revenue",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/formsandpublications/papersonalincometaxguide/documents/pitguide_netincomebusprofarm.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "PA-40 Schedule C - Profit or Loss from Business or Profession (with instructions) - PA Department of Revenue",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/formsandpublications/formsforindividuals/pit/documents/pa-40c.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Instructions for Estimating PA Personal Income Tax for Individuals Only (REV-413 (I)) - PA Department of Revenue",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/formsandpublications/formsforindividuals/pit/documents/2026/2026_rev-413i.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Fees and Payments - Pennsylvania Department of State",
+      "url": "https://www.pa.gov/agencies/dos/programs/business/fees-and-payments",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Annual Reports - Pennsylvania Department of State",
+      "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/annual-reports",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Act 32 of 2008 Policy & Procedure Manual (local EIT rate limits) - PA DCED",
+      "url": "https://dced.pa.gov/download/act-32-of-2008-procedure-manual/?wpdmdl=56767",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Rate History - City of Philadelphia Department of Revenue",
+      "url": "https://www.phila.gov/departments/department-of-revenue/forms-documents/regulations-rulings/tax-rate-history/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Net Profits Tax - City of Philadelphia",
+      "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/net-profits-tax/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "code": "OK",
+  "name": "Oklahoma",
+  "slug": "oklahoma",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/oklahoma",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 3750,
+          "rate": 0.025
+        },
+        {
+          "over": 4900,
+          "rate": 0.035
+        },
+        {
+          "over": 7200,
+          "rate": 0.045
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 7500,
+          "rate": 0.025
+        },
+        {
+          "over": 9800,
+          "rate": 0.035
+        },
+        {
+          "over": 14400,
+          "rate": 0.045
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 7500,
+          "rate": 0.025
+        },
+        {
+          "over": 9800,
+          "rate": 0.035
+        },
+        {
+          "over": 14400,
+          "rate": 0.045
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 6350,
+      "mfj": 12700,
+      "hoh": 9350
+    },
+    "personalExemption": {
+      "single": 1000,
+      "mfj": 2000,
+      "hoh": 1000
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 brackets and rates are from 68 O.S. § 2355(D) as amended by HB 2764 (2025): 0% / 2.5% / 3.5% / 4.5%; heads of household use the married-filing-jointly schedule.",
+      "HB 2764 allows further 0.25-point rate cuts when the State Board of Equalization certifies revenue growth; the earliest possible cut takes effect January 1, 2027, so 2026 rates are unaffected.",
+      "Standard deduction ($6,350 / $12,700 / $9,350) and $1,000 personal exemption are fixed in statute (not indexed); dollar figures were confirmed in the 2025 Form 511 instructions because 2026 forms are not yet published.",
+      "Oklahoma itemized deductions are capped at $17,000 (excluding charitable and medical) and require federal itemizing; not modeled.",
+      "Dependent exemptions, additional exemptions for age 65+/blind, the Oklahoma child tax credit, EITC, sales tax relief credit and other credits are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Oklahoma starts from federal AGI, so the deductible half of SE tax flows through with no add-back."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The federal self-employed health insurance deduction is included in federal AGI and is not added back."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted for federal AGI carry through to Oklahoma."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The QBI deduction is taken below federal AGI, so it does not reduce Oklahoma income."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Oklahoma cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect Oklahoma tax to exceed withholding by $500 or more.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment interest if timely withholding and estimated payments total at least 70% of the 2026 tax liability or 100% of the 2025 tax liability. Farmers (at least two-thirds of gross income from farming) are exempt.",
+    "form": "Form OW-8-ES (or pay online through OkTAP)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 Articles of Organization (Oklahoma Secretary of State, 18 O.S. § 2055).",
+    "annualReportFee": "$25 annual certificate, due every year on the anniversary of formation (18 O.S. § 2055.2).",
+    "franchiseOrMinimumTax": "None. Oklahoma's franchise tax was repealed starting with tax year 2024 (HB 1039X, 2023), and LLCs were not subject to it before.",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Enrolled HB 2764 (2025), amending 68 O.S. § 2355 - Oklahoma Legislature",
+      "url": "https://www.oklegislature.gov/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Oklahoma Resident Individual Income Tax Forms and Instructions (Form 511 packet) - Oklahoma Tax Commission",
+      "url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/511-Pkt.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Form OW-8-ES, Oklahoma Individual Estimated Tax, Tax Year 2026 - Oklahoma Tax Commission",
+      "url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/OW-8-ES.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Fees - Oklahoma Secretary of State",
+      "url": "https://www.sos.ok.gov/business/fees.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Franchise Tax Ends in Oklahoma - Oklahoma Tax Commission newsroom",
+      "url": "https://oklahoma.gov/tax/newsroom/2023/07-26-23.html",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

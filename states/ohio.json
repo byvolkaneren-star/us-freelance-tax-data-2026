@@ -1,0 +1,292 @@
+{
+  "code": "OH",
+  "name": "Ohio",
+  "slug": "ohio",
+  "taxYear": 2026,
+  "lastVerified": "2026-11-09",
+  "page": "https://hourfloor.com/states/ohio",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 26050,
+          "rate": 0.0275
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 26050,
+          "rate": 0.0275
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 26050,
+          "rate": 0.0275
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 1900,
+      "mfj": 3800,
+      "hoh": 1900
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Ohio business income deduction (modeled): the first $250,000 of business income (Schedule C net profit) is deducted, and business income above $250,000 is taxed at a flat 3%, outside the regular brackets. For most freelancers this means no Ohio income tax on self-employment profit.",
+      "2026 nonbusiness schedule under R.C. 5747.02(A)(3)(c) as amended by H.B. 96: $0 on Ohio taxable nonbusiness income up to $26,050; above $26,050 the tax is $332 plus 2.75% of the excess (modeled). Business income is handled by the business income deduction above.",
+      "Discrepancy flag: the Ohio Department of Taxation's 2026 IT 1040ES worksheet still prints the 2025-style schedule ($342 + 2.75% to $100,000; 3.125% above). The flat 2.75% for 2026 is taken from the statute/H.B. 96; ODT's final 2026 IT 1040 instructions were not available on 2026-10-22 and should be checked.",
+      "Personal exemption depends on modified AGI (indexing suspended for 2025-2026 by H.B. 96): $2,400 (MAGI <= $40,000), $2,150 ($40,001-$80,000), $1,900 ($80,001 up to the cap), $0 at MAGI of $500,000 or more for 2026. $1,900 per taxpayer/spouse is used here; dependents not modeled.",
+      "Credits not modeled: joint filer credit, $20 exemption credit, nonrefundable credits based on MAGI, retirement/senior credits, earned income credit, credit for taxes paid to other states, and Ohio's own self-employed health insurance/medical deduction rules (Ohio Schedule of Adjustments line 44)."
+    ],
+    "businessIncomeDeduction": {
+      "amount": {
+        "single": 250000,
+        "mfj": 250000,
+        "hoh": 250000
+      },
+      "excessFlatRate": 0.03
+    },
+    "fixedAmountOver": {
+      "over": 26050,
+      "amount": 332
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Ohio starts from federal AGI, which already reflects the deductible half of SE tax (it reduces nonbusiness income because business income is measured from Schedule C net profit)."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI; Ohio's separate unreimbursed health-care deduction must be reduced by the federal SE health insurance deduction to avoid double counting."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP/solo 401(k) deductions in federal AGI flow through; no Ohio add-back."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is not in Ohio's federal-AGI starting point; Ohio instead has its own $250,000 business income deduction and 3% flat rate (see notes)."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Most Ohio cities and villages levy a municipal income tax (commonly about 1%-2.5%, some higher) on wages and on net profits of self-employed residents and businesses operating there, filed with the city or a collection agency (RITA/CCA). Many school districts also levy a school district income tax (SD 100) on residents: 'traditional base' districts tax Ohio taxable income, 'earned income base' districts tax wages and self-employment income. Rates and coverage vary by address, so neither is modeled.",
+    "localities": [
+      {
+        "slug": "columbus",
+        "name": "Columbus",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Columbus municipal income tax",
+            "rate": 0.025
+          }
+        ],
+        "note": "Columbus taxes residents' wages and net profits at 2.50% and gives a 100% credit (up to 2.50%) for tax paid to the city where you work. School district income taxes are not included.",
+        "sources": [
+          {
+            "title": "Ohio municipal income tax rates (Tax Municipalities list) - City of Columbus Income Tax Division",
+            "url": "https://municipalities.columbus.gov/PrintAllMunis.aspx",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "slug": "cleveland",
+        "name": "Cleveland",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Cleveland municipal income tax",
+            "rate": 0.025
+          }
+        ],
+        "note": "Cleveland taxes residents' wages and net profits at 2.50% and gives a 100% credit (up to 2.50%) for tax paid to the city where you work. School district income taxes are not included.",
+        "sources": [
+          {
+            "title": "Ohio municipal income tax rates (Tax Municipalities list) - City of Columbus Income Tax Division",
+            "url": "https://municipalities.columbus.gov/PrintAllMunis.aspx",
+            "retrieved": "2026-10-23"
+          },
+          {
+            "title": "Tax Rates - Central Collection Agency (Cleveland)",
+            "url": "https://www.ccaohio.gov/tax-rates",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "slug": "cincinnati",
+        "name": "Cincinnati",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Cincinnati municipal income tax",
+            "rate": 0.018
+          }
+        ],
+        "note": "Cincinnati taxes residents' wages and net profits at 1.80% and gives a 100% credit (up to 1.80%) for tax paid to the city where you work. School district income taxes are not included.",
+        "sources": [
+          {
+            "title": "Ohio municipal income tax rates (Tax Municipalities list) - City of Columbus Income Tax Division",
+            "url": "https://municipalities.columbus.gov/PrintAllMunis.aspx",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "slug": "toledo",
+        "name": "Toledo",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Toledo municipal income tax",
+            "rate": 0.025
+          }
+        ],
+        "note": "Toledo taxes residents' wages and net profits at 2.50% and gives a 100% credit (up to 2.50%) for tax paid to the city where you work. School district income taxes are not included.",
+        "sources": [
+          {
+            "title": "Ohio municipal income tax rates (Tax Municipalities list) - City of Columbus Income Tax Division",
+            "url": "https://municipalities.columbus.gov/PrintAllMunis.aspx",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "slug": "akron",
+        "name": "Akron",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Akron municipal income tax",
+            "rate": 0.025
+          }
+        ],
+        "note": "Akron taxes residents' wages and net profits at 2.50% and gives a 100% credit (up to 2.50%) for tax paid to the city where you work. School district income taxes are not included.",
+        "sources": [
+          {
+            "title": "Ohio municipal income tax rates (Tax Municipalities list) - City of Columbus Income Tax Division",
+            "url": "https://municipalities.columbus.gov/PrintAllMunis.aspx",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "slug": "dayton",
+        "name": "Dayton",
+        "components": [
+          {
+            "kind": "earnings",
+            "label": "Dayton municipal income tax",
+            "rate": 0.025
+          }
+        ],
+        "note": "Dayton taxes residents' wages and net profits at 2.50% and gives a 100% credit (up to 2.50%) for tax paid to the city where you work. School district income taxes are not included.",
+        "sources": [
+          {
+            "title": "Ohio municipal income tax rates (Tax Municipalities list) - City of Columbus Income Tax Division",
+            "url": "https://municipalities.columbus.gov/PrintAllMunis.aspx",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      }
+    ]
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Estimated Ohio tax liability (total tax minus credits) less Ohio withholding of more than $500",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Required installments are based on the lesser of 90% of the 2026 Ohio tax or 100% of the 2025 Ohio tax (IT 1040ES worksheet lines 9-11); interest penalty computed on IT/SD 2210. School district tax estimates are separate (SD 100ES).",
+    "form": "IT 1040ES worksheet; pay with the Ohio Universal Payment Coupon (OUPC) for 2026"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$99 Articles of Organization (Ohio Secretary of State Form 610).",
+    "annualReportFee": "None - Ohio does not require LLC annual reports.",
+    "franchiseOrMinimumTax": "None (Ohio's corporate franchise tax was replaced by the CAT).",
+    "grossReceiptsTax": "Commercial Activity Tax (CAT) applies only to Ohio taxable gross receipts above $6,000,000 per year (tax years 2025 onward) at 0.26%; businesses below $6 million do not file or pay. Not relevant to a typical freelancer."
+  },
+  "sources": [
+    {
+      "title": "Ohio Department of Taxation - 2025 IT 1040 Instructions booklet (business income deduction, exemption table)",
+      "url": "https://dam.assets.ohio.gov/image/upload/v1767095693/tax.ohio.gov/forms/ohio_individual/individual/2025/it1040-booklet.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Ohio Department of Taxation - 2026 Ohio Estimated Income Tax Payment Worksheet (IT 1040ES)",
+      "url": "https://dam.assets.ohio.gov/image/upload/v1735926006/tax.ohio.gov/forms/ohio_individual/individual/2026/ites-instructions-fi.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Ohio Department of Taxation - Annual Tax Rates",
+      "url": "https://tax.ohio.gov/individual/file-now/annual-tax-rates",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Ohio Revised Code 5747.02 - Tax rates (as amended by H.B. 96)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-5747.02",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Ohio Department of Taxation - Commercial Activity Tax",
+      "url": "https://tax.ohio.gov/business/ohio-business-taxes/commercial-activities",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Ohio Secretary of State - Form 610 Articles of Organization (Domestic LLC)",
+      "url": "https://www.ohiosos.gov/assets/610.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "General Income Tax Information - City of Columbus Income Tax Division",
+      "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/General-Income-Tax-Information",
+      "retrieved": "2026-11-09"
+    },
+    {
+      "title": "Tax Rates - Central Collection Agency (Cleveland)",
+      "url": "https://www.ccaohio.gov/tax-rates",
+      "retrieved": "2026-11-09"
+    },
+    {
+      "title": "Municipal Net Profit Tax - Ohio Department of Taxation",
+      "url": "https://tax.ohio.gov/business/municipal-net-profit-tax",
+      "retrieved": "2026-11-09"
+    },
+    {
+      "title": "Income - School District Tax FAQs - Ohio Department of Taxation",
+      "url": "https://tax.ohio.gov/help-center/faqs/income-school-district/income-school-district",
+      "retrieved": "2026-11-09"
+    }
+  ]
+}

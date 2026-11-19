@@ -1,0 +1,213 @@
+{
+  "code": "AR",
+  "name": "Arkansas",
+  "slug": "arkansas",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/arkansas",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "stateDefinedIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 5600,
+          "rate": 0.02
+        },
+        {
+          "over": 11200,
+          "rate": 0.03
+        },
+        {
+          "over": 16000,
+          "rate": 0.034
+        },
+        {
+          "over": 26400,
+          "rate": 0.037
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 5600,
+          "rate": 0.02
+        },
+        {
+          "over": 11200,
+          "rate": 0.03
+        },
+        {
+          "over": 16000,
+          "rate": 0.034
+        },
+        {
+          "over": 26400,
+          "rate": 0.037
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 5600,
+          "rate": 0.02
+        },
+        {
+          "over": 11200,
+          "rate": 0.03
+        },
+        {
+          "over": 16000,
+          "rate": 0.034
+        },
+        {
+          "over": 26400,
+          "rate": 0.037
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 2470,
+      "mfj": 4940,
+      "hoh": 2470
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 29,
+      "mfj": 58,
+      "hoh": 58
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Act 1 (HB1001) and Act 2 (SB1) of the 2026 First Extraordinary Session, signed May 6, 2026, cut the top individual rate from 3.9% to 3.7% for tax year 2026 and later. DFA's HB1001 fiscal impact statement gives the 2026 standard income table: 0% to $5,599, 2% $5,600-$11,199, 3% $11,200-$15,999, 3.4% $16,000-$26,399, 3.7% $26,400-$94,700. DFA had not posted official 2026 tax tables when checked (the 2026 AR1000ES worksheet still shows the pre-cut 3.9% schedule).",
+      "Arkansas uses the same rate table for every filing status (joint filers apply it to combined income or may file separately on the same return).",
+      "Above $94,700 of net taxable income Arkansas uses the upper income table (2026: 2% on the first $4,700 and 3.7% above, i.e. tax = 3.7% x NTI - $79.90 once NTI exceeds $97,600), with bracket adjustments phasing it in between $94,701 and $97,600. Modeled as a recapture of the lower brackets' benefit phased in over $2,900 of NTI (state AGI thresholds assume the $2,470-per-taxpayer standard deduction); the model then taxes all NTI at 3.7%, overstating tax by about $80 above $97,600 of NTI.",
+      "Low-income tax tables (which can reduce tax to zero for low incomes) are not modeled.",
+      "Standard deduction ($2,470 per taxpayer) is the 2025 figure; DFA's 2026 AR1000ES worksheet also uses $2,470. Personal tax credits are $29 per taxpayer ($58 for joint and head of household); dependent, age 65+, blind and deaf credits of $29 each are not modeled.",
+      "Arkansas does not allow the deductible half of self-employment tax."
+    ],
+    "taxBenefitRecapture": {
+      "single": {
+        "agiStart": 97170,
+        "phaseRange": 2900,
+        "offset": 79.9
+      },
+      "mfj": {
+        "agiStart": 99640,
+        "phaseRange": 2900,
+        "offset": 79.9
+      },
+      "hoh": {
+        "agiStart": 97170,
+        "phaseRange": 2900,
+        "offset": 79.9
+      }
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Arkansas computes its own AGI; the AR1000ADJ adjustment list does not include the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Self-employed health insurance deduction is an allowed adjustment on Form AR1000ADJ."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "KEOGH, self-employed SEP and SIMPLE plan contributions are allowed adjustments on Form AR1000ADJ."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Arkansas does not start from federal taxable income and has no QBI deduction."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Arkansas cities and counties do not levy local income taxes."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you can reasonably expect 2026 Arkansas tax after credits and withholding to be more than $1,000.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Estimated payments must be at least 90% of the tax actually due; otherwise a 10% per-annum underestimate penalty applies. The penalty is computed on the lesser of the current year's or the previous year's tax liability (Form AR2210).",
+    "form": "Form AR1000ES (Estimated Tax Declaration Vouchers)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$45 online ($50 paper) Certificate of Organization (Form LL-01), Arkansas Secretary of State.",
+    "annualReportFee": "$150 Annual LLC Franchise Tax Report, due every year on or before May 1 (first report due May 1 of the year after formation).",
+    "franchiseOrMinimumTax": "The $150 annual LLC franchise tax (paid with the annual report) is the only entity-level charge for an LLC.",
+    "grossReceiptsTax": "None on income. Arkansas's 'gross receipts tax' is its sales tax, which applies to tangible goods and specifically enumerated services only."
+  },
+  "sources": [
+    {
+      "title": "State of Arkansas Indexed Tax Brackets, Tax Year 2025 - Arkansas DFA",
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025_TaxBrackets.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 AR1000F and AR1000NR Instructions - Arkansas DFA",
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025_AR1000F_and_AR1000NR_Instructions.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Estimated Tax Declaration Vouchers (AR1000ES) - Arkansas DFA",
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2026_Final_AR1000ES_1.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Fiscal Impact Statement, HB1001 (2026 First Extraordinary Session) - Arkansas DFA",
+      "url": "https://arkleg.state.ar.us/Home/FTPDocument?path=%2FAssembly%2F2025%2F2026S1%2FFiscal+Impacts%2FHB1001-DFA1.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Cuts Passed in Special Session - Arkansas House of Representatives",
+      "url": "https://www.arkansashouse.org/news/post/35262/tax-cuts-passed-in-special-session/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Daily Summary for Tuesday, May 5, 2026 - Arkansas House of Representatives",
+      "url": "https://www.arkansashouse.org/news/post/35260/daily-summary-for-tuesday-may-5-2026/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Senate Meets for Special Session to Lower State Income Tax - Arkansas Senate",
+      "url": "https://senate.arkansas.gov/senate-news/posts/2026/05/special-session-2026/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Bills Signed: HB1001, SB1 - Office of the Governor of Arkansas",
+      "url": "https://governor.arkansas.gov/news_post/bills-signed-hb1001-sb1/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LLC Forms/Fees - Arkansas Secretary of State",
+      "url": "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Annual LLC Franchise Tax Report 2025 - Arkansas Secretary of State",
+      "url": "https://www.sos.arkansas.gov/uploads/bcs/LLC1_FT_2025.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

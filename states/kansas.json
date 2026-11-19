@@ -1,0 +1,152 @@
+{
+  "code": "KS",
+  "name": "Kansas",
+  "slug": "kansas",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/kansas",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.052
+        },
+        {
+          "over": 23000,
+          "rate": 0.0558
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.052
+        },
+        {
+          "over": 46000,
+          "rate": 0.0558
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.052
+        },
+        {
+          "over": 23000,
+          "rate": 0.0558
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 3605,
+      "mfj": 8240,
+      "hoh": 6180
+    },
+    "personalExemption": {
+      "single": 9160,
+      "mfj": 18320,
+      "hoh": 11480
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 tax computation schedules (Form K-40ES 2026): 5.2% up to $23,000 (single/HoH/MFS) or $46,000 (MFJ), 5.58% above.",
+      "Standard deduction $3,605 single, $8,240 MFJ, $6,180 HoH (K.S.A. 79-32,119; same on the 2026 K-40ES chart). Exemption $9,160 single/HoH and $18,320 MFJ, plus an extra $2,320 for head of household (K.S.A. 79-32,121 / 79-32,121b, fixed amounts for 2025 and later, not indexed; TY2025 K-40 instructions apply the HoH extra $2,320).",
+      "Not modeled: $2,320 dependent exemptions, higher standard deduction for age 65+/blind, itemized deductions, Kansas modifications on Schedule S (e.g., Social Security/retirement subtractions), food sales and other credits."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Kansas AGI starts from federal AGI."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below AGI; Kansas applies its own standard deduction and exemptions instead."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Kansas cities and counties do not levy a local earned-income tax on individuals."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if your estimated Kansas tax after withholding and credits is $500 or more and withholding/credits may be less than the smaller of 90% of 2026 tax or 100% of 2025 tax.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No penalty if each payment is timely and total payments/credits are at least 90% of 2026 tax, or at least 100% of the 2025 tax (12-month return with a liability), or 90% of annualized-income tax (Schedule K-210). The Jan 15 installment is not required if the 2026 return is filed and paid in full by Jan 31, 2027.",
+    "form": "Form K-40ES"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$85 online or $90 on paper for Articles of Organization (Form DL instructions rev. 2/27/26).",
+    "annualReportFee": "Information Report every two years (biennial, due April 15 of the odd or even year matching formation year): $90 online or $110 on paper.",
+    "franchiseOrMinimumTax": "None.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "Kansas DOR - 2026 Individual Estimated Tax K-40ES (fetched via r.jina.ai)",
+      "url": "https://www.ksrevenue.gov/pdf/k-40es26.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kansas DOR - 2025 Individual Income Tax Instructions IP25",
+      "url": "https://www.ksrevenue.gov/pdf/ip25.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kansas DOR - Individual Income Tax",
+      "url": "https://www.ksrevenue.gov/perstaxtypesii.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "K.S.A. 79-32,119 - Kansas standard deduction",
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch79/079_032_0119.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "K.S.A. 79-32,121 - Kansas personal exemptions",
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch79/079_032_0121.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "K.S.A. 79-32,121b - Kansas exemptions (head of household extra exemption)",
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch79/079_032_0121b.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kansas Secretary of State - Articles of Organization (DL) instructions",
+      "url": "https://sos.ks.gov/forms/business_services/DL.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kansas Secretary of State - Information Report (ILC) instructions",
+      "url": "https://sos.ks.gov/forms/business_services/ILC.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Kansas Secretary of State - Information Reports",
+      "url": "https://sos.ks.gov/businesses/information-reports.html",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "code": "ME",
+  "name": "Maine",
+  "slug": "maine",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/maine",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.058
+        },
+        {
+          "over": 27400,
+          "rate": 0.0675
+        },
+        {
+          "over": 64850,
+          "rate": 0.0715
+        },
+        {
+          "over": 1000000,
+          "rate": 0.0915
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.058
+        },
+        {
+          "over": 54850,
+          "rate": 0.0675
+        },
+        {
+          "over": 129750,
+          "rate": 0.0715
+        },
+        {
+          "over": 1500000,
+          "rate": 0.0915
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.058
+        },
+        {
+          "over": 41100,
+          "rate": 0.0675
+        },
+        {
+          "over": 97300,
+          "rate": 0.0715
+        },
+        {
+          "over": 1500000,
+          "rate": 0.0915
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 15700,
+      "mfj": 31400,
+      "hoh": 23550
+    },
+    "personalExemption": {
+      "single": 5300,
+      "mfj": 10600,
+      "hoh": 5300
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 rate schedules (revised May 20, 2026) from Maine Revenue Services; top bracket includes the new 2% income tax surcharge (36 M.R.S. 5111(7)) on Maine taxable income over $1,000,000 single, $750,000 married filing separately, $1,500,000 joint/HoH, folded in as 7.15% + 2% = 9.15%.",
+      "Standard deduction phases out for Maine AGI over $102,250 single/MFS, $153,400 HoH, $204,550 joint, fully gone over a $75,000/$112,500/$150,000 range. Modeled.",
+      "Personal exemption ($5,300 each for taxpayer and spouse) phases out for Maine AGI over $341,000 single, $375,050 HoH, $409,150 joint over a $125,000 range. Modeled.",
+      "Not modeled: Maine income modifications (pension deduction, decoupling add-backs for bonus/qualified production property depreciation and R&E expensing), dependent exemption credit, property tax fairness credit, sales tax fairness credit, Maine EITC, and the 2026 affordability-payment subtraction.",
+      "Maine conforms to the IRC as amended through Dec 31, 2025 (P.L. 2025, c. 650, Pt. K)."
+    ],
+    "standardDeductionPhaseout": {
+      "single": [
+        {
+          "from": 102250,
+          "ref": 102250,
+          "base": 15700,
+          "rate": 0.20933333333333334
+        }
+      ],
+      "hoh": [
+        {
+          "from": 153400,
+          "ref": 153400,
+          "base": 23550,
+          "rate": 0.20933333333333334
+        }
+      ],
+      "mfj": [
+        {
+          "from": 204550,
+          "ref": 204550,
+          "base": 31400,
+          "rate": 0.20933333333333334
+        }
+      ]
+    },
+    "personalExemptionPhaseout": {
+      "single": [
+        {
+          "from": 341000,
+          "ref": 341000,
+          "base": 5300,
+          "rate": 0.0424
+        }
+      ],
+      "hoh": [
+        {
+          "from": 375050,
+          "ref": 375050,
+          "base": 5300,
+          "rate": 0.0424
+        }
+      ],
+      "mfj": [
+        {
+          "from": 409150,
+          "ref": 409150,
+          "base": 10600,
+          "rate": 0.0848
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Maine starts from federal AGI, so the deductible half of SE tax (an above-the-line federal adjustment) is already excluded."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are above-the-line federal adjustments inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it does not reduce the state base."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Maine municipalities do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Estimated Maine income tax, after withholding and allowable credits, of $1,000 or more (and prior-year liability also $1,000 or more)",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Pay at least the smaller of 100% of the prior year's tax (if the prior year was 12 months) or 90% of the current year's tax. Special rule: 'unusual event income' ($500,000+ increase over the same period of the prior year) requires 90% of the tax on that income and cannot use the prior-year rule.",
+    "form": "Form 1040ES-ME"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$175 Certificate of Formation (31 M.R.S. 1680)",
+    "annualReportFee": "$85 domestic LLC annual report, due June 1 every year (31 M.R.S. 1680)",
+    "franchiseOrMinimumTax": "None for LLCs and sole proprietors (Maine's franchise tax applies to financial institutions)",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Maine Revenue Services - 2026 Individual Income Tax Rates (revised May 20, 2026)",
+      "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/2026-05/ind_tax_rate_sched_2026_rev.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Maine Revenue Services - 2026 Session Legislation Enacted",
+      "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/legischange26.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Maine Revenue Services - 2026 Form 1040ES-ME and instructions",
+      "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_1040es_fillable.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Maine Revenue Services - 2026 Phaseout of Itemized/Standard Deductions Worksheet",
+      "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_item_stand_%20ded_phaseout_wksht_0.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Maine Revenue Services - 2026 Phaseout of Personal Exemption Worksheet",
+      "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_1040es_pers_exempt_phaseout_wksht.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Maine Revenue Services - 2026 Withholding Tables (August 2026)",
+      "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_wh_tab_instr_August2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "31 M.R.S. 1680 - LLC filing fees",
+      "url": "https://legislature.maine.gov/statutes/31/title31sec1680.html",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

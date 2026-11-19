@@ -1,0 +1,131 @@
+{
+  "code": "AZ",
+  "name": "Arizona",
+  "slug": "arizona",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/arizona",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.025
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.025
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.025
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 16100,
+      "mfj": 32200,
+      "hoh": 24150
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Flat 2.5% rate on all Arizona taxable income since tax year 2023 (A.R.S. 43-1011; JLBC Tax Handbook).",
+      "Standard deduction: A.R.S. 43-1041(A) sets $15,750 / $31,500 / $23,625 for 2025, and subsection H requires ADOR to index it each year in the same manner as the federal basic standard deduction under IRC 63, so the 2026 amounts equal the federal 2026 basic standard deduction ($16,100 / $32,200 / $24,150, Rev. Proc. 2025-32). ADOR's 2026 publication could not be retrieved (azdor.gov blocked).",
+      "Arizona has no personal exemption; the $100/$25 dependent tax credit, the additional standard deduction for charitable contributions (2026+: 100% of contributions, capped at $1,000 single / $2,000 joint), age 65+/blind exemptions and other credits are not modeled.",
+      "HB 4168 (signed June 13, 2026) updated Arizona's IRC conformity date to January 1, 2026, with departures (e.g., bonus depreciation addback and a $10,000 SALT itemized cap from 2026); itemized deductions are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Arizona starts from federal AGI, which already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted in federal AGI carry through to Arizona."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI and Arizona has no equivalent, so it does not reduce Arizona taxable income."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Arizona cities and counties do not levy local income taxes."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if Arizona gross income exceeded $75,000 ($150,000 joint) in 2025 and is expected to exceed $75,000 ($150,000 joint) in 2026. No penalty if the 2026 balance due after withholding and credits is under $1,000.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Installments must total, with withholding, at least 90% of 2026 tax or 100% of 2025 tax (A.R.S. 43-581); exceptions under IRC 6654 also apply.",
+    "form": "Arizona Form 140ES (or AZTaxes.gov)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$50 Articles of Organization with the Arizona Corporation Commission ($85 with expedited processing).",
+    "annualReportFee": "None: Arizona LLCs do not file annual reports (only corporations do).",
+    "franchiseOrMinimumTax": "None.",
+    "grossReceiptsTax": "Arizona Transaction Privilege Tax (TPT) applies only to specific business classifications (retail, restaurants, contracting, rentals, etc.). Services not included in one of the TPT classifications are not subject to TPT (JLBC Tax Handbook), so a typical freelance service business owes none; city TPT rules can differ."
+  },
+  "sources": [
+    {
+      "title": "A.R.S. 43-1041 Standard deduction - Arizona Legislature",
+      "url": "https://www.azleg.gov/ars/43/01041.htm",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "A.R.S. 43-581 Payment of estimated tax - Arizona Legislature",
+      "url": "https://www.azleg.gov/ars/43/00581.htm",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "A.R.S. 43-1011 Taxes and tax rates - Arizona Legislature",
+      "url": "https://www.azleg.gov/ars/43/01011.htm",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "State of Arizona 2025 Tax Handbook - Joint Legislative Budget Committee",
+      "url": "https://www.azjlbc.gov/revenues/25taxbk.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Schedule of Fees, Limited Liability Companies - Arizona Corporation Commission",
+      "url": "https://azcc.gov/docs/default-source/corps-files/fee-schedules/fee-schedule-llcs.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Services FAQs - Arizona Corporation Commission",
+      "url": "https://azcc.gov/faqs/BusinessServicesFAQs",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Rev. Proc. 2025-32 (2026 inflation adjustments, basic standard deduction) - IRS",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "code": "CO",
+  "name": "Colorado",
+  "slug": "colorado",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/colorado",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalTaxableIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.044
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.044
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.044
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Flat 4.4% rate for tax year 2026 (DOR 2026 DR 0104EP worksheet). The TABOR-triggered temporary rate reduction does not apply to 2026.",
+      "Colorado starts from federal taxable income, so the federal standard (or itemized) deduction is already applied; Colorado standard deduction and personal exemption are therefore 0 here.",
+      "For tax years 2026 and later, taxpayers with federal AGI over $300,000 must add back federal standard or itemized deductions in excess of $1,000 (single) / $2,000 (joint). This addback is not modeled, so tax is understated above $300,000 AGI.",
+      "Taxpayers with AGI over $500,000 (single) or $1,000,000 (joint) must add back the federal QBI deduction (made permanent from 2026 by HB25B-1001); not modeled.",
+      "Colorado subtractions (e.g., state income tax refunds, pension/Social Security subtraction), credits (e.g., Colorado EITC and child tax credit) and Colorado AMT are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: federal taxable income already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal taxable income."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal taxable income."
+    },
+    "qbi": {
+      "allowed": true,
+      "note": "Federal taxable income is after the QBI deduction, so Colorado keeps it, except single filers with AGI over $500,000 and joint filers over $1,000,000 must add it back."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No Colorado locality taxes income. Several cities (e.g., Denver) levy flat monthly occupational privilege (head) taxes on workers and businesses, which are not income-based and are not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe more than $1,000 of Colorado net tax for 2026 after withholding and credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Required annual payment is the smaller of 70% of 2026 net Colorado tax or 100% of 2025 net Colorado tax (110% if 2025 federal AGI exceeded $150,000, or $75,000 MFS); the prior-year method requires a full 12-month 2025 Colorado return.",
+    "form": "Form DR 0104EP (or Revenue Online)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$50 Articles of Organization (online only), Colorado Secretary of State.",
+    "annualReportFee": "$25 Periodic Report, filed every year ($50 late penalty).",
+    "franchiseOrMinimumTax": "None.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "2026 DR 0104EP Individual Estimated Income Tax Payment Form - Colorado Department of Revenue",
+      "url": "https://tax.colorado.gov/sites/default/files/documents/DR_0104EP_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Individual Income Tax Guide - Colorado Department of Revenue",
+      "url": "https://tax.colorado.gov/individual-income-tax-guide",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "HB25B-1001 Qualified Business Income Deduction Add-Back - Colorado General Assembly",
+      "url": "https://www.leg.colorado.gov/bills/hb25b-1001",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Organizations Fee Schedule - Colorado Secretary of State",
+      "url": "https://www.sos.state.co.us/pubs/info_center/fees/business.html",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

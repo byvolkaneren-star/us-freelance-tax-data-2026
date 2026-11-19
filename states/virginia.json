@@ -1,0 +1,198 @@
+{
+  "code": "VA",
+  "name": "Virginia",
+  "slug": "virginia",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/virginia",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 3000,
+          "rate": 0.03
+        },
+        {
+          "over": 5000,
+          "rate": 0.05
+        },
+        {
+          "over": 17000,
+          "rate": 0.0575
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 3000,
+          "rate": 0.03
+        },
+        {
+          "over": 5000,
+          "rate": 0.05
+        },
+        {
+          "over": 17000,
+          "rate": 0.0575
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 3000,
+          "rate": 0.03
+        },
+        {
+          "over": 5000,
+          "rate": 0.05
+        },
+        {
+          "over": 17000,
+          "rate": 0.0575
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 8750,
+      "mfj": 17500,
+      "hoh": 8750
+    },
+    "personalExemption": {
+      "single": 930,
+      "mfj": 1860,
+      "hoh": 930
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Brackets (Va. Code § 58.1-320) are the same for every filing status and are not indexed: 2% to $3,000, 3% to $5,000, 5% to $17,000, 5.75% above $17,000.",
+      "Standard deduction for taxable years 2025 and 2026 is $8,750 single / $17,500 married (Va. Code § 58.1-322.03(1)(b)(v)); head of household uses the single amount. It rises to $9,200/$18,400 for 2027 and $9,300/$18,600 for 2028-2029.",
+      "The Virginia standard deduction is only allowed if the taxpayer did not itemize on the federal return; itemizers must use federal itemized deductions (minus state income taxes) instead. Not modeled.",
+      "Personal exemption is $930 per federal personal exemption (dependents also get $930 each, not modeled); additional $800 for each taxpayer age 65+ or blind, and the $12,000 age deduction (phased out by income), are not modeled.",
+      "Not modeled: spouse tax adjustment for two-earner married couples filing jointly, low-income/earned income credits, Virginia additions/subtractions (Virginia now uses fixed IRC conformity as of December 31, 2025 with deconformity from IRC §168(n), §174A and the §179 increases), and credit for taxes paid to other states."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Virginia starts from federal AGI, which already reflects the deduction for one-half of self-employment tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment included in federal AGI, Virginia's starting point."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions for the self-employed reduce federal AGI and therefore Virginia income."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it never enters Virginia's AGI-based computation."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No local income taxes. Many Virginia localities impose a Business, Professional and Occupational License (BPOL) tax on gross receipts and local business license fees, which vary by locality and are not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "For taxable years beginning on and after January 1, 2026, estimated payments are required if Virginia tax after withholding and credits is expected to be more than $1,000 (was $150 for 2025). Not required if Virginia AGI is under $11,950 (single) or $23,900 (MFJ).",
+    "dueDates": [
+      "2026-05-01",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment penalty if timely payments are at least the lesser of 90% of the current-year tax or 100% of the prior-year tax (prior year must be a 12-month year with a liability), or the annualized-income installment; also no penalty if total installment underpayments are $1,000 or less (Form 760ES; Va. Code § 58.1-492). No 110% rule. The January 15 payment is not required if the 2026 return is filed and paid in full by March 1, 2027.",
+    "form": "Form 760ES (Virginia Estimated Income Tax Payment Vouchers for Individuals)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 (Articles of Organization filed with the State Corporation Commission, Va. Code § 13.1-1005).",
+    "annualReportFee": "$50 annual registration fee, due by the last day of the LLC's formation month each year ($25 penalty if late) (Va. Code § 13.1-1062); no separate annual report.",
+    "franchiseOrMinimumTax": "None (no franchise tax or minimum income tax for individuals or single-member LLCs).",
+    "grossReceiptsTax": "No state gross receipts tax. Local BPOL (Business, Professional and Occupational License) taxes on gross receipts apply in many cities and counties; rates and thresholds vary by locality."
+  },
+  "sources": [
+    {
+      "title": "Code of Virginia § 58.1-320 – Imposition of tax (rates)",
+      "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-320/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Code of Virginia § 58.1-322.03 – Virginia taxable income; deductions (standard deduction, personal exemption)",
+      "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-322.03/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Code of Virginia § 58.1-490 – Declarations of estimated tax",
+      "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-490/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Code of Virginia § 58.1-492 – Failure by individual to pay estimated tax",
+      "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-492/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Code of Virginia § 13.1-1005 – LLC fees",
+      "url": "https://law.lis.virginia.gov/vacode/title13.1/chapter12/section13.1-1005/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Code of Virginia § 13.1-1062 – LLC annual registration fees",
+      "url": "https://law.lis.virginia.gov/vacode/title13.1/chapter12/section13.1-1062/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia Tax – 2026 Form 760ES Estimated Income Tax Payment Vouchers",
+      "url": "https://www.tax.virginia.gov/sites/default/files/taxforms/individual-income-tax/2026/760es-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia Tax – 2025 Form 760 Resident Individual Income Tax Instructions",
+      "url": "https://www.tax.virginia.gov/sites/default/files/vatax-pdf/2025-760-instructions.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia Tax – New Virginia tax laws (July 2026)",
+      "url": "https://www.tax.virginia.gov/news/new-virginia-tax-laws",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia Tax – 2026 Legislative Summary",
+      "url": "https://www.tax.virginia.gov/sites/default/files/inline-files/2026-legislative-summary.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia Tax – Exemptions",
+      "url": "https://www.tax.virginia.gov/exemptions",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia SCC – Virginia limited liability company forms and fees",
+      "url": "https://www.scc.virginia.gov/businesses/forms-and-fees/virginia-limited-liability-companies/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Virginia SCC – Maintaining your business (annual registration fee)",
+      "url": "https://www.scc.virginia.gov/businesses/maintaining-your-business/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

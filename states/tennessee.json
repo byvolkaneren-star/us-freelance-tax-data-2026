@@ -1,0 +1,136 @@
+{
+  "code": "TN",
+  "name": "Tennessee",
+  "slug": "tennessee",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/tennessee",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Tennessee has no personal income tax on wages or self-employment income (the Hall tax on investment income was fully repealed for tax years beginning in 2021).",
+      "Important for LLC owners: unlike a sole proprietorship, a Tennessee LLC owned by an individual is NOT disregarded for franchise and excise tax. It must file Form FAE170 every year and pay franchise tax of 0.25% of net worth ($100 minimum). It also owes the 6.5% excise tax on net earnings, but a single-member LLC owned by an individual may deduct the earnings subject to federal self-employment tax (Schedule J2), so for a typical service freelancer the excise tax is usually $0 or small. The calculator does not include the franchise tax; sole proprietors without an LLC are exempt.",
+      "State business tax on gross receipts applies only when gross sales in a county (and separately in a city) reach $100,000 (most services: Classification 3, 0.1875%; minimum $22 per location, $44 inside a city); between $3,000 and $100,000 only a $15 minimal activity license per county/city is required. Not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: Tennessee has no personal income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: Tennessee has no personal income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: Tennessee has no personal income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: Tennessee has no personal income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Tennessee cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Not applicable: no personal income tax. (LLCs subject to franchise and excise tax have separate quarterly estimate rules.)",
+    "dueDates": [],
+    "safeHarbor": "Not applicable.",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$300 Articles of Organization for a single-member LLC ($50 per member, $300 minimum, $3,000 maximum; Tennessee Secretary of State form SS-4270).",
+    "annualReportFee": "$300 annual report for an LLC with up to 6 members (plus $50 per member over 6, $3,000 maximum), due every year by the first day of the fourth month after fiscal year end (April 1 for calendar-year entities).",
+    "franchiseOrMinimumTax": "LLCs (including single-member LLCs owned by an individual) must file a franchise and excise tax return (FAE170) each year: franchise tax of 0.25% of net worth with a $100 annual minimum, plus 6.5% excise tax on net earnings after deducting earnings subject to federal self-employment tax (so a service freelancer's LLC usually owes little or no excise tax and pays about the $100 minimum). Sole proprietors and general partnerships are not subject.",
+    "grossReceiptsTax": "Tennessee business tax applies once gross sales in a county or city reach $100,000: most services are Classification 3 at 0.1875% of gross receipts, $22 minimum per location ($44 in a city). Between $3,000 and $100,000 only a $15 minimal activity license per county (and city) is required; $3,000 or less needs no license."
+  },
+  "sources": [
+    {
+      "title": "Hall Income Tax (repealed for tax periods beginning on or after January 1, 2021) - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/hall-income-tax.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "GEN-34 - Income Tax Withholding (Tennessee has no state income tax on earned income) - Tennessee Department of Revenue",
+      "url": "https://revenue.support.tn.gov/hc/en-us/articles/360057595051-GEN-34-Income-Tax-Withholding",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Franchise and Excise Tax Manual, June 2026 - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/content/dam/tn/revenue/documents/tax_manuals/june-2026/franchise-tax.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax Manual, June 2026 - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/content/dam/tn/revenue/documents/tax_manuals/june-2026/business-tax.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Forms & Fees - Tennessee Secretary of State",
+      "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Form SS-4270 Articles of Organization (Limited Liability Company), Rev. 01/25 - Tennessee Secretary of State",
+      "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/SS-4270%20LLC_0.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "All Frequently Asked Questions for Businesses (annual report fees) - Tennessee Secretary of State",
+      "url": "https://sos.tn.gov/businesses/faqs",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Franchise & Excise Tax - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/franchise---excise-tax.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Franchise & Excise Tax Due Dates and Tax Rates - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/franchise---excise-tax/due-dates-and-tax-rates.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/business-tax.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax Registration and Licensing - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/business-tax/registration-and-licensing.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax Due Dates and Tax Rates - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/business-tax/due-dates-and-tax-rates.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax Classifications - Tennessee Department of Revenue",
+      "url": "https://www.tn.gov/revenue/taxes/business-tax/classifications.html",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

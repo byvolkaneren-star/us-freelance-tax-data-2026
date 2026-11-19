@@ -1,0 +1,121 @@
+{
+  "code": "NC",
+  "name": "North Carolina",
+  "slug": "north-carolina",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/north-carolina",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0399
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0399
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0399
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 12750,
+      "mfj": 25500,
+      "hoh": 19125
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Session Law 2023-134 sets the rate at 3.99% for taxable years after 2025 (4.25% in 2025); further cuts may apply from 2027 if revenue triggers are met.",
+      "NC standard deduction is set by statute (not indexed): $12,750 single, $25,500 MFJ, $19,125 HOH; it is zero if the taxpayer is not eligible for the federal standard deduction.",
+      "Child deduction (by AGI), NC itemized deductions, and NC additions/deductions such as the bonus-depreciation add-back are not modeled.",
+      "NC has no personal exemption and few individual credits (e.g., credit for taxes paid to other states); not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "North Carolina starts from federal AGI, which already reflects the deductible half of SE tax; no NC add-back."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI; no NC add-back."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP/solo 401(k) deductions in federal AGI flow through."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below the AGI line, so it is not part of NC's starting point."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "North Carolina counties and cities do not levy income taxes."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Tax shown due on the return, after NC withholding and allowable credits, of $1,000 or more",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Interest applies unless withholding plus timely estimates equal the lesser of 90% of the current-year tax (66 2/3% farmers/fishermen) or 100% of the prior-year tax (prior year must be a 12-month return). No interest if there was no tax liability for the prior year.",
+    "form": "NC-40 (interest computed on D-422)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$125 Articles of Organization (NC Secretary of State).",
+    "annualReportFee": "$200 annual report, due April 15 each year beginning the year after formation.",
+    "franchiseOrMinimumTax": "None for LLCs (NC franchise tax applies to C and S corporations, including LLCs electing corporate taxation).",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "NC Department of Revenue - Tax Rate Schedules",
+      "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/tax-rate-schedules",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NC Department of Revenue - NC Standard Deduction or NC Itemized Deductions",
+      "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/north-carolina-standard-deduction-or-north-carolina-itemized-deductions",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NC Department of Revenue - Estimated Income Tax",
+      "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/estimated-income-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NC Department of Revenue - 2025 D-422 Underpayment of Estimated Tax by Individuals",
+      "url": "https://www.ncdor.gov/2025-form-d-422-underpayment-estimated-tax-individuals/open",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NC Secretary of State - Business Registration fees (LLCs)",
+      "url": "https://www.sosnc.gov/fees/by_title/_Business_Registration_limited_liability_companies",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

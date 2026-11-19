@@ -1,0 +1,157 @@
+{
+  "code": "MN",
+  "name": "Minnesota",
+  "slug": "minnesota",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/minnesota",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0535
+        },
+        {
+          "over": 33310,
+          "rate": 0.068
+        },
+        {
+          "over": 109430,
+          "rate": 0.0785
+        },
+        {
+          "over": 203150,
+          "rate": 0.0985
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0535
+        },
+        {
+          "over": 48700,
+          "rate": 0.068
+        },
+        {
+          "over": 193480,
+          "rate": 0.0785
+        },
+        {
+          "over": 337930,
+          "rate": 0.0985
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0535
+        },
+        {
+          "over": 41010,
+          "rate": 0.068
+        },
+        {
+          "over": 164800,
+          "rate": 0.0785
+        },
+        {
+          "over": 270060,
+          "rate": 0.0985
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 15300,
+      "mfj": 30600,
+      "hoh": 23000
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 inflation-adjusted brackets and standard deduction published by the Minnesota Department of Revenue (Dec 2025). Minnesota has no personal exemption for the taxpayer/spouse (only a $5,300 dependent exemption, not modeled).",
+      "Standard deduction is reduced when AGI exceeds $244,400 ($122,200 MFS), with a steeper reduction above $337,800 ($168,900 MFS) and the reduction capped at 80% of the deduction (Minn. Stat. 290.0123, subd. 5); not modeled.",
+      "Not modeled: 1% net investment income tax on net investment income over $1 million; additions such as 80% bonus-depreciation add-back and Section 179 differences; Social Security/pension subtractions; Child and Working Family Credit; other credits.",
+      "2026 Session Laws ch. 128 (H.F. 2438) updated IRC conformity to May 1, 2026 and created a tax-relief account that may reduce the first-bracket rate by at least 0.1% for a following tax year if funded (determination each Dec 15); no reduction applies to tax year 2026 rates as published."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Minnesota starts from federal AGI, so the deductible half of SE tax (an above-the-line federal adjustment) is already excluded."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are above-the-line federal adjustments inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it does not reduce the state base."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Minnesota cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Minnesota income tax of $500 or more due after withholding, credits and refundable credits",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Pay the lesser of 90% of the current year's tax or 100% of the prior year's total tax (110% if prior-year federal AGI was more than $150,000). No penalty if you had no 2025 Minnesota liability and were a full-year resident.",
+    "form": "Minnesota estimated tax payments (e-Services or Form M14 voucher); underpayment on Schedule M15"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$155 Articles of Organization online or in person; $135 by mail",
+    "annualReportFee": "$0 annual renewal, filed every year",
+    "franchiseOrMinimumTax": "None for a single-member LLC taxed as a disregarded entity or sole proprietor. (Partnerships and S corporations owe a minimum fee only when Minnesota property + payroll + sales are $1,280,000 or more for 2026, starting at $260.)",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Minnesota Department of Revenue - Income Tax Rates and Brackets",
+      "url": "https://www.revenue.state.mn.us/minnesota-income-tax-rates-and-brackets",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Minnesota Department of Revenue - Tax Year 2026 Inflation-Adjusted Amounts",
+      "url": "https://www.revenue.state.mn.us/sites/default/files/2025-12/inflation-adjusted-amounts-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Minnesota Department of Revenue - Analysis of Session Laws 2026, Chapter 128 (H.F. 2438)",
+      "url": "https://www.revenue.state.mn.us/sites/default/files/2026-05/hf2438sf2082-enacted-otb.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Minnesota Department of Revenue - 2026 Schedule M15 Underpayment of Estimated Income Tax",
+      "url": "https://www.revenue.state.mn.us/sites/default/files/2026-10/m15-26.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Minnesota Secretary of State - Business Filing and Certification Fee Schedule",
+      "url": "https://www.sos.mn.gov/business-liens/business-filing-and-certification-fee-schedule/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

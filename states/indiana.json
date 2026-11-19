@@ -1,0 +1,130 @@
+{
+  "code": "IN",
+  "name": "Indiana",
+  "slug": "indiana",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/indiana",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0295
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0295
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0295
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 1000,
+      "mfj": 2000,
+      "hoh": 1000
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "State rate 2.95% for 2026, falling to 2.90% in 2027 (DOR Rates, Fees & Penalties; Departmental Notice #1).",
+      "Personal exemption $1,000 per taxpayer/spouse (Departmental Notice #1, Table A). Not modeled: $1,500 dependent exemptions, extra exemptions for age 65+/blind, renter's and other deductions, Indiana add-backs, and credits.",
+      "County income tax is modeled with a representative rate (see localIncomeTax); actual county rates range from 0.5% (Porter) to 3.0% (Randolph)."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Indiana AGI starts from federal AGI (IRC conformity updated to Jan 1, 2026 by SEA 243-2026)."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below AGI and is not part of Indiana AGI."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "All 92 Indiana counties levy a county income tax, applied to the same base as the state tax (Indiana AGI less exemptions) and determined by county of residence on Jan 1. Rates in Departmental Notice #1 (effective Oct 1, 2026) range from 0.5% to 3.0%; the modeled 1.97% is the median of the 92 county rates (e.g., Marion 2.02%, Lake 1.5%, Allen 1.59%, Hamilton 1.1%). Users should substitute their own county rate.",
+    "modeled": {
+      "rate": 0.0197,
+      "base": "stateTaxableIncome",
+      "label": "Indiana county income tax (median county rate)"
+    }
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Generally required if you will owe $1,000 or more in combined state and county tax for the year that is not covered by withholding.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Avoid the 10% underpayment penalty by paying at least 90% of this year's tax or 100% of last year's tax (110% if prior-year federal AGI exceeded $150,000, or $75,000 MFS); use IT-2210/IT-2210A.",
+    "form": "Form ES-40 (or INTIME online payment)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "Articles of Organization: $75 filed electronically or $100 on paper (IC 23-0.5-9-19; State Form 49459 lists $100 paper fee). INBiz may add an online processing/convenience fee on top of the statutory amount.",
+    "annualReportFee": "Business Entity Report every two years (biennial): $20 statutory fee filed electronically (plus any INBiz processing fee) or $50 on paper for a for-profit entity (IC 23-0.5-9-34; IC 23-0.5-2-13).",
+    "franchiseOrMinimumTax": "None.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "Indiana DOR - Rates, Fees & Penalties (fetched via Internet Archive)",
+      "url": "https://www.in.gov/dor/resources/tax-rates-and-reports/rates-fees-and-penalties/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Indiana DOR - Departmental Notice #1, county tax rates effective Oct 1, 2026 (fetched via Internet Archive)",
+      "url": "https://www.in.gov/dor/files/dn01.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Indiana DOR - Estimated Payments",
+      "url": "https://www.in.gov/dor/i-am-a/individual/payments-and-billing/estimated-payments",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Indiana DOR - Legislative Synopsis 2026 (fetched via Internet Archive)",
+      "url": "https://www.in.gov/dor/files/legislative-synopsis-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Indiana Code 2026, IC 23-0.5 (Chapter 9 fees: 23-0.5-9-19 articles of organization, 23-0.5-9-34 biennial report)",
+      "url": "https://iga.in.gov/ic/2026/Title_23/Article_0.5.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Indiana SOS - Articles of Organization, State Form 49459 (R12/01-26)",
+      "url": "https://forms.in.gov/Download.aspx?id=16989",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

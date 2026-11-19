@@ -1,0 +1,110 @@
+{
+  "code": "AK",
+  "name": "Alaska",
+  "slug": "alaska",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/alaska",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Alaska has no state individual income tax, so self-employment income is taxed only federally.",
+      "Alaska also has no statewide sales tax; some boroughs and cities levy local sales taxes, which do not affect income tax."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Not applicable: Alaska has no individual income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Not applicable: Alaska has no individual income tax."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "Not applicable: Alaska has no individual income tax."
+    },
+    "qbi": {
+      "allowed": true,
+      "note": "Not applicable: Alaska has no individual income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No Alaska borough or city levies a local income tax."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Not applicable: no state individual income tax.",
+    "dueDates": [],
+    "safeHarbor": "Not applicable.",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$250 Articles of Organization for a domestic LLC (Division of Corporations, Business and Professional Licensing).",
+    "annualReportFee": "$100 biennial report for a domestic LLC, due January 2 every two years ($137.50 with late fee after February 1).",
+    "franchiseOrMinimumTax": "None for LLCs. Separately, nearly every business operating in Alaska needs a state business license: $50 per year (may be bought for one or two years).",
+    "grossReceiptsTax": "None at the state level."
+  },
+  "sources": [
+    {
+      "title": "Corporation Forms & Fees (Domestic LLC) - Alaska Division of Corporations, Business and Professional Licensing",
+      "url": "https://www.commerce.alaska.gov/web/cbpl/Corporations/CorporationFormsFees",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Licensing Forms & Fees - Alaska Division of Corporations, Business and Professional Licensing",
+      "url": "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/BusinessLicensingFormsFees",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Statutes and Regulations, Business Licensing (March 2026) - Alaska Department of Commerce, Community, and Economic Development",
+      "url": "https://www.commerce.alaska.gov/web/portals/5/pub/BusinessLicenseStatutes.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business License: New Application (form 08-4181) - Alaska Division of Corporations, Business and Professional Licensing",
+      "url": "https://www.commerce.alaska.gov/web/portals/5/pub/bus4181.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Alaska Taxable 2024 - Alaska Office of the State Assessor",
+      "url": "https://www.commerce.alaska.gov/web/Portals/4/pub/OSA/2024%20Alaska%20Taxable%20Report.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Registration and Sales Tax - City and Borough of Juneau",
+      "url": "https://juneau.org/finance/business-registration-and-sales-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Notice of Sales Tax Code Changes: Sales Tax Cap (July 2026) - City and Borough of Juneau",
+      "url": "https://juneau.org/wp-content/uploads/2026/07/HOT-TOPIC-Sales-Tax-Cap-Changes.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Sales Tax Quick Facts - Kenai Peninsula Borough",
+      "url": "https://www.kpb.us/images/KPB/FIN/Sales_Tax/Sales_Tax_Forms/Sales_Tax_Quick_Facts.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

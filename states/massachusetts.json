@@ -1,0 +1,145 @@
+{
+  "code": "MA",
+  "name": "Massachusetts",
+  "slug": "massachusetts",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/massachusetts",
+  "incomeTax": {
+    "type": "flat",
+    "base": "stateDefinedIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.05
+        },
+        {
+          "over": 1107750,
+          "rate": 0.09
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.05
+        },
+        {
+          "over": 1107750,
+          "rate": 0.09
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.05
+        },
+        {
+          "over": 1107750,
+          "rate": 0.09
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 4400,
+      "mfj": 8800,
+      "hoh": 6800
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Part B (ordinary/business) income is taxed at 5%. The 4% surtax applies to total taxable income above $1,107,750 for tax year 2026 (inflation-indexed; $1,083,150 in 2025); the threshold is the same for single and joint returns. Folded in as 9% above the threshold.",
+      "Massachusetts has no standard deduction; personal exemptions are $4,400 single/MFS, $6,800 HoH, $8,800 joint (plus $1,000 per dependent, $700 age 65+, $2,200 blindness - not modeled).",
+      "Base is Massachusetts Part B income: business profit with only Massachusetts-allowed deductions. The deduction for Social Security/Medicare/self-employment tax paid (up to $2,000 per person, Form 1 line 11) is modeled for the self-employed person; a spouse's own FICA deduction is not.",
+      "Not modeled: 8.5% short-term capital gains rate, 12% collectibles rate, rental deduction (50% of rent up to $4,000), No Tax Status and Limited Income Credit, child and dependent credits, and Massachusetts EITC.",
+      "Massachusetts did not adopt several 2025 federal (P.L. 119-21) business changes (e.g., IRC 174A R&E expensing); differences in business depreciation/expensing are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Massachusetts does not allow the federal half-SE-tax adjustment. Instead it allows a deduction for Social Security, Medicare and self-employment tax paid, up to $2,000 per person (Form 1, line 11); modeled for the self-employed person.",
+      "seTaxPaidCap": 2000
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Allowed on Schedule Y, line 7, equal to the federal self-employed health insurance deduction."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Form 1 instructions: payments to an IRA, Keogh, SEP or SIMPLE account are not deductible for Massachusetts income tax purposes."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Massachusetts uses its own income definition and has no QBI deduction."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Massachusetts cities and towns do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Expected tax due of more than $400 on income not subject to withholding",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Pay at least 80% of the current year's tax (66.67% farmers/fishermen) through withholding and estimates, or pay at least 100% of the prior year's tax (prior return must cover a full 12 months) divided among the installments; no penalty if tax due after credits and withholding is $400 or less (Form M-2210). Taxpayers subject to the 4% surtax must file and pay electronically.",
+    "form": "Form 1-ES; underpayment on Form M-2210"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$500 Certificate of Organization (M.G.L. c. 156C, s. 12; 950 CMR 112.00)",
+    "annualReportFee": "$500 annual report, due each year by the anniversary date of the original certificate (M.G.L. c. 156C, s. 12)",
+    "franchiseOrMinimumTax": "None for a sole proprietor or single-member LLC taxed as a disregarded entity (the Massachusetts corporate excise applies to corporations)",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Massachusetts DOR - 2026 Form 1-ES Estimated Income Tax instructions and worksheets",
+      "url": "https://www.mass.gov/doc/2026-form-1-es-estimated-tax-payment-vouchers-instructions-and-worksheets/download",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Massachusetts DOR - Massachusetts 4% Surtax on Taxable Income",
+      "url": "https://www.mass.gov/info-details/massachusetts-4-surtax-on-taxable-income",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Massachusetts DOR - Personal Income Tax Exemptions",
+      "url": "https://www.mass.gov/info-details/personal-income-tax-exemptions",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Massachusetts DOR - 2025 Form 1 Instructions",
+      "url": "https://www.mass.gov/doc/2025-form-1-instructions/download",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Massachusetts DOR - Estimated Tax Payments",
+      "url": "https://www.mass.gov/info-details/massachusetts-dor-estimated-tax-payments",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "M.G.L. c. 156C, s. 12 - LLC certificate of organization and annual report fees",
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXII/Chapter156c/Section12",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "950 CMR 112.00 - Limited Liability Companies (Secretary of the Commonwealth)",
+      "url": "https://www.sec.state.ma.us/divisions/corporations/pdf-html/950_cmr_112_limited_liability_companies.htm",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

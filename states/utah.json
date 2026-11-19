@@ -1,0 +1,157 @@
+{
+  "code": "UT",
+  "name": "Utah",
+  "slug": "utah",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/utah",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0445
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0445
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0445
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 966,
+      "mfj": 1932,
+      "hoh": 1449
+    },
+    "exemptionCreditPhaseout": {
+      "single": [
+        {
+          "from": 18213,
+          "ref": 18213,
+          "base": 966,
+          "rate": 0.013
+        }
+      ],
+      "mfj": [
+        {
+          "from": 36426,
+          "ref": 36426,
+          "base": 1932,
+          "rate": 0.013
+        }
+      ],
+      "hoh": [
+        {
+          "from": 27320,
+          "ref": 27320,
+          "base": 1449,
+          "rate": 0.013
+        }
+      ]
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 rate is 4.45% under Utah Code § 59-10-104 as amended by Chapter 250, 2026 General Session (effective 1/1/2026). The Tax Commission's rate web page still shows 4.5% (2025) and had not been updated when checked.",
+      "Utah has no standard deduction or personal exemption for the taxpayer. Instead, the nonrefundable taxpayer tax credit (Utah Code § 59-10-1018) equals 6% of the federal standard deduction claimed (2026 federal amounts $16,100 / $32,200 / $24,150, giving $966 / $1,932 / $1,449), or 6% of federal itemized deductions minus state income tax if itemizing.",
+      "The taxpayer credit is reduced by $0.013 for each dollar of Utah taxable income above a base amount and is fully gone at about $92,500 (single). The phase-out uses the 2025 base amounts ($18,213 single/MFS, $27,320 HoH, $36,426 MFJ) because the Tax Commission has not yet published 2026 indexed amounts; 2026 bases will be slightly higher.",
+      "Utah taxable income is federal AGI plus Utah additions minus subtractions; the phase-out is modeled on state AGI as an approximation. Dependent exemptions ($1,750 per qualifying dependent before indexing, 6% credit), the Utah child tax credit, Social Security and retirement credits, and the Utah EITC are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Utah starts from federal AGI, so the deductible half of SE tax carries through."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The federal self-employed health insurance deduction is part of federal AGI and carries through."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted for federal AGI carry through to Utah."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The QBI deduction is taken below federal AGI and does not reduce Utah taxable income; § 59-10-1018 also excludes it from Utah itemized deductions."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Utah cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Utah does not require quarterly estimated payments from individuals. To avoid the extension penalty you must prepay (withholding, credits and payments) by the original return due date the lesser of 90% of the 2026 tax or 100% of the 2025 tax.",
+    "dueDates": [],
+    "safeHarbor": "Pay the lesser of 90% of the current-year tax or 100% of the prior-year tax by April 15, 2027 (Utah Code § 59-10-516(2)); otherwise a 2% per month extension penalty applies under § 59-1-401(5).",
+    "form": "None required (voluntary prepayments can be made to the Utah State Tax Commission before April 15, 2027)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$59 Certificate of Organization (Utah Division of Corporations, FY2026 fee schedule effective July 1, 2025).",
+    "annualReportFee": "$18 annual renewal for an LLC (includes a $5 portal surcharge), due every year on the anniversary of formation; $10 late renewal fee.",
+    "franchiseOrMinimumTax": "None for sole proprietors or LLCs not taxed as corporations.",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Utah Code § 59-10-104, Tax basis - Tax rate (effective 1/1/2026, amended by Ch. 250, 2026 General Session) - Utah Legislature",
+      "url": "https://le.utah.gov/xcode/title59/chapter10/C59-10-S104_2026050620260506.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Utah Code § 59-10-1018, Nonrefundable taxpayer tax credits (effective 1/1/2026) - Utah Legislature",
+      "url": "https://le.utah.gov/xcode/Title59/Chapter10/C59-10-S1018_2026050620260506.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "January 15, 2026 Tax Practitioner Webinar (2025 phase-out base amounts) - Utah State Tax Commission",
+      "url": "https://files.tax.utah.gov/tax/train/webinars/2026-01-15-presentation.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Rates - Utah State Tax Commission (Individual Income Tax)",
+      "url": "https://incometax.utah.gov/paying/tax-rates",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Utah Code § 59-10-516, Filing extension - Payment of tax - Penalty (effective 5/5/2021, current) - Utah Legislature",
+      "url": "https://le.utah.gov/xcode/Title59/Chapter10/59-10-S516.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Utah Code § 59-1-401, Penalties (effective 1/1/2026) - Utah Legislature",
+      "url": "https://le.utah.gov/xcode/Title59/Chapter1/C59-1-S401_2026010120250507.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "IR-2025-103: IRS releases tax inflation adjustments for tax year 2026 (federal standard deduction) - IRS",
+      "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Fiscal Year 2026 Fee Schedule (effective July 1, 2025) - Utah Division of Corporations and Commercial Code",
+      "url": "https://corporations.utah.gov/wp-content/uploads/2023/04/currentfees.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

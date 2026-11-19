@@ -1,0 +1,209 @@
+{
+  "code": "NJ",
+  "name": "New Jersey",
+  "slug": "new-jersey",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/new-jersey",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "stateDefinedIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.014
+        },
+        {
+          "over": 20000,
+          "rate": 0.0175
+        },
+        {
+          "over": 35000,
+          "rate": 0.035
+        },
+        {
+          "over": 40000,
+          "rate": 0.05525
+        },
+        {
+          "over": 75000,
+          "rate": 0.0637
+        },
+        {
+          "over": 500000,
+          "rate": 0.0897
+        },
+        {
+          "over": 1000000,
+          "rate": 0.1075
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.014
+        },
+        {
+          "over": 20000,
+          "rate": 0.0175
+        },
+        {
+          "over": 50000,
+          "rate": 0.0245
+        },
+        {
+          "over": 70000,
+          "rate": 0.035
+        },
+        {
+          "over": 80000,
+          "rate": 0.05525
+        },
+        {
+          "over": 150000,
+          "rate": 0.0637
+        },
+        {
+          "over": 500000,
+          "rate": 0.0897
+        },
+        {
+          "over": 1000000,
+          "rate": 0.1075
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.014
+        },
+        {
+          "over": 20000,
+          "rate": 0.0175
+        },
+        {
+          "over": 50000,
+          "rate": 0.0245
+        },
+        {
+          "over": 70000,
+          "rate": 0.035
+        },
+        {
+          "over": 80000,
+          "rate": 0.05525
+        },
+        {
+          "over": 150000,
+          "rate": 0.0637
+        },
+        {
+          "over": 500000,
+          "rate": 0.0897
+        },
+        {
+          "over": 1000000,
+          "rate": 0.1075
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 1000,
+      "mfj": 2000,
+      "hoh": 1000
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Rates/brackets are from the official 2026 NJ-1040-ES rate schedules (Table A single/MFS; Table B MFJ, head of household, qualifying widow(er)); they are not indexed and are unchanged from 2020-2025. Head of household uses Table B.",
+      "New Jersey gross income is built from NJ net profits from business (federal Schedule C with NJ adjustments, Schedule NJ-BUS-1), not federal AGI; there is no standard deduction.",
+      "Personal exemption is $1,000 each for the taxpayer and spouse/CU partner; extra exemptions for age 65+, blind/disabled, veterans and dependents are not modeled.",
+      "Medical expenses over 2% of NJ gross income are deductible (Worksheet F) - only the self-employed health insurance part is captured via conformity; the rest is not modeled.",
+      "Property tax deduction or credit, NJ EITC, child tax credit, pension/retirement exclusion, Alternative Business Calculation Adjustment, and credit for taxes paid to other jurisdictions are not modeled.",
+      "Losses in one category of income cannot offset income in another category (other than via the Alternative Business Calculation Adjustment); not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "NJ taxes net profits from business (Schedule NJ-BUS-1); the federal deduction for half of SE tax is a federal AGI adjustment with no NJ counterpart."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is allowed in full as part of the NJ medical expense deduction (NJ-1040 line 31, Worksheet F line 5, not subject to the 2% floor)."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "New Jersey does not allow a deduction for SEP-IRA contributions, but self-employed 401(k) contributions are deductible (NJ-1040 instructions). The calculator applies this based on the plan type you choose.",
+      "solo401kAllowed": true
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "New Jersey does not start from federal taxable income and has no QBI deduction."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "New Jersey municipalities do not levy a resident income tax (Newark's payroll tax is an employer tax, not an individual income tax)."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "NJ income tax expected to be more than $400 after withholding and other credits",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Interest is charged on underpayments unless payments equal at least the lesser of 80% of the current-year tax (66 2/3% for farmers) or 100% of last year's tax (prior year must be a full 12-month return with a tax obligation); other exceptions on Form NJ-2210.",
+    "form": "NJ-1040-ES (interest computed on Form NJ-2210; see GIT-8)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 Certificate of Formation (NJ Division of Revenue and Enterprise Services fee schedule).",
+    "annualReportFee": "$75 annual report, due each year by the end of the anniversary month of formation.",
+    "franchiseOrMinimumTax": "None for a single-member LLC taxed as a sole proprietorship (NJ Corporation Business Tax minimums apply to corporations).",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "NJ Division of Taxation - 2025 NJ-1040 Resident Return Instructions",
+      "url": "https://www.nj.gov/treasury/taxation/pdf/current/1040i.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NJ Division of Taxation - 2026 NJ-1040-ES Instructions (rate schedules)",
+      "url": "https://www.nj.gov/treasury/taxation/pdf/current/1040esi.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NJ Division of Taxation - 2026 NJ-1040-ES vouchers",
+      "url": "https://www.nj.gov/treasury/taxation/pdf/current/1040es.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NJ Division of Taxation - GIT-8 Estimating Income Taxes (January 2026)",
+      "url": "https://www.nj.gov/treasury/taxation/pdf/pubs/tgi-ee/git8.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NJ Division of Taxation - NJ Income Tax Rates",
+      "url": "https://www.nj.gov/treasury/taxation/taxtables.shtml",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NJ Division of Revenue and Enterprise Services - Registry Fee Schedules",
+      "url": "https://www.nj.gov/treasury/revenue/fees.shtml",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

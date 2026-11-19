@@ -1,0 +1,410 @@
+{
+  "name": "us-freelance-tax-data-2026",
+  "license": "CC-BY-4.0",
+  "attribution": "HourFloor (hourfloor.com)",
+  "homepage": "https://hourfloor.com/",
+  "methodology": "https://hourfloor.com/methodology",
+  "taxYear": 2026,
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "slug": "alabama",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/alabama.json"
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "slug": "alaska",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/alaska.json"
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "slug": "arizona",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/arizona.json"
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "slug": "arkansas",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/arkansas.json"
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "slug": "california",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/california.json"
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "slug": "colorado",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/colorado.json"
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "slug": "connecticut",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/connecticut.json"
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "slug": "delaware",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/delaware.json"
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "slug": "district-of-columbia",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/district-of-columbia.json"
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "slug": "florida",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/florida.json"
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "slug": "georgia",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/georgia.json"
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "slug": "hawaii",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/hawaii.json"
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "slug": "idaho",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/idaho.json"
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "slug": "illinois",
+      "incomeTax": "flat",
+      "lastVerified": "2026-11-12",
+      "file": "states/illinois.json"
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "slug": "indiana",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/indiana.json"
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "slug": "iowa",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/iowa.json"
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "slug": "kansas",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/kansas.json"
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "slug": "kentucky",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/kentucky.json"
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "slug": "louisiana",
+      "incomeTax": "flat",
+      "lastVerified": "2026-11-12",
+      "file": "states/louisiana.json"
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "slug": "maine",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/maine.json"
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "slug": "maryland",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/maryland.json"
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "slug": "massachusetts",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/massachusetts.json"
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "slug": "michigan",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/michigan.json"
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "slug": "minnesota",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/minnesota.json"
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "slug": "mississippi",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/mississippi.json"
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "slug": "missouri",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/missouri.json"
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "slug": "montana",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/montana.json"
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "slug": "nebraska",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/nebraska.json"
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "slug": "nevada",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/nevada.json"
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "slug": "new-jersey",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/new-jersey.json"
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "slug": "new-mexico",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/new-mexico.json"
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "slug": "new-york",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/new-york.json"
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "slug": "north-carolina",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/north-carolina.json"
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "slug": "north-dakota",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/north-dakota.json"
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "slug": "ohio",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-11-09",
+      "file": "states/ohio.json"
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "slug": "oklahoma",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/oklahoma.json"
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "slug": "oregon",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-11-09",
+      "file": "states/oregon.json"
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "slug": "pennsylvania",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/pennsylvania.json"
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "slug": "rhode-island",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/rhode-island.json"
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "slug": "south-carolina",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/south-carolina.json"
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "slug": "south-dakota",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/south-dakota.json"
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "slug": "tennessee",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/tennessee.json"
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "slug": "texas",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/texas.json"
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "slug": "utah",
+      "incomeTax": "flat",
+      "lastVerified": "2026-10-22",
+      "file": "states/utah.json"
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "slug": "vermont",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/vermont.json"
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "slug": "virginia",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/virginia.json"
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "slug": "washington",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/washington.json"
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "slug": "west-virginia",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/west-virginia.json"
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "slug": "wisconsin",
+      "incomeTax": "progressive",
+      "lastVerified": "2026-10-22",
+      "file": "states/wisconsin.json"
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "slug": "wyoming",
+      "incomeTax": "none",
+      "lastVerified": "2026-10-22",
+      "file": "states/wyoming.json"
+    }
+  ]
+}

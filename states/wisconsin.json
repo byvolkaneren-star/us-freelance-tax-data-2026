@@ -1,0 +1,202 @@
+{
+  "code": "WI",
+  "name": "Wisconsin",
+  "slug": "wisconsin",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/wisconsin",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.035
+        },
+        {
+          "over": 15110,
+          "rate": 0.044
+        },
+        {
+          "over": 51950,
+          "rate": 0.053
+        },
+        {
+          "over": 332720,
+          "rate": 0.0765
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.035
+        },
+        {
+          "over": 20150,
+          "rate": 0.044
+        },
+        {
+          "over": 69260,
+          "rate": 0.053
+        },
+        {
+          "over": 443630,
+          "rate": 0.0765
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.035
+        },
+        {
+          "over": 15110,
+          "rate": 0.044
+        },
+        {
+          "over": 51950,
+          "rate": 0.053
+        },
+        {
+          "over": 332720,
+          "rate": 0.0765
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 13960,
+      "mfj": 25840,
+      "hoh": 18030
+    },
+    "personalExemption": {
+      "single": 700,
+      "mfj": 1400,
+      "hoh": 700
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 brackets are from the 2026 Form 1-ES instructions and reflect 2025 Wisconsin Act 15 (widened 4.4% bracket) plus indexing. Head of household uses the single brackets.",
+      "Sliding-scale standard deduction (2026) based on Wisconsin income; the values above are the maximums and the phase-down below is modeled. Single: $13,960 if income is $20,120 or less; otherwise $13,960 minus 12% of income over $20,120; $0 above $136,453.",
+      "Sliding-scale standard deduction, MFJ (2026): $25,840 if income is $29,040 or less; otherwise $25,840 minus 19.778% of income over $29,040; $0 at income above $159,690.",
+      "Sliding-scale standard deduction, head of household (2026): $18,030 if income is $20,120 or less; from $20,120 to $58,827 it is $18,030 minus 22.515% of income over $20,120; above $58,827 it is $13,960 minus 12% of income over $20,120 (same as single); $0 at income above $136,453. (Married filing separately, not offered: $12,280 minus 19.778% over $13,780, $0 above $75,869.)",
+      "Personal exemption is $700 each for the taxpayer and spouse (dependents $700 each and the extra $250 for age 65+ are not modeled).",
+      "Wisconsin conforms to the Internal Revenue Code as amended to December 31, 2022, with exceptions; later federal changes (e.g. 2025 federal legislation) may require Wisconsin adjustments that are not modeled.",
+      "Not modeled: Schedule SB subtractions other than self-employed health insurance (e.g. retirement income exclusions, 30% long-term capital gain exclusion), itemized deduction credit, school property tax credit, earned income credit, and credit for taxes paid to other states."
+    ],
+    "standardDeductionPhaseout": {
+      "single": [
+        {
+          "from": 20120,
+          "ref": 20120,
+          "base": 13960,
+          "rate": 0.12
+        }
+      ],
+      "mfj": [
+        {
+          "from": 29040,
+          "ref": 29040,
+          "base": 25840,
+          "rate": 0.19778
+        }
+      ],
+      "hoh": [
+        {
+          "from": 20120,
+          "ref": 20120,
+          "base": 18030,
+          "rate": 0.22515
+        },
+        {
+          "from": 58827,
+          "ref": 20120,
+          "base": 13960,
+          "rate": 0.12
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Wisconsin starts from federal AGI, which already reflects the deduction for one-half of self-employment tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Wisconsin allows the self-employed health insurance deduction (via federal AGI and the Schedule SB line 6 medical care insurance subtraction worksheet, which avoids double counting); net effect is at least the federal deduction."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions reduce federal AGI and therefore Wisconsin income."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it never enters Wisconsin's AGI-based computation."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No local income taxes in Wisconsin."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe at least $500 in Wisconsin tax for 2026 after withholding and credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment interest if withholding and timely payments are at least the smallest of: 90% of the 2026 tax, 100% of the 2025 tax (if the 2025 return covered 12 months), or 90% of the tax computed by annualizing income. Filing the 2026 return and paying in full by January 31, 2027 substitutes for the January payment. Underpayment is charged as interest on Schedule U.",
+    "form": "Form 1-ES (Wisconsin Estimated Income Tax Voucher)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$130 online / $170 paper (Articles of Organization, Form 502, Wisconsin Department of Financial Institutions); optional next-day expedite $100.",
+    "annualReportFee": "$25 per year online / $40 paper (domestic LLC annual report, DFI).",
+    "franchiseOrMinimumTax": "None for a sole proprietor or single-member LLC taxed as a disregarded entity (Wisconsin's franchise tax applies to corporations).",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Wisconsin DOR – 2026 Form 1-ES Instructions (2026 brackets, sliding-scale standard deduction, estimated tax)",
+      "url": "https://www.revenue.wi.gov/TaxForms2026/2026-Form1-ES-Inst.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wisconsin DOR – 2025 Form 1-ES Instructions",
+      "url": "https://www.revenue.wi.gov/TaxForms2025/2025-Form1-ES-Inst.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wisconsin DOR – Tax rates FAQ",
+      "url": "https://www.revenue.wi.gov/Pages/FAQS/pcs-taxrates.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wisconsin DOR – 2025 Form 1 Instructions (federal AGI starting point, IRC conformity, exemptions)",
+      "url": "https://www.revenue.wi.gov/TaxForms2025/2025-Form1-Inst.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wisconsin DOR – 2025 Schedule SB Instructions (medical care insurance subtraction)",
+      "url": "https://www.revenue.wi.gov/TaxForms2025/2025-ScheduleSB-Inst.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wisconsin DFI – Business Entities Fees",
+      "url": "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/Fees.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wisconsin DFI – Form 502 Articles of Organization (LLC)",
+      "url": "https://dfi.wi.gov/Documents/BusinessServices/BusinessEntities/Forms/CORP502.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

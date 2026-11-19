@@ -1,0 +1,168 @@
+{
+  "code": "WA",
+  "name": "Washington",
+  "slug": "washington",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/washington",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Washington has no personal income tax on wages or self-employment income for tax year 2026.",
+      "ESSB 6346 (Chapter 238, Laws of 2026) enacts a 9.9% tax on Washington taxable income above a $1,000,000 per-individual standard deduction beginning January 1, 2028 (first returns/payments in 2029); it does not apply to 2026. Initiative 2111 (2024) prohibiting personal income taxes was cited in the bill report; the new tax may face legal challenge.",
+      "Washington's capital gains excise tax on long-term capital gains is not modeled (irrelevant to ordinary freelance income).",
+      "Washington instead taxes gross receipts via the business and occupation (B&O) tax; see businessCosts. The calculator models service-and-other-activities B&O at 1.5% of gross receipts (treated as a deductible business expense) with the small business B&O credit computed annually: maximum $160 x 12 = $1,920; when B&O tax exceeds that, credit = 2 x $1,920 - tax, reaching $0 at $3,840 of tax (RCW 82.04.4451; DOR credit 720 table). Monthly or quarterly filers compute the credit per period, so actual results can differ slightly. Retail sales tax and local B&O taxes are not modeled.",
+      "ESSB 5814 (effective October 1, 2025) made several services retail sales subject to sales tax and retailing B&O (not service B&O): IT services, custom software/website development, technical support, temporary staffing, advertising services, live presentations, investigation/security. Freelancers in those fields collect sales tax and pay the 0.471% retailing B&O rate instead of the service rate."
+    ],
+    "grossReceiptsTax": {
+      "label": "Washington B&O tax (service and other activities, 1.5%)",
+      "rate": 0.015,
+      "creditMax": 1920
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: Washington has no personal income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: Washington has no personal income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: Washington has no personal income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: Washington has no personal income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No local income taxes. Some cities (e.g. Seattle, Tacoma, Bellevue) impose their own local B&O taxes and business license fees, which are not modeled."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "None: Washington has no personal income tax, so there are no state estimated income tax payments. B&O tax is paid on the excise tax return on the filing frequency DOR assigns (annual, quarterly or monthly).",
+    "dueDates": [],
+    "safeHarbor": "Not applicable (no personal income tax).",
+    "form": "None (B&O tax is reported on the Combined Excise Tax Return via My DOR)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$180 (Certificate of Formation / original filing, Washington Secretary of State); optional expedited service $100 extra. A separate Business License Application with DOR is required (processing fee varies).",
+    "annualReportFee": "$70 per year (annual report for LLCs, Secretary of State); $95 if filed late with delinquency fee; $10 initial report.",
+    "franchiseOrMinimumTax": "None (no franchise tax or minimum tax; no corporate or personal income tax).",
+    "grossReceiptsTax": "Business & Occupation (B&O) tax on gross receipts. Service & Other Activities classification, effective Oct 1, 2025 (ESHB 2081, Chapter 420, Laws of 2025): 1.5% if the business (with affiliates) had less than $1,000,000 of such taxable income in the prior calendar year; 1.75% for $1,000,000 to $4,999,999.99; 2.1% for $5 million or more (hospitals and certain advanced computing businesses stay at 1.5%). Small Business B&O Credit (credit 720, for businesses with 50%+ of income under Service & Other Activities): up to $160 per month of the reporting period, phasing out dollar-for-dollar as B&O tax due rises above $160, fully gone when tax due exceeds $320/month (annual filers: credit ends above $3,840 of B&O tax; roughly the first ~$125,000 of service income is tax-free, fully phased out around $250,000). Registration/business license required if gross income is $12,000 per year or more; businesses with under $125,000 of gross income across all B&O classifications (and no retail sales tax collection or other DOR tax) may qualify for active non-reporting status. Annual filing for estimated tax liability of $1,050 or less. ESSB 6346 (2026) raises the service credit to $375/month and the annual filing threshold to $250,000 starting January 1, 2029 (not 2026)."
+  },
+  "sources": [
+    {
+      "title": "WA DOR – Business & occupation tax classifications (rates)",
+      "url": "https://dor.wa.gov/find-taxes-rates/business-occupation-tax/business-occupation-tax-classifications",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA DOR – Special notice: Service and Other Activities rate changes (ESSB 2081)",
+      "url": "https://dor.wa.gov/forms-publications/publications-subject/special-notices/service-and-other-activities-rate-changes",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA DOR – 2025 Tax legislation",
+      "url": "https://dor.wa.gov/forms-publications/publications-subject/tax-topics/2025-tax-legislation",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA DOR – Business & occupation tax overview",
+      "url": "https://dor.wa.gov/taxes-rates/business-occupation-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA DOR – Tax credits (Small Business B&O Tax Credit)",
+      "url": "https://dor.wa.gov/find-taxes-rates/tax-incentives/credits",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA DOR – Filing frequencies & due dates (active non-reporting)",
+      "url": "https://dor.wa.gov/file-pay-taxes/filing-frequencies-due-dates",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA DOR – Apply for a business license ($12,000 threshold)",
+      "url": "https://dor.wa.gov/open-business/apply-business-license",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA Legislature – Final Bill Report ESSB 6346, C 238 L 26",
+      "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/Senate/6346-S.E%20SBR%20FBR%2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "WA Secretary of State – Fee Schedules & Priority Services",
+      "url": "https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-schedules-priority-services",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "RCW 82.04.4451 – Small business B&O credit (maximum credit, phase-out formula)",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=82.04.4451",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business and occupation tax credit increase for small businesses - Washington Department of Revenue",
+      "url": "https://dor.wa.gov/forms-publications/publications-subject/special-notices/business-and-occupation-tax-credit-increase-small-businesses",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Active non-reporting - Washington Department of Revenue",
+      "url": "https://dor.wa.gov/file-pay-taxes/filing-frequencies-due-dates/active-non-reporting",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Services newly subject to retail sales tax - Washington Department of Revenue",
+      "url": "https://dor.wa.gov/taxes-rates/retail-sales-tax/services-newly-subject-retail-sales-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Information technology, website, and software development services now subject to sales tax - Washington Department of Revenue",
+      "url": "https://dor.wa.gov/forms-publications/publications-subject/special-notices/information-technology-website-and-software-development-services-now-subject-sales-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Tax Legislation - Washington Department of Revenue",
+      "url": "https://dor.wa.gov/forms-publications/publications-subject/tax-topics/2026-tax-legislation",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Frequently asked questions about income tax - Washington Department of Revenue",
+      "url": "https://dor.wa.gov/taxes-rates/income-tax/frequently-asked-questions-about-income-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business License Tax - City of Seattle License and Tax Administration",
+      "url": "https://www.seattle.gov/license-and-tax-administration/business-license-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Rates and Classifications - City of Seattle Finance",
+      "url": "https://www.seattle.gov/city-finance/business-taxes-and-licenses/business-taxes/tax-rates-and-classifications",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

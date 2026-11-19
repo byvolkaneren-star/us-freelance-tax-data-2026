@@ -1,0 +1,397 @@
+{
+  "code": "OR",
+  "name": "Oregon",
+  "slug": "oregon",
+  "taxYear": 2026,
+  "lastVerified": "2026-11-09",
+  "page": "https://hourfloor.com/states/oregon",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0475
+        },
+        {
+          "over": 4550,
+          "rate": 0.0675
+        },
+        {
+          "over": 11400,
+          "rate": 0.0875
+        },
+        {
+          "over": 125000,
+          "rate": 0.099
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0475
+        },
+        {
+          "over": 9100,
+          "rate": 0.0675
+        },
+        {
+          "over": 22800,
+          "rate": 0.0875
+        },
+        {
+          "over": 250000,
+          "rate": 0.099
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0475
+        },
+        {
+          "over": 9100,
+          "rate": 0.0675
+        },
+        {
+          "over": 22800,
+          "rate": 0.0875
+        },
+        {
+          "over": 250000,
+          "rate": 0.099
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 2910,
+      "mfj": 5820,
+      "hoh": 4685
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 263,
+      "mfj": 526,
+      "hoh": 263
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 bracket thresholds are from Oregon DOR's 2026 Publication OR-ESTIMATE rate charts and the 2026 withholding formulas (Charts S and J); heads of household use the joint chart. The 2026 Form OR-40 has not been published yet.",
+      "2026 standard deduction ($2,910 / $5,820 / $4,685) is from the DOR 2026 Combined Payroll Tax Report instructions and withholding formulas; the earlier OR-ESTIMATE publication listed estimates of $2,900 / $5,800 / $4,650. Confirm against the 2026 OR-40 instructions when released.",
+      "Personal exemption credit is $263 per exemption in the 2026 withholding formulas (OR-ESTIMATE estimated $260). Modeled as $0 when AGI exceeds $100,000 (single) or $200,000 (joint, head of household).",
+      "Oregon subtracts federal income tax liability (2026 limit $8,750, $4,375 MFS), phased out between $125,000 and $145,000 AGI (single) or $250,000 and $290,000 (joint/HoH). Modeled with a straight-line phase-out (Oregon uses steps).",
+      "Additional standard deduction for age 65+/blind, Oregon itemized deductions, the reduced pass-through rate for qualified business income (requires employees), kicker credit, Working Family Household and Dependent Care credit and other credits are not modeled.",
+      "Self-employed people working in the TriMet or Lane Transit districts owe a separate transit self-employment tax (TriMet 0.8237%, LTD 0.80% of net SE earnings over $400, Forms OR-TM / OR-LTD); not modeled."
+    ],
+    "federalTaxDeduction": {
+      "shareTiers": [
+        {
+          "agiUpTo": null,
+          "share": 1
+        }
+      ],
+      "cap": {
+        "single": 8750,
+        "mfj": 8750,
+        "hoh": 8750
+      },
+      "capPhaseout": {
+        "single": {
+          "start": 125000,
+          "end": 145000
+        },
+        "mfj": {
+          "start": 250000,
+          "end": 290000
+        },
+        "hoh": {
+          "start": 250000,
+          "end": 290000
+        }
+      }
+    },
+    "exemptionCreditPhaseout": {
+      "single": [
+        {
+          "from": 100000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "mfj": [
+        {
+          "from": 200000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "hoh": [
+        {
+          "from": 200000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Oregon starts from federal AGI; DOR says the half-SE-tax deduction flows through and needs no separate Oregon entry for full-year residents."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "DOR says the federal self-employed health insurance deduction flows through federal AGI for full-year residents."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted for federal AGI carry through to Oregon."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Oregon is disconnected from the IRC § 199A QBI deduction (ORS 316.859); it does not flow to the Oregon return."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Portland-area residents with high incomes owe Metro Supportive Housing Services tax (1% of taxable income over $128,000 single / $205,000 joint for 2026) and Multnomah County Preschool for All tax (1.5% over $125,000 single / $200,000 joint, plus another 1.5% over $250,000 / $400,000; PFA thresholds unchanged for 2026; Metro SHS thresholds indexed to $128,000 / $205,000). Quarterly estimates are required from 2026 when either tax exceeds $5,000. These apply to a minority of residents and are not modeled. TriMet/LTD transit self-employment taxes are noted under income tax notes.",
+    "localities": [
+      {
+        "slug": "multnomah",
+        "name": "Portland (Multnomah County)",
+        "components": [
+          {
+            "kind": "brackets",
+            "label": "Metro Supportive Housing Services tax",
+            "brackets": {
+              "single": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 128000,
+                  "rate": 0.01
+                }
+              ],
+              "mfj": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 205000,
+                  "rate": 0.01
+                }
+              ],
+              "hoh": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 205000,
+                  "rate": 0.01
+                }
+              ]
+            }
+          },
+          {
+            "kind": "brackets",
+            "label": "Multnomah County Preschool for All tax",
+            "brackets": {
+              "single": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 125000,
+                  "rate": 0.015
+                },
+                {
+                  "over": 250000,
+                  "rate": 0.03
+                }
+              ],
+              "mfj": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 200000,
+                  "rate": 0.015
+                },
+                {
+                  "over": 400000,
+                  "rate": 0.03
+                }
+              ],
+              "hoh": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 125000,
+                  "rate": 0.015
+                },
+                {
+                  "over": 250000,
+                  "rate": 0.03
+                }
+              ]
+            }
+          }
+        ],
+        "note": "Metro SHS: 1% of Oregon taxable income over $128,000 (single) or $205,000 (joint and head of household) for 2026. Multnomah PFA: 1.5% over $125,000 single / $200,000 joint, plus 1.5% more over $250,000 / $400,000. Portland does not state the PFA threshold for head of household; the single threshold is used here. The $35 Portland Arts Tax is not included.",
+        "sources": [
+          {
+            "title": "Personal Income Tax Filing and Payment Information (Metro SHS and Multnomah County PFA) - City of Portland Revenue Division",
+            "url": "https://www.portland.gov/revenue/personal-tax",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "slug": "metro-other",
+        "name": "Metro area outside Multnomah County",
+        "components": [
+          {
+            "kind": "brackets",
+            "label": "Metro Supportive Housing Services tax",
+            "brackets": {
+              "single": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 128000,
+                  "rate": 0.01
+                }
+              ],
+              "mfj": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 205000,
+                  "rate": 0.01
+                }
+              ],
+              "hoh": [
+                {
+                  "over": 0,
+                  "rate": 0
+                },
+                {
+                  "over": 205000,
+                  "rate": 0.01
+                }
+              ]
+            }
+          }
+        ],
+        "note": "Metro SHS: 1% of Oregon taxable income over $128,000 (single) or $205,000 (joint and head of household) for 2026, for residents of the Metro area in Washington and Clackamas counties.",
+        "sources": [
+          {
+            "title": "Personal Income Tax Filing and Payment Information (Metro SHS and Multnomah County PFA) - City of Portland Revenue Division",
+            "url": "https://www.portland.gov/revenue/personal-tax",
+            "retrieved": "2026-10-23"
+          }
+        ]
+      }
+    ]
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe $1,000 or more of Oregon tax after credits and withholding.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Required annual payment is the lesser of 90% of 2026 tax after credits or 100% of 2025 tax after credits (2025 return must be filed and not a short year). Annualized installments allowed via Form OR-10.",
+    "form": "Form OR-40-V (estimated payment voucher) or Revenue Online; see Publication OR-ESTIMATE"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 Articles of Organization (Oregon Secretary of State Corporation Division).",
+    "annualReportFee": "$100 annual report/renewal for a domestic LLC, due every year on the anniversary of registration.",
+    "franchiseOrMinimumTax": "None for income tax purposes. Corporate Activity Tax (CAT) applies only above $1 million of Oregon commercial activity: $250 plus 0.57% of taxable commercial activity over $1 million (registration required at $750,000).",
+    "grossReceiptsTax": "Oregon Corporate Activity Tax applies to sole proprietors and LLCs alike, but only when Oregon commercial activity exceeds $1 million (registration at $750,000). Most freelancers are below this."
+  },
+  "sources": [
+    {
+      "title": "2026 Publication OR-ESTIMATE, Oregon Estimated Income Tax Instructions - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "150-206-436 Oregon Withholding Tax Formulas, 2026 (Rev. 12-31-25) - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/forms/FormsPubs/withholding-tax-formulas_206-436_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Oregon Combined Payroll Tax Report Instructions - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/forms/FormsPubs/combined-payroll_211-155-2_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Form OR-W-4 Instructions - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/forms/FormsPubs/form-or-W-4-instr_101-402-1_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Publication OR-17, Oregon Individual Income Tax Guide - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/forms/FormsPubs/publication-or-17_101-431_2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Corporate Activity Tax - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/programs/businesses/Pages/corporate-activity-tax.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Transit Self-employment Taxes - Oregon DOR",
+      "url": "https://www.oregon.gov/dor/programs/businesses/pages/self-employment.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Articles of Organization - Limited Liability Company (form) - Oregon Secretary of State",
+      "url": "https://sos.oregon.gov/business/documents/business-registry-forms/llc-articles.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Don't Be Misled (annual report fee) - Oregon Secretary of State",
+      "url": "https://sos.oregon.gov/business/Pages/dont-be-misled.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Personal Income Tax Filing and Payment Information (Metro SHS / Multnomah PFA) - City of Portland Revenue Division",
+      "url": "https://www.portland.gov/revenue/personal-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax Filing and Payment Information (Portland Business License Tax, Multnomah County Business Income Tax) - City of Portland Revenue Division",
+      "url": "https://www.portland.gov/revenue/business-tax",
+      "retrieved": "2026-11-09"
+    },
+    {
+      "title": "Transit Tax Information - TriMet",
+      "url": "https://trimet.org/taxinfo/",
+      "retrieved": "2026-11-09"
+    }
+  ]
+}

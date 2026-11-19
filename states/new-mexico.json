@@ -1,0 +1,196 @@
+{
+  "code": "NM",
+  "name": "New Mexico",
+  "slug": "new-mexico",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/new-mexico",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.015
+        },
+        {
+          "over": 5500,
+          "rate": 0.032
+        },
+        {
+          "over": 16500,
+          "rate": 0.043
+        },
+        {
+          "over": 33500,
+          "rate": 0.047
+        },
+        {
+          "over": 66500,
+          "rate": 0.049
+        },
+        {
+          "over": 210000,
+          "rate": 0.059
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.015
+        },
+        {
+          "over": 8000,
+          "rate": 0.032
+        },
+        {
+          "over": 25000,
+          "rate": 0.043
+        },
+        {
+          "over": 50000,
+          "rate": 0.047
+        },
+        {
+          "over": 100000,
+          "rate": 0.049
+        },
+        {
+          "over": 315000,
+          "rate": 0.059
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.015
+        },
+        {
+          "over": 8000,
+          "rate": 0.032
+        },
+        {
+          "over": 25000,
+          "rate": 0.043
+        },
+        {
+          "over": 50000,
+          "rate": 0.047
+        },
+        {
+          "over": 100000,
+          "rate": 0.049
+        },
+        {
+          "over": 315000,
+          "rate": 0.059
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 16100,
+      "mfj": 32200,
+      "hoh": 24150
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Brackets are the statutory schedule in effect since tax year 2025 (not inflation-indexed). Thresholds were verified against the official 2025 PIT-1 Tax Rate Table (e.g., the 'over $100,000' table: 4.9% up to $210,000 single / $315,000 MFJ & HOH, then 5.9%). Head of household uses the married-filing-jointly schedule. The 2026 PIT-1 rate table was not yet published; no 2026 rate change was found.",
+      "New Mexico allows the same standard deduction the taxpayer may claim federally (PIT-1 line 12); values shown are the 2026 federal amounts from IRS Rev. Proc. 2025-32. Itemizers deduct federal itemized deductions less a state/local income tax add-back.",
+      "Low- and middle-income exemption (up to $2,500 per exemption, phased out as federal AGI rises above $20,000 single / $30,000 MFJ-HOH, gone at $36,667 / $55,000) is not modeled.",
+      "Deduction for certain dependents, capital gains deduction, Social Security exemption, age-65+/blind exemption, and credits (working families tax credit, child income tax credit, low-income comprehensive tax rebate, credit for taxes paid to other states) are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "New Mexico starts from federal AGI (PIT-1 line 9), which already reflects the deductible half of SE tax; there is no add-back."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI; no New Mexico add-back."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP/solo 401(k) deductions in federal AGI flow through; no New Mexico add-back."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below the AGI line, so it is not part of New Mexico's starting point."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "New Mexico has no city or county income taxes (local governments levy gross receipts tax increments instead)."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Expected New Mexico tax not covered by withholding of $1,000 or more (penalty considered when tax due exceeds payments by more than $1,000)",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Required annual payment is the lesser of 90% of the current-year tax or 100% of the prior-year tax (prior year must be a full 12-month New Mexico return). No 110% rule.",
+    "form": "PIT-ES (penalty computed on RPD-41272)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$50 Articles of Organization (New Mexico Secretary of State; filed online through the Business Portal).",
+    "annualReportFee": "None - New Mexico LLCs do not file annual or biennial reports with the Secretary of State (biennial reports apply to corporations).",
+    "franchiseOrMinimumTax": "None for LLCs taxed as sole proprietorships.",
+    "grossReceiptsTax": "Yes - Gross Receipts Tax (GRT) applies to most services performed in New Mexico, including freelance/professional services. State rate is 4.875% (the out-of-state location-code rate), plus county/municipal increments; the combined rate depends on the business location (see TRD's GRT location code and rate map) and is commonly passed on to clients. Register with Taxation and Revenue (CRS ID) and file monthly, quarterly or semiannually. Not modeled as income tax."
+  },
+  "sources": [
+    {
+      "title": "NM Taxation and Revenue - 2025 PIT-1 Personal Income Tax Return Instructions",
+      "url": "https://realfile.tax.newmexico.gov/2025pit-1-ins.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NM Taxation and Revenue - 2025 Tax Rate Table (PIT-TRT)",
+      "url": "https://realfile.tax.newmexico.gov/2025trt.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NM Taxation and Revenue - Estimated Payments",
+      "url": "https://www.tax.newmexico.gov/individuals/estimated-payments/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NM Taxation and Revenue - PIT-ES Personal Income Estimated Tax Payment Voucher",
+      "url": "https://realfile.tax.newmexico.gov/2025pit-es.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NM Taxation and Revenue - Gross Receipts Tax Overview",
+      "url": "https://www.tax.newmexico.gov/businesses/gross-receipts-overview/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "NM Taxation and Revenue - TRD-41413 GRT Return Instructions (state rate 4.875%)",
+      "url": "https://realfile.tax.newmexico.gov/trd-41413ins.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "IRS Rev. Proc. 2025-32 (2026 federal standard deduction used by New Mexico)",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "New Mexico Secretary of State - Business Services",
+      "url": "https://www.sos.nm.gov/business-services/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

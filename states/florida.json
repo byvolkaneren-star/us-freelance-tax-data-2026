@@ -1,0 +1,155 @@
+{
+  "code": "FL",
+  "name": "Florida",
+  "slug": "florida",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/florida",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Florida levies no personal income tax: Art. VII, s. 5(a) of the Florida Constitution bars a state tax on the income of natural persons who are residents (beyond amounts creditable against federal tax, of which there are none).",
+      "Only federal income tax and self-employment tax apply to a Florida freelancer's net profit."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: Florida has no personal income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: Florida has no personal income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: Florida has no personal income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: Florida has no personal income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No Florida city or county levies an income tax; the constitution only authorizes state-level taxes on income of entities other than natural persons. Local business tax receipts (flat occupational license fees) are not income-based and are not modeled."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Not applicable: no state personal income tax.",
+    "dueDates": [],
+    "safeHarbor": "Not applicable.",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$125 for a new Florida LLC ($100 filing fee + $25 registered agent designation fee).",
+    "annualReportFee": "$138.75 per year (annual report incl. supplemental fee), due Jan 1-May 1; $538.75 if received after May 1 ($400 late fee).",
+    "franchiseOrMinimumTax": "None. Florida corporate income tax (ch. 220) does not apply to a single-member LLC that is disregarded for federal tax purposes (s. 605.1103, F.S.) or to a sole proprietorship (s. 220.03(1)(e), F.S.).",
+    "grossReceiptsTax": "None on general professional or freelance service income."
+  },
+  "sources": [
+    {
+      "title": "Florida Constitution, Art. VII, s. 5 (Estate, inheritance and income taxes)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?submenu=3#A7S05",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Florida Division of Corporations - LLC Fees",
+      "url": "https://dos.fl.gov/sunbiz/forms/fees/llc-fees/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Florida Division of Corporations - File Annual Report",
+      "url": "https://dos.fl.gov/sunbiz/manage-business/efile/annual-report/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Florida Statutes s. 605.1103 - Taxation of LLCs (ch. 220)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0605/Sections/0605.1103.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Florida Statutes s. 220.03 - Definitions (corporate income tax)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0220/Sections/0220.03.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Limited Liability Company Annual Report Help - Florida Department of State, Division of Corporations",
+      "url": "https://efile.sunbiz.org/llc_ar_help.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Profit and NonProfit Annual Report Help - Florida Department of State, Division of Corporations",
+      "url": "https://efile.sunbiz.org/sbs_ar_instr.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Secretary of State Cord Byrd Reminds Florida Businesses to File Annual Report before May 1 Deadline - Florida Department of State",
+      "url": "https://dos.fl.gov/communications/press-releases/2026/secretary-of-state-cord-byrd-reminds-florida-businesses-to-file-annual-report-before-may-1-deadline/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Fictitious Names - Frequently Asked Questions - Florida Department of State, Division of Corporations",
+      "url": "https://efile.sunbiz.org/ficfaq.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Pay your Local Business Tax - Miami-Dade Office of the Tax Collector",
+      "url": "https://www.miamidade.gov/global/news-item.page?Mduid_news=news1602017472715893",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 212.05, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0212/Sections/0212.05.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 212.08, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0212/Sections/0212.08.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 220.11, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0220/Sections/0220.11.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 220.14, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0220/Sections/0220.14.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 443.1215, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0443/Sections/0443.1215.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 443.131, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0443/Sections/0443.131.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Section 443.1217, 2026 Florida Statutes - The Florida Legislature",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0443/Sections/0443.1217.html",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

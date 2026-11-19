@@ -1,0 +1,248 @@
+{
+  "code": "MO",
+  "name": "Missouri",
+  "slug": "missouri",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/missouri",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 1348,
+          "rate": 0.02
+        },
+        {
+          "over": 2696,
+          "rate": 0.025
+        },
+        {
+          "over": 4044,
+          "rate": 0.03
+        },
+        {
+          "over": 5392,
+          "rate": 0.035
+        },
+        {
+          "over": 6740,
+          "rate": 0.04
+        },
+        {
+          "over": 8088,
+          "rate": 0.045
+        },
+        {
+          "over": 9436,
+          "rate": 0.047
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 1348,
+          "rate": 0.02
+        },
+        {
+          "over": 2696,
+          "rate": 0.025
+        },
+        {
+          "over": 4044,
+          "rate": 0.03
+        },
+        {
+          "over": 5392,
+          "rate": 0.035
+        },
+        {
+          "over": 6740,
+          "rate": 0.04
+        },
+        {
+          "over": 8088,
+          "rate": 0.045
+        },
+        {
+          "over": 9436,
+          "rate": 0.047
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 1348,
+          "rate": 0.02
+        },
+        {
+          "over": 2696,
+          "rate": 0.025
+        },
+        {
+          "over": 4044,
+          "rate": 0.03
+        },
+        {
+          "over": 5392,
+          "rate": 0.035
+        },
+        {
+          "over": 6740,
+          "rate": 0.04
+        },
+        {
+          "over": 8088,
+          "rate": 0.045
+        },
+        {
+          "over": 9436,
+          "rate": 0.047
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 16100,
+      "mfj": 32200,
+      "hoh": 24150
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 1400
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 brackets are the inflation-indexed brackets in the DOR 2026 Missouri Withholding Tax Formula ($1,348-wide steps, 4.7% over $9,436); the same brackets apply to every filing status. Top rate stays 4.7% (no RSMo 143.011 trigger reduction applied for 2026). Amendment 5 (income-tax phase-out) was rejected by voters on Aug 4, 2026.",
+      "Missouri's standard deduction equals the federal standard deduction ($16,100 single, $32,200 joint, $24,150 HoH for 2026 per DOR withholding formula). HoH and qualifying surviving spouse get an additional $1,400 exemption (shown as HoH personalExemption).",
+      "Modeled: the deduction for federal income tax (35%, 25%, 15% or 5% of federal tax for Missouri AGI up to $25,000, $50,000, $100,000 or $125,000; none above $125,000; capped at $5,000, or $10,000 married filing jointly) and the 20% business income deduction for Schedule C income (Form MO-A line 17). Not modeled: capital gains and Social Security/pension subtractions, credits.",
+      "dor.mo.gov blocked automated access during verification; Missouri DOR documents were read from Internet Archive copies of the official dor.mo.gov URLs (2026 withholding formula captured Oct 13, 2026; 2025 MO-1040 instructions captured Feb 15, 2026).",
+      "Simplification: the calculator applies the 20% business income deduction to net profit after the deductible half of SE tax, while the MO-1040 worksheet (line 17) and RSMo 143.022 use Schedule C net profit (line 31) before that adjustment. This understates the deduction by 20% of the half-SE-tax deduction and overstates Missouri tax by roughly $40-$100 at typical freelance incomes."
+    ],
+    "federalTaxDeduction": {
+      "shareTiers": [
+        {
+          "agiUpTo": 25000,
+          "share": 0.35
+        },
+        {
+          "agiUpTo": 50000,
+          "share": 0.25
+        },
+        {
+          "agiUpTo": 100000,
+          "share": 0.15
+        },
+        {
+          "agiUpTo": 125000,
+          "share": 0.05
+        },
+        {
+          "agiUpTo": null,
+          "share": 0
+        }
+      ],
+      "cap": {
+        "single": 5000,
+        "mfj": 10000,
+        "hoh": 5000
+      }
+    },
+    "businessIncomeDeduction": {
+      "share": 0.2
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Missouri starts from federal AGI, so the deductible half of SE tax is already excluded."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI (Missouri also offers a separate qualified health insurance premium subtraction for amounts not already deducted)."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below AGI and not allowed; Missouri instead allows its own 20% business income deduction (RSMo 143.022; Form MO-A line 17), which the calculator models."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Kansas City and St. Louis City levy a 1% earnings tax on residents (and on nonresidents working in the city). Most Missouri residents do not live in either city, so it is not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Missouri estimated tax expected to be at least $100",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Required annual payment is the smaller of 90% of the current year's tax (66-2/3% for farmers) or 100% of the prior year's tax; no underpayment penalty if tax after withholding is less than $500 (Form MO-2210).",
+    "form": "Form MO-1040ES; underpayment on Form MO-2210"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$45 online / $100 paper Articles of Organization (RSMo 347.179); the Secretary of State may add a small technology fee",
+    "annualReportFee": "None - Missouri LLCs do not file an annual report",
+    "franchiseOrMinimumTax": "None",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Missouri DOR - 2026 Missouri Withholding Tax Formula (Internet Archive copy of official URL)",
+      "url": "https://dor.mo.gov/forms/Withholding%20Formula_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Missouri DOR - 2025 Form MO-1040 Instructions (Internet Archive copy of official URL)",
+      "url": "https://dor.mo.gov/forms/MO-1040%20Instructions_2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Missouri DOR - 2025 Individual Income Tax Year Changes (Internet Archive copy of official URL)",
+      "url": "https://dor.mo.gov/taxation/individual/tax-types/income/year-changes/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "RSMo 143.011 - Resident individuals tax rates, rate reductions (Internet Archive copy, Aug 2026)",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.011",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "RSMo 347.179 - LLC fees (Internet Archive copy)",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=347.179",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Missouri Secretary of State - Starting a Business (Internet Archive copy)",
+      "url": "https://www.sos.mo.gov/business/corporations/startBusiness",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "RSMo 143.022 - Deduction for business income (Internet Archive copy of official URL, Jan 2026)",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.022",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

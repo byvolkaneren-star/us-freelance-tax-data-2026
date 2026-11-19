@@ -1,0 +1,149 @@
+{
+  "code": "ID",
+  "name": "Idaho",
+  "slug": "idaho",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/idaho",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 4811,
+          "rate": 0.053
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 9622,
+          "rate": 0.053
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 9622,
+          "rate": 0.053
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 16100,
+      "mfj": 32200,
+      "hoh": 24150
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2025,
+    "notes": [
+      "Rate 5.3% (in effect since Jan 1, 2025; confirmed by the 2025 Form 40/43 instructions EIN00046). No 2026 rate-cut bill became law in the 2026 session (the 2026 enacted list shows only HB 559 IRC conformity and unrelated income-tax bills), so 5.3% applies for 2026.",
+      "Zero-rate amount: the first $4,811 (single/MFS) or $9,622 (married filing jointly, head of household, qualifying surviving spouse) of Idaho taxable income is taxed at 0% for 2025 (Form 40 tax computation worksheet). Idaho indexes these amounts yearly; the 2026 values had not been published, so 2025 values are used.",
+      "Head of household uses the $9,622 married amount: confirmed by the 2025 Form 40 instructions tax computation worksheet.",
+      "Idaho conforms to the IRC as of January 1, 2026 (2025 Form 40 instructions) and uses the federal standard deduction (2025: $15,750 / $31,500 / $23,625, matching the federal amounts). The 2026 federal amounts ($16,100 / $32,200 / $24,150) are used on that basis; Idaho's 2026 instructions are not yet published.",
+      "Not modeled: Food Tax Credit ($155 per person in 2025, refundable; about $155 single / $310 joint less tax), $10 permanent building fund tax, Idaho additions/subtractions to federal AGI (e.g. bonus depreciation decoupling), itemized deductions and other credits."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Idaho starts from federal AGI, which reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Idaho taxable income is federal AGI less the standard/itemized deduction; the federal QBI deduction is not part of the Idaho computation."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No Idaho city or county levies an income tax."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Idaho doesn't require estimated tax payments from individuals (2025 Form 40 instructions, 'When to File and Pay'); Idaho Code 63-3036A imposes estimated-tax requirements only on corporations. You can prepay at any time online or with Form 51. Tax not paid by the April 15 return due date accrues interest (6% for 2026).",
+    "dueDates": [],
+    "safeHarbor": "No individual underpayment-of-estimated-tax penalty. To get the automatic 6-month filing extension, by April 15 pay at least 100% of the prior year's Idaho tax or 80% of the current year's tax (Form 51 worksheet); otherwise an extension penalty can apply.",
+    "form": "Form 51 (Estimated Payment of Idaho Individual Income Tax), optional"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 Certificate of Organization (Idaho Code 30-21-214(b)(16)) filed online at SOSBiz; $120 on paper including the $20 manual processing fee.",
+    "annualReportFee": "$0: Idaho charges no fee for the annual report (Idaho Code 30-21-214(b)(7)); file online at SOSBiz by the end of the LLC's anniversary month each year (Idaho Code 30-21-213(c)). Paper filings add a $20 manual processing fee.",
+    "franchiseOrMinimumTax": "None for a sole proprietor or a disregarded single-member LLC.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "Idaho State Tax Commission - Individual Income Tax Rate Schedule",
+      "url": "https://tax.idaho.gov/taxes/income-tax/individual-income/individual-income-tax-rate-schedule/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho Secretary of State - Business Forms and Fees",
+      "url": "https://sos.idaho.gov/business-forms/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho Secretary of State - Business FAQ",
+      "url": "https://sos.idaho.gov/business-resources/business-faq/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho State Tax Commission - 2025 Individual Income Tax Instructions, Forms 40/43/39R/39NR (EIN00046, 03-02-2026)",
+      "url": "https://tax.idaho.gov/wp-content/uploads/forms/EIN00046/EIN00046_03-02-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho State Tax Commission - Form 51, Estimated Payment of Individual Income Tax (EFO00092)",
+      "url": "https://tax.idaho.gov/document-mngr/forms_EFO00092/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho Code 63-3036A - Payment of estimated tax (corporations)",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/title63/t63ch30/sect63-3036a/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho Code 30-21-214 - Fees (Secretary of State)",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/title30/t30ch21/sect30-21-214/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho Code 30-21-213 - Annual report for Secretary of State",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/title30/t30ch21/sect30-21-213/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Idaho Legislature - 2026 Session legislation list",
+      "url": "https://legislature.idaho.gov/sessioninfo/2026/legislation/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

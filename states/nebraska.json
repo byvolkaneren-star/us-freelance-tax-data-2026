@@ -1,0 +1,158 @@
+{
+  "code": "NE",
+  "name": "Nebraska",
+  "slug": "nebraska",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/nebraska",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0246
+        },
+        {
+          "over": 4130,
+          "rate": 0.0351
+        },
+        {
+          "over": 24760,
+          "rate": 0.0455
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0246
+        },
+        {
+          "over": 8250,
+          "rate": 0.0351
+        },
+        {
+          "over": 49530,
+          "rate": 0.0455
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0246
+        },
+        {
+          "over": 7700,
+          "rate": 0.0351
+        },
+        {
+          "over": 39620,
+          "rate": 0.0455
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 8850,
+      "mfj": 17700,
+      "hoh": 12950
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 176,
+      "mfj": 352,
+      "hoh": 176
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 brackets come from the Nebraska DOR 2026 Tax Calculation Schedule marked 'DRAFT AS OF 8/17/2026 DO NOT FILE' and match the official 2026 Form 1040N-ES worksheet; final 2026 forms were not yet released on 2026-10-22.",
+      "Under Neb. Rev. Stat. 77-2715.03 the third and fourth brackets both carry 4.55% for 2026 (top rate down from 5.20% in 2025), so they are merged into one 4.55% bracket here.",
+      "Standard deduction ($8,850 / $17,700 / $12,950) and the $176-per-exemption personal exemption credit are the 2026 indexed values printed in the official 2026 Form 1040N-ES booklet. MFJ credit = 2 x $176; dependents' exemption credits are not modeled.",
+      "Additional standard deduction for age 65+/blind and the reduced standard deduction for dependents are not modeled.",
+      "Nebraska itemized deductions (federal itemized less state income taxes) are not modeled.",
+      "Credits not modeled: Nebraska earned income credit, child/dependent care credit, property-tax-related credits, credit for tax paid to another state, and others.",
+      "Schedule I adjustments (e.g., Social Security and military retirement exclusions, U.S. obligation interest) are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Nebraska starts from federal AGI (Form 1040N line 5), which already reflects the deductible half of SE tax; Schedule I has no add-back for it."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI; Nebraska Schedule I has no add-back for the self-employed health insurance deduction."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP/solo 401(k) deductions taken above the line in federal AGI flow through; no Nebraska add-back."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it never reaches Nebraska's federal-AGI starting point."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Nebraska has no city, county, or school-district income taxes."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Nebraska income tax after personal exemption credits expected to exceed withholding and other credits by $500 or more",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No penalty if payments (incl. withholding) equal at least 90% of the 2026 tax, 100% of the 2025 Nebraska tax (if 2025 federal AGI was $150,000 or less), or 110% of the 2025 tax if 2025 federal AGI was over $150,000; also no penalty if 2026 tax less withholding is under $500. Farmers/ranchers/fishers use 66 2/3%.",
+    "form": "Form 1040N-ES (penalty computed on Form 2210N)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 online / $110 in-office for the Certificate of Organization (Nebraska Secretary of State). Nebraska LLCs must also publish a notice of organization in a newspaper (newspaper charges vary) and file the Affidavit/Proof of Publication ($25 online / $30 in-office).",
+    "annualReportFee": "$30 biennial report, due by April 1 of each odd-numbered year (delinquent June 16), per the Secretary of State's LLC biennial fee schedule.",
+    "franchiseOrMinimumTax": "None for LLCs (Nebraska's biennial occupation tax applies to corporations, not LLCs).",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "Nebraska DOR - 2026 Tax Calculation Schedule for Individual Income Tax (draft 8/17/2026)",
+      "url": "https://revenue.nebraska.gov/sites/default/files/doc/tax-forms/drafts/2026_tax_calculation_schedule.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nebraska DOR - 2026 Individual Estimated Income Tax Payment Vouchers, Form 1040N-ES",
+      "url": "https://revenue.nebraska.gov/sites/default/files/doc/tax-forms/2025/f_1040N-ES.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nebraska DOR - Draft 2026 Form 1040N Schedules I, II, III",
+      "url": "https://revenue.nebraska.gov/sites/default/files/doc/tax-forms/drafts/f_1040n_schs.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nebraska Secretary of State - Forms and Fee Information",
+      "url": "https://sos.nebraska.gov/business-services/forms-and-fee-information",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nebraska Secretary of State - Annual/Biennial Reporting",
+      "url": "https://sos.nebraska.gov/business-services/annualbiennial-reporting",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nebraska Secretary of State - Domestic LLC Reinstatement form (biennial fee $30)",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/business-services/Corporations/Reinstatement/DLLCReinstatement.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Nebraska Secretary of State - Certificate of Organization form",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/business-services/Corporations/Forms/CertificateOfOrganization.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

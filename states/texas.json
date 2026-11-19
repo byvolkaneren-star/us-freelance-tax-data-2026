@@ -1,0 +1,160 @@
+{
+  "code": "TX",
+  "name": "Texas",
+  "slug": "texas",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/texas",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Texas has no personal income tax, so self-employment income is subject only to federal income and self-employment tax.",
+      "A Texas LLC (including a single-member LLC taxed as a sole proprietorship) is a taxable entity for the franchise tax, but owes no tax when annualized total revenue is at or below the no-tax-due threshold ($2,650,000 for 2026 and 2027 reports); it must still file a Public Information Report or Ownership Information Report each year by May 15. Sole proprietors without an LLC are not subject."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: Texas has no personal income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: Texas has no personal income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: Texas has no personal income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: Texas has no personal income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Texas cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Not applicable: no state personal income tax.",
+    "dueDates": [],
+    "safeHarbor": "Not applicable.",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$300 Certificate of Formation (Form 205, Texas Secretary of State).",
+    "annualReportFee": "None with the Secretary of State. LLCs must file a free franchise tax Public Information Report (or Ownership Information Report) with the Comptroller every year by May 15.",
+    "franchiseOrMinimumTax": "Franchise tax applies to LLCs (including single-member LLCs) but no tax is due if annualized total revenue is at or below $2,650,000 (2026 and 2027 reports); above that, 0.75% of taxable margin (0.375% for retail/wholesale). No minimum tax. Sole proprietorships are not subject.",
+    "grossReceiptsTax": "None for a typical freelancer below the franchise tax threshold (the Texas franchise tax is a margin tax that only applies to LLCs above $2,650,000 in revenue)."
+  },
+  "sources": [
+    {
+      "title": "Franchise Tax - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/franchise/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Franchise Tax Overview (Publication 98-806) - Texas Comptroller",
+      "url": "https://comptroller.texas.gov/taxes/publications/98-806.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Taxable Entities - Franchise Tax Frequently Asked Questions - Texas Comptroller",
+      "url": "https://comptroller.texas.gov/taxes/franchise/faq/taxable-entities.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Texas is open for small business (Fiscal Notes 2025) - Texas Comptroller",
+      "url": "https://comptroller.texas.gov/economy/fiscal-notes/industry/2025/small-biz-info/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Form 205 Instructions, Certificate of Formation - Limited Liability Company - Texas Secretary of State",
+      "url": "https://www.sos.texas.gov/corp/instructions/205.shtml",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "No Tax Due Reporting for Report Year 2024 and Later - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/franchise/ntd-rpt-updates-2024.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Texas Franchise Tax Public Information Report and Ownership Information Report - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Due Dates for Taxes, Fees and Information Reports - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/file-pay/due-dates.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Taxable Services (Publication 96-259) - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/publications/96-259.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Data Processing Services are Taxable (Publication 94-127) - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/publications/94-127.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Information Services (Publication 94-109) - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/publications/94-109.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Texas Sales and Use Tax Frequently Asked Questions: Permits - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/sales/faq/permit.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Sales and Use Tax - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/sales/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Property Tax Today, January 2026 - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/newsletter/vol35-jan26.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Valuing Property - Texas Comptroller of Public Accounts",
+      "url": "https://comptroller.texas.gov/taxes/property-tax/valuing-property.php",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "H.B. No. 9, 89th Legislature (Enrolled) - Texas Legislature Online",
+      "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00009F.htm",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Name Filings FAQs - Texas Secretary of State",
+      "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Selecting a Business Structure - Texas Secretary of State",
+      "url": "https://www.sos.state.tx.us/corp/businessstructure.shtml",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

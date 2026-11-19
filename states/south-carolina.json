@@ -1,0 +1,175 @@
+{
+  "code": "SC",
+  "name": "South Carolina",
+  "slug": "south-carolina",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/south-carolina",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0199
+        },
+        {
+          "over": 30000,
+          "rate": 0.0521
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0199
+        },
+        {
+          "over": 30000,
+          "rate": 0.0521
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0199
+        },
+        {
+          "over": 30000,
+          "rate": 0.0521
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 15000,
+      "mfj": 30000,
+      "hoh": 22500
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Act 110 of 2026 (H.4216) rewrote South Carolina's income tax starting with tax year 2026: two brackets (1.99% on taxable income under $30,000; 5.21% minus $966 at $30,000 and above, i.e. 5.21% marginal above $30,000), one schedule for all filing statuses. SCDOR Information Letter #26-20 confirms the 2026 figures. Brackets are indexed in later years.",
+      "Starting in 2026, South Carolina begins with federal AGI (not federal taxable income) and does not allow the federal standard/itemized deductions or the federal QBI, tips, overtime, car-loan-interest or senior deductions.",
+      "The South Carolina Income Adjusted Deduction (SCIAD) shown as the standard deduction ($15,000 single/MFS, $22,500 HoH, $30,000 MFJ) phases out in proportion to federal AGI: single from $40,000 to $95,000, HoH from $60,000 to $142,500, MFJ from $80,000 to $190,000. Modeled.",
+      "Optional 3% flat rate on active trade or business income (SC Code § 12-6-545, Form I-335) is available to sole proprietors, but income reasonably related to the owner's personal services is excluded, so it usually helps freelancers little; not modeled.",
+      "Top-rate reductions under Act 110 can start no earlier than tax year 2027. Dependent exemption, retirement-income and age-65 deductions, the $200-capped SC EITC and other credits are not modeled."
+    ],
+    "standardDeductionPhaseout": {
+      "single": [
+        {
+          "from": 40000,
+          "ref": 40000,
+          "base": 15000,
+          "rate": 0.2727272727272727
+        }
+      ],
+      "hoh": [
+        {
+          "from": 60000,
+          "ref": 60000,
+          "base": 22500,
+          "rate": 0.2727272727272727
+        }
+      ],
+      "mfj": [
+        {
+          "from": 80000,
+          "ref": 80000,
+          "base": 30000,
+          "rate": 0.2727272727272727
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "South Carolina now starts from federal AGI, so the deductible half of SE tax carries through."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The federal self-employed health insurance deduction is part of federal AGI and carries through."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions deducted for federal AGI carry through to South Carolina."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Act 110 decouples South Carolina from IRC § 63(b)-(g), so the federal QBI deduction is not allowed starting in 2026."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "South Carolina counties and cities do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe $100 or more with your SC1040 after withholding and credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Generally no penalty if timely estimates equal 100% of the prior-year SC tax (110% if prior-year AGI exceeded $150,000), or if you pay at least 90% of the current-year tax. SCDOR Information Letter #26-20 explains adjusting 2026 payments for Act 110.",
+    "form": "Form SC1040ES (or MyDORWAY)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$110 Articles of Organization (South Carolina Secretary of State, S.C. Code § 33-44-1204).",
+    "annualReportFee": "None. An LLC not taxed as a corporation files no annual report and pays no corporate license fee.",
+    "franchiseOrMinimumTax": "None for sole proprietors or LLCs taxed as sole proprietorships/partnerships (the corporate license fee applies only to LLCs taxed as corporations).",
+    "grossReceiptsTax": "None at the state level. Check your city or county for any local business license requirement."
+  },
+  "sources": [
+    {
+      "title": "H.4216 (Act No. 110 of 2026), ratified text - South Carolina Legislature",
+      "url": "https://www.scstatehouse.gov/sess126_2025-2026/bills/4216.htm",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "SC Information Letter #26-20: Individual Income Tax Reform - SCDOR",
+      "url": "https://dor.sc.gov/sites/dor/files/policies/IL26-20.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Information about H.4216 - SCDOR",
+      "url": "https://dor.sc.gov/news/information-about-h-4216",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Estimated Income Tax payments due September 15? Read Information Letter #26-20 first - SCDOR",
+      "url": "https://dor.sc.gov/news/estimated-income-tax-payments-due-september-15-read-information-letter-26-20-first",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 SC1040ES Individual Declaration of Estimated Tax - SCDOR",
+      "url": "https://dor.sc.gov/sites/dor/files/forms/SC1040ES_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 I-335 Active Trade or Business Income Reduced Rate Computation - SCDOR",
+      "url": "https://dor.sc.gov/sites/dor/files/forms/I335_2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "SC Revenue Ruling #98-11: Single Member Limited Liability Company - SCDOR",
+      "url": "https://dor.sc.gov/income-tax-single-member-limited-liability-company",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "S.C. Code Title 33 Chapter 44 (§ 33-44-1204 Fees) - South Carolina Legislature",
+      "url": "https://www.scstatehouse.gov/code/t33c044.php",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

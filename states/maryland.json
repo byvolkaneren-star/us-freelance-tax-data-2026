@@ -1,0 +1,296 @@
+{
+  "code": "MD",
+  "name": "Maryland",
+  "slug": "maryland",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/maryland",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 1000,
+          "rate": 0.03
+        },
+        {
+          "over": 2000,
+          "rate": 0.04
+        },
+        {
+          "over": 3000,
+          "rate": 0.0475
+        },
+        {
+          "over": 100000,
+          "rate": 0.05
+        },
+        {
+          "over": 125000,
+          "rate": 0.0525
+        },
+        {
+          "over": 150000,
+          "rate": 0.055
+        },
+        {
+          "over": 250000,
+          "rate": 0.0575
+        },
+        {
+          "over": 500000,
+          "rate": 0.0625
+        },
+        {
+          "over": 1000000,
+          "rate": 0.065
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 1000,
+          "rate": 0.03
+        },
+        {
+          "over": 2000,
+          "rate": 0.04
+        },
+        {
+          "over": 3000,
+          "rate": 0.0475
+        },
+        {
+          "over": 150000,
+          "rate": 0.05
+        },
+        {
+          "over": 175000,
+          "rate": 0.0525
+        },
+        {
+          "over": 225000,
+          "rate": 0.055
+        },
+        {
+          "over": 300000,
+          "rate": 0.0575
+        },
+        {
+          "over": 600000,
+          "rate": 0.0625
+        },
+        {
+          "over": 1200000,
+          "rate": 0.065
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 1000,
+          "rate": 0.03
+        },
+        {
+          "over": 2000,
+          "rate": 0.04
+        },
+        {
+          "over": 3000,
+          "rate": 0.0475
+        },
+        {
+          "over": 150000,
+          "rate": 0.05
+        },
+        {
+          "over": 175000,
+          "rate": 0.0525
+        },
+        {
+          "over": 225000,
+          "rate": 0.055
+        },
+        {
+          "over": 300000,
+          "rate": 0.0575
+        },
+        {
+          "over": 600000,
+          "rate": 0.0625
+        },
+        {
+          "over": 1200000,
+          "rate": 0.065
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 3350,
+      "mfj": 6700,
+      "hoh": 6700
+    },
+    "personalExemption": {
+      "single": 3200,
+      "mfj": 6400,
+      "hoh": 3200
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Rates/brackets and the flat standard deduction ($3,350 single/MFS, $6,700 joint/HoH/QSS) are from the Comptroller's 2026 Payment Voucher Worksheet; the 6.25% and 6.50% brackets were added by the Budget Reconciliation and Financing Act of 2025 (Ch. 604) for tax years after 2024. The standard deduction is to be indexed to cost-of-living in future years.",
+      "Personal exemption $3,200 per taxpayer/spouse is reduced when federal AGI exceeds $100,000 (single/MFS: $1,600 to $125k, $800 to $150k, $0 above $150k; joint/HoH: $1,600 per person at $150k-$175k, $800 at $175k-$200k, $0 above $200k). Modeled.",
+      "Not modeled: additional 2% tax on net capital gain when federal AGI exceeds $350,000; itemized-deduction phase-out (7.5% of FAGI over $200,000); Maryland subtractions and credits (EITC, child tax credit, etc.).",
+      "County/Baltimore City income tax is modeled separately at a representative 3.20%; actual 2026 county rates range from 2.25% (Worcester) to 3.30% (Dorchester, Kent), with graduated local rates in Anne Arundel and Frederick."
+    ],
+    "personalExemptionPhaseout": {
+      "single": [
+        {
+          "from": 100000.01,
+          "ref": 0,
+          "base": 1600,
+          "rate": 0
+        },
+        {
+          "from": 125000.01,
+          "ref": 0,
+          "base": 800,
+          "rate": 0
+        },
+        {
+          "from": 150000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "hoh": [
+        {
+          "from": 150000.01,
+          "ref": 0,
+          "base": 1600,
+          "rate": 0
+        },
+        {
+          "from": 175000.01,
+          "ref": 0,
+          "base": 800,
+          "rate": 0
+        },
+        {
+          "from": 200000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "mfj": [
+        {
+          "from": 150000.01,
+          "ref": 0,
+          "base": 3200,
+          "rate": 0
+        },
+        {
+          "from": 175000.01,
+          "ref": 0,
+          "base": 1600,
+          "rate": 0
+        },
+        {
+          "from": 200000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Maryland starts from federal AGI, so the deductible half of SE tax (an above-the-line federal adjustment) is already excluded."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are above-the-line federal adjustments inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it does not reduce the state base."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Every Maryland county and Baltimore City levies a local income tax on Maryland taxable net income, so essentially all residents pay it. 3.20% is used as the representative rate because it is the 2026 rate in Baltimore City and the most populous counties (Montgomery, Prince George's, Baltimore County, Howard) and in most other counties. 2026 rates: 3.30% Dorchester and Kent; 3.20% Allegany, Baltimore City, Baltimore Co., Calvert, Caroline, Howard, Montgomery, Prince George's, Queen Anne's, St. Mary's, Somerset, Wicomico; 3.06% Harford; 3.03% Carroll and Charles; 2.95% Washington; 2.74% Cecil; 2.65% Garrett; 2.40% Talbot; 2.25% Worcester; Anne Arundel 2.70%/2.94%/3.20% and Frederick 2.25%-3.20% graduated.",
+    "modeled": {
+      "rate": 0.032,
+      "base": "stateTaxableIncome",
+      "label": "Maryland county/Baltimore City income tax (representative 3.20%)"
+    }
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Gross income expected to develop Maryland (state + local) tax of more than $500 in excess of Maryland withholding",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No interest if four timely quarterly payments each equal at least one-fourth of 110% of the prior year's tax or 90% of the current year's tax, or if tax after withholding is $500 or less (Form 502UP). The 4th payment may be replaced by filing and paying in full by Jan 31, 2027.",
+    "form": "Form PV / Payment Voucher Worksheet (502D declaration); underpayment interest on Form 502UP"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 Articles of Organization (Md. Code, Corps. & Ass'ns 1-203); optional expedited service extra",
+    "annualReportFee": "$300 annual report, due April 15 every year (Md. Code, Corps. & Ass'ns 1-203)",
+    "franchiseOrMinimumTax": "None",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Comptroller of Maryland - 2026 Payment Voucher Worksheet for Estimated Tax and Extension Payments",
+      "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/forms/worksheets/2026-pv-worksheet.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Comptroller of Maryland - Tax Alert: Changes to Standard and Itemized Deductions and to State and Local Income Tax Rates from the 2025 Legislative Session (rev. Dec 22, 2025)",
+      "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/alerts/tax-alert-changes-to-standard-and-itemized-deductions-and-to-state-and-local-income-tax-rates-from-the-2025-legislative-session.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Comptroller of Maryland - Withholding Tax Facts January 2026",
+      "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/withholding-tax-facts-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Comptroller of Maryland - 2025 Form 502UP Underpayment of Estimated Income Tax by Individuals",
+      "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/forms/2025/502up.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Maryland Code, Corporations and Associations 1-203 (filing fees)",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/laws/StatuteText?article=gca&section=1-203",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

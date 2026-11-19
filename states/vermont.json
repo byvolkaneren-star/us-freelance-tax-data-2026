@@ -1,0 +1,162 @@
+{
+  "code": "VT",
+  "name": "Vermont",
+  "slug": "vermont",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/vermont",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0335
+        },
+        {
+          "over": 50750,
+          "rate": 0.066
+        },
+        {
+          "over": 122850,
+          "rate": 0.076
+        },
+        {
+          "over": 256300,
+          "rate": 0.0875
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0335
+        },
+        {
+          "over": 84700,
+          "rate": 0.066
+        },
+        {
+          "over": 204750,
+          "rate": 0.076
+        },
+        {
+          "over": 312050,
+          "rate": 0.0875
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0335
+        },
+        {
+          "over": 68000,
+          "rate": 0.066
+        },
+        {
+          "over": 175500,
+          "rate": 0.076
+        },
+        {
+          "over": 284150,
+          "rate": 0.0875
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 7650,
+      "mfj": 15300,
+      "hoh": 11450
+    },
+    "personalExemption": {
+      "single": 5300,
+      "mfj": 10600,
+      "hoh": 5300
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2025,
+    "notes": [
+      "Brackets are the 2026 PRELIMINARY rate schedules published in the 2026 Form IN-114 estimated tax instructions; final 2026 schedules are issued with the 2026 return booklet and may differ slightly.",
+      "Standard deduction ($7,650 single / $15,300 MFJ / $11,450 HoH) and personal exemption ($5,300 per person) are the 2025 amounts; Vermont has not yet published 2026 indexed values. Extra $1,250 standard deduction per box for age 65+/blind is not modeled.",
+      "Minimum tax (modeled): if federal AGI exceeds $150,000 (all filing statuses), Vermont income tax is the greater of the rate-schedule tax or 3% of federal AGI minus interest from U.S. obligations.",
+      "Self-employed individuals owe the Vermont Child Care Contribution of 0.11% of Vermont self-employment income, paid with the income tax return (not modeled).",
+      "Not modeled: Vermont additions/subtractions (e.g. non-Vermont municipal bond interest, Social Security and retirement income exclusions), capital gains exclusion, Vermont earned income/child tax credits, dependent exemptions, and credit for taxes paid to other states."
+    ],
+    "agiMinimumTax": {
+      "agiOver": 150000,
+      "rate": 0.03
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Vermont starts from federal AGI, which already reflects the deduction for one-half of self-employment tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment included in federal AGI, Vermont's starting point."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions reduce federal AGI and therefore Vermont income."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Vermont starts from federal AGI and applies its own standard deduction and exemptions, so the federal QBI deduction (taken after AGI) is not allowed."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No local income taxes in Vermont (some towns levy local option sales, rooms/meals taxes, not modeled)."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Estimated payments are expected if Vermont tax due after withholding and credits will be $500 or more; no underpayment penalty when the amount due is under $500.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment penalty if timely payments total at least the lesser of 100% of the prior-year Vermont tax or 90% of the current-year Vermont tax.",
+    "form": "Form IN-114 (Vermont Individual Income Estimated Tax Payment Voucher)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$155 (Articles of Organization, domestic LLC, Vermont Secretary of State).",
+    "annualReportFee": "$45 per year (domestic LLC annual report, Vermont Secretary of State).",
+    "franchiseOrMinimumTax": "None for a sole proprietor or single-member LLC taxed as a disregarded entity (income is taxed on the owner's personal return).",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Vermont Department of Taxes – 2026 Form IN-114 Instructions (2026 preliminary rate schedules, estimated tax)",
+      "url": "https://tax.vermont.gov/sites/tax/files/documents/IN-114-Instr-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Vermont Department of Taxes – Filing Season FAQs (2025 standard deduction and personal exemption)",
+      "url": "https://tax.vermont.gov/filing-season-faqs",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Vermont Department of Taxes – 2025 Vermont Tax Rate Schedules (3% of AGI rule for AGI over $150,000)",
+      "url": "https://tax.vermont.gov/sites/tax/files/documents/TaxRateSched-2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Vermont Department of Taxes – 2025 Income Tax Return Booklet",
+      "url": "https://tax.vermont.gov/sites/tax/files/documents/Income-Booklet-2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Vermont Secretary of State – Business Services Fees & Statutes",
+      "url": "https://sos.vermont.gov/business-services/fees-statutes",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

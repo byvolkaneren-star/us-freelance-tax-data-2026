@@ -1,0 +1,151 @@
+{
+  "code": "IA",
+  "name": "Iowa",
+  "slug": "iowa",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/iowa",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalTaxableIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.038
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.038
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.038
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 40,
+      "mfj": 80,
+      "hoh": 80
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Flat 3.8% on all taxable income for 2026 (SF 2442 of 2024; IDR announcement Oct 21, 2025).",
+      "Iowa starts from federal taxable income (IA 1040 line 2 = federal Form 1040 line 15) with rolling IRC conformity, so the federal standard/itemized deduction is already applied and the Iowa standard deduction is 0 here.",
+      "Personal exemption credit is $40 per person; MFJ and head of household claim two credits ($80). This is a fixed statutory amount confirmed in the TY2025 expanded instructions. Dependent and age 65+/blind credits are not modeled.",
+      "Not modeled: school district income surtax (a percentage of Iowa tax set by each school district) and the county EMS surtax (Appanoose, Cass, Pocahontas, Sac, Shelby, Winnebago); Iowa modifications on Schedule 1 (e.g., depreciation/section 179 differences); credits."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: federal taxable income already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal taxable income."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal taxable income."
+    },
+    "qbi": {
+      "allowed": true,
+      "note": "Kept: Iowa starts from federal taxable income (federal 1040 line 15, after the QBI deduction) with rolling IRC conformity, and lists the QBI deduction (IA 1040 line 1e) only as an add-back for the low-income exemption test, not as a modification (IA 1040 line 4 instructions)."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Most Iowa school districts levy an income surtax computed as a percentage of the resident's Iowa income tax (rates vary by district; some districts levy none), and six counties add an EMS surtax. Because the surtax is a percentage of tax and not universal, it is not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe $1,000 or more (for tax years beginning on or after Jan 1, 2026; previously $200) in tax on income not subject to withholding.",
+    "dueDates": [
+      "2026-04-30",
+      "2026-06-30",
+      "2026-09-30",
+      "2027-02-01"
+    ],
+    "safeHarbor": "No penalty if timely payments equal or exceed the prior year's tax (12-month year; high-income taxpayers with prior-year federal AGI over $150,000 may need more than 100%, see IA 1040ES) or are at least 90% of the current year's tax on annualized income (IA 2210). The fourth installment's nominal date is Jan 31, which falls on a Sunday in 2027.",
+    "form": "IA 1040ES (Individual Income Voucher) or GovConnectIowa"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$50 Certificate of Organization (Iowa Code 489.122(1)(c)).",
+    "annualReportFee": "Biennial report every odd-numbered year, due Jan 1-April 1 (Iowa Code 489.212); the fee is set by the Secretary of State (489.122(4)) and is commonly listed as $30 online / $45 paper - the SOS fee page blocked automated access, so the amount was not re-verified.",
+    "franchiseOrMinimumTax": "None.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "Iowa Department of Revenue - IDR Announces 2026 Individual Income Tax and Interest Rates",
+      "url": "https://revenue.iowa.gov/press-release/2025-10-21/idr-announces-2026-individual-income-tax-and-interest-rates",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - IA 1040 Expanded Instructions: Conformity with the IRC",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/conformity-irc",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - IA 1040 Line 2: Federal Taxable Income",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/federal-taxable-income",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - IA 1040 Exemption Credits",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/exemption-credits",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - IA 1040 Schedule 1",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/ia-1040-schedule-1",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - School District Surtax / EMS Tax",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/school-district-surtaxemergency",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - Estimated Income Tax Payments",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/estimated-income-tax-payments",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - Penalty for Underpayment of Estimated Tax",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/penalty-underpayment",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa Secretary of State - Business Entity Forms and Fees",
+      "url": "https://sos.iowa.gov/businesses/business-entity-forms-and-fees",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa DOR - IA 1040 Line 4: Iowa Taxable Income (QBI add-back only for low-income test)",
+      "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/iowa-taxable-income",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Iowa Code 2026, Chapter 489 (sections 489.122 fees, 489.212 biennial report)",
+      "url": "https://www.legis.iowa.gov/docs/code/489.pdf",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

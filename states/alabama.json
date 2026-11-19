@@ -1,0 +1,209 @@
+{
+  "code": "AL",
+  "name": "Alabama",
+  "slug": "alabama",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/alabama",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "stateDefinedIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 500,
+          "rate": 0.04
+        },
+        {
+          "over": 3000,
+          "rate": 0.05
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 1000,
+          "rate": 0.04
+        },
+        {
+          "over": 6000,
+          "rate": 0.05
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.02
+        },
+        {
+          "over": 500,
+          "rate": 0.04
+        },
+        {
+          "over": 3000,
+          "rate": 0.05
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 3000,
+      "mfj": 8500,
+      "hoh": 5200
+    },
+    "personalExemption": {
+      "single": 1500,
+      "mfj": 3000,
+      "hoh": 3000
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2025,
+    "notes": [
+      "Rates and bracket widths are statutory and not indexed (2%/4%/5%; head of family uses the single schedule). No rate change has been enacted for 2026.",
+      "Standard deduction (2025 ADOR chart; 2026 chart not yet published) phases down as Alabama AGI rises above $25,999: single loses $25 per $500 to a $2,500 floor, MFJ $175 per $500 to $5,000, HoH $135 per $500 to $2,500. Modeled as a straight-line phase-down.",
+      "Alabama allows a deduction for federal income tax paid or accrued (Form 40, line 12; income tax only, not SE tax). Modeled using the estimated federal income tax.",
+      "Half of SE tax is not an adjustment to Alabama AGI. FICA and federal self-employment tax can instead be claimed as an Alabama itemized deduction (Schedule A, line 6); not modeled.",
+      "Dependent exemptions (amount depends on AGI), itemized deductions and credits are not modeled."
+    ],
+    "standardDeductionPhaseout": {
+      "single": [
+        {
+          "from": 26000,
+          "ref": 26000,
+          "base": 3000,
+          "rate": 0.05
+        },
+        {
+          "from": 36000,
+          "ref": 0,
+          "base": 2500,
+          "rate": 0
+        }
+      ],
+      "mfj": [
+        {
+          "from": 26000,
+          "ref": 26000,
+          "base": 8500,
+          "rate": 0.35
+        },
+        {
+          "from": 36000,
+          "ref": 0,
+          "base": 5000,
+          "rate": 0
+        }
+      ],
+      "hoh": [
+        {
+          "from": 26000,
+          "ref": 26000,
+          "base": 5200,
+          "rate": 0.27
+        },
+        {
+          "from": 36000,
+          "ref": 0,
+          "base": 2500,
+          "rate": 0
+        }
+      ]
+    },
+    "federalTaxDeduction": {
+      "shareTiers": [
+        {
+          "agiUpTo": null,
+          "share": 1
+        }
+      ],
+      "cap": null
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Alabama computes its own AGI (Form 40 Part II adjustments), and the deductible half of SE tax is not on the list; SE tax is deductible only as an itemized deduction."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Form 40 page 2, Part II, line 7 allows the self-employed health insurance deduction."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "Form 40 Part II, line 2 allows payments to a Keogh retirement plan and self-employment SEP deduction (self-employed qualified plans)."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Alabama does not start from federal taxable income and has no QBI-equivalent deduction."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Some Alabama municipalities and counties (for example Birmingham) levy local occupational license taxes on wages and/or business license taxes; they are administered locally, not by ADOR, and are not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you expect to owe at least $500 of Alabama tax for 2026 after withholding and credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No penalty if withholding plus credits are at least the smaller of 90% of 2026 tax or 100% of 2025 tax (110% if 2025 Alabama AGI was over $150,000, or $75,000 married filing separately).",
+    "form": "Form 40ES (Individual Estimated Tax) or My Alabama Taxes online"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$200 Secretary of State filing fee for a domestic LLC Certificate of Formation (a name reservation is filed first and carries its own fee).",
+    "annualReportFee": "None with the Secretary of State for LLCs. Pass-through entities file the Business Privilege Tax return (Form PPT) with ADOR only when the privilege tax exceeds $100.",
+    "franchiseOrMinimumTax": "Business Privilege Tax on LLCs and disregarded entities: $0.25 to $1.75 per $1,000 of Alabama net worth. For tax year 2026, entities whose tax would be $100 or less have no filing requirement and owe nothing (the former minimum tax no longer applies). Maximum $15,000.",
+    "grossReceiptsTax": "None at the state level. Local business licenses (which may be based on gross receipts) are set by cities/counties."
+  },
+  "sources": [
+    {
+      "title": "What is Alabama's individual income tax rate? - Alabama Department of Revenue",
+      "url": "https://www.revenue.alabama.gov/faqs/what-is-alabamas-individual-income-tax-rate/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Form 40NR Booklet - Standard Deduction chart - Alabama Department of Revenue",
+      "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/25stddeduction40nr.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2025 Form 40 Individual Income Tax Return - Alabama Department of Revenue",
+      "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/25f40.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Form 40ES Instructions - Alabama Department of Revenue",
+      "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/26f40esinstr.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "2026 Form PPT Instructions (Business Privilege Tax) - Alabama Department of Revenue",
+      "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/26fpptinstr.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Summary of Alabama Taxes and Tax Incentives - Alabama Department of Revenue",
+      "url": "https://www.revenue.alabama.gov/wp-content/uploads/2025/05/summary.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Limited Liability Companies - Alabama Secretary of State",
+      "url": "https://www.sos.alabama.gov/business-entities/llcs",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

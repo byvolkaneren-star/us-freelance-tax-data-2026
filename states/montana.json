@@ -1,0 +1,133 @@
+{
+  "code": "MT",
+  "name": "Montana",
+  "slug": "montana",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/montana",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalTaxableIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.047
+        },
+        {
+          "over": 47500,
+          "rate": 0.0565
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.047
+        },
+        {
+          "over": 95000,
+          "rate": 0.0565
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.047
+        },
+        {
+          "over": 71250,
+          "rate": 0.0565
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "HB 337 (2025): for 2026 the top ordinary rate falls from 5.9% to 5.65% and the 4.7% bracket widens to $47,500 single/MFS, $71,250 HoH, $95,000 joint. 2027: 5.4% above $65,000/$97,500/$130,000.",
+      "Montana starts from federal taxable income (after the federal standard or itemized deduction, including the new federal Schedule 1-A deductions), so there is no separate Montana standard deduction or personal exemption; the federal QBI deduction must NOT be subtracted.",
+      "Net long-term capital gains are taxed at separate 3.0%/4.1% rates (not modeled).",
+      "Not modeled: $5,660 subtraction for taxpayers 65+ (2025 amount, indexed), other Schedule I additions/subtractions (e.g., state income tax add-back), Montana EITC (20% of federal from 2026), and other credits."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: federal taxable income already reflects the deductible half of SE tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited: federal taxable income already reflects the self-employed health insurance deduction."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "Inherited: SEP-IRA and solo 401(k) deductions are already reflected in federal taxable income."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Form 2 instructions: do not include the federal qualified business income deduction when determining federal taxable income for Montana purposes."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Montana cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Expected Montana tax due of $500 or more after withholding and credits",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "To avoid underpayment interest, pay either 90% of the current year's tax liability or 100% of the previous year's tax liability (no 110% rule stated by the Department).",
+    "form": "Form IT payment voucher (or online via TransAction Portal); underpayment interest on Form EST-I"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$35 Articles of Organization (plus $50 per series member for a series LLC)",
+    "annualReportFee": "Annual report due April 15 every year: fee currently waived by the Secretary of State if filed by April 15 (otherwise $20 base fee); $35 if filed after April 15",
+    "franchiseOrMinimumTax": "None",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Montana Department of Revenue - HB337: 2026-2027 Montana Individual Income Tax Changes",
+      "url": "https://revenue.mt.gov/news/recent-news/HB-337",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Montana Department of Revenue - 2025 Form 2 Instructions (incl. 2026 tax tables, federal taxable income starting point, QBI exclusion)",
+      "url": "https://revenue.mt.gov/files/forms/Montana-Individual-Income-Tax-Return-Form-2-Instructions/2025_Montana_Individual_Income_Tax_Return_Form_2_Instructions.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Montana Department of Revenue - 2026 Publication 1, Guide to Montana Tax Withholding",
+      "url": "https://revenuefiles.mt.gov/files/Forms/Publication-1/Publication-1-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Montana Department of Revenue - Making Estimated Tax Payments",
+      "url": "https://revenue.mt.gov/taxes/estimated-tax-payments",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Montana Secretary of State - Business Services Filing Fees",
+      "url": "https://sosmt.gov/business/fees/",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

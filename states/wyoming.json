@@ -1,0 +1,100 @@
+{
+  "code": "WY",
+  "name": "Wyoming",
+  "slug": "wyoming",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/wyoming",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Wyoming imposes no individual or corporate income tax (rate 0%, $0 collected; see Wyo. Const. Art. 15, Sec. 18 per the Legislative Service Office tax structure summary).",
+      "Sales/use tax and property tax are not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: Wyoming has no personal income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: Wyoming has no personal income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: Wyoming has no personal income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: Wyoming has no personal income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No city or county income taxes in Wyoming."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "None: Wyoming has no personal income tax, so no state estimated income tax payments are due.",
+    "dueDates": [],
+    "safeHarbor": "Not applicable (no personal income tax).",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 (Articles of Organization, Wyoming Secretary of State; fee schedule effective July 1, 2026).",
+    "annualReportFee": "Annual report license tax, due each year on the first day of the LLC's anniversary month: the greater of $60 or two-tenths of one mill ($0.0002) per dollar of the company's assets located and employed in Wyoming (i.e. $60 for $300,000 or less of Wyoming assets).",
+    "franchiseOrMinimumTax": "None beyond the annual report license tax above (no franchise or income tax).",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Wyoming Secretary of State – Business Division Filing Fee Schedule (effective July 1, 2026)",
+      "url": "https://sos.wyo.gov/Business/docs/BusinessFees.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Wyoming Legislature (LSO) – Wyoming tax structure, rates and collections, June 3, 2025",
+      "url": "https://wyoleg.gov/InterimCommittee/2025/03-202506032-01WyomingtaxstructureratesandcollectionsJune32025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business FAQs - Wyoming Secretary of State",
+      "url": "https://sos.wyo.gov/faqs.aspx?root=BUS",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Division Filing Fee Schedule (effective July 1, 2026) - Wyoming Secretary of State",
+      "url": "https://sos.wyo.gov/business/docs/businessfees.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Educational Materials (Professional Services; Computer Sales & Services) - Wyoming Excise Tax Division",
+      "url": "https://excise-tax-div.wyo.gov/general-administrative/educational-materials",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Excise Tax FAQs - Wyoming Excise Tax Division",
+      "url": "https://excise-tax-div.wyo.gov/general-administrative/excise-tax-faqs",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

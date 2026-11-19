@@ -1,0 +1,121 @@
+{
+  "code": "MI",
+  "name": "Michigan",
+  "slug": "michigan",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/michigan",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0425
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0425
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0425
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 5900,
+      "mfj": 11800,
+      "hoh": 5900
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Rate for tax year 2026 is 4.25%: Treasury determined on April 15, 2026 that the MCL 206.51(1)(c) formula reduction was not triggered (FY2025 GF/GP revenue fell 1.56% vs. 2.70% inflation).",
+      "Personal exemption is $5,900 per person for 2026 (taxpayer and spouse; dependents not modeled). Michigan has no general standard deduction.",
+      "Not modeled: special exemptions (disability, deaf/blind, qualified disabled veteran), retirement/pension and senior subtractions, other Schedule 1 additions/subtractions, homestead property tax credit, home heating credit, and Michigan EITC.",
+      "City income taxes (e.g., Detroit) are not modeled; see localIncomeTax."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Michigan starts from federal AGI, so the deductible half of SE tax (an above-the-line federal adjustment) is already excluded."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are above-the-line federal adjustments inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it does not reduce the state base."
+    }
+  },
+  "localIncomeTax": {
+    "exists": true,
+    "note": "Michigan has no county income tax, but some cities (e.g., Detroit) levy a city income tax under the City Income Tax Act, with rates set by each city (Treasury administers several of them, see Form 5123 for 2026). Most Michigan residents do not live in a taxing city, so it is not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Expected to owe more than $500 when filing the MI-1040",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Estimates not needed if withholding/payments are at least 90% of the 2026 tax, 100% of the 2025 tax, or 110% of the 2025 tax if 2025 AGI exceeded $150,000 ($75,000 MFS). The 4th installment may be skipped by filing the 2026 return by Feb 1, 2027.",
+    "form": "MI-1040ES"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$50 Articles of Organization (Form CSCL/CD-700)",
+    "annualReportFee": "$25 annual statement, due February 15 every year ($50 penalty if late); LLCs formed after Sept 30 skip the first one",
+    "franchiseOrMinimumTax": "None (Michigan Corporate Income Tax does not apply to a single-member LLC taxed as a disregarded entity)",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "Michigan Treasury - 4.25% Income Tax Rate for Individuals and Fiduciaries in 2026 Tax Year (Apr 15, 2026)",
+      "url": "https://www.michigan.gov/treasury/reference/taxpayer-notices/2026/04/15/425-income-tax-rate-for-individuals-and-fiduciaries-in-2026-tax-year",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Michigan Treasury - Withholding Tax Information by Calendar Year (2026 personal exemption $5,900)",
+      "url": "https://www.michigan.gov/taxes/business-taxes/withholding/calendar-year-tax-information",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Michigan Treasury - 2026 MI-1040ES Michigan Estimated Income Tax for Individuals",
+      "url": "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/IIT/TY2025/MI-1040ES-(2026).pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LARA - Articles of Organization, Domestic LLC (CSCL/CD-700, rev. 07/25)",
+      "url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/cscl/NonImages_new/Corps/forms/llc/700-0725.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LARA - Annual Reports and Annual Statements",
+      "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/michigan-business-roadmap/annual-reports-and-annual-statements",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

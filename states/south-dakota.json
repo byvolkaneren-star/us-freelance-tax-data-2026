@@ -1,0 +1,125 @@
+{
+  "code": "SD",
+  "name": "South Dakota",
+  "slug": "south-dakota",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/south-dakota",
+  "incomeTax": {
+    "type": "none",
+    "base": "none",
+    "brackets": null,
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "South Dakota has no personal income tax, so self-employment income is subject only to federal income and self-employment tax.",
+      "South Dakota's 4.2% state sales tax (plus any municipal sales tax) applies to sales of services unless a specific exemption applies, so many freelancers must collect and remit sales tax; this is a pass-through tax on customers and is not modeled."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": false,
+      "note": "Not applicable: South Dakota has no personal income tax."
+    },
+    "seHealthInsurance": {
+      "allowed": false,
+      "note": "Not applicable: South Dakota has no personal income tax."
+    },
+    "retirementContributions": {
+      "allowed": false,
+      "note": "Not applicable: South Dakota has no personal income tax."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "Not applicable: South Dakota has no personal income tax."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "South Dakota cities and counties do not levy a local income tax."
+  },
+  "estimatedTax": {
+    "required": false,
+    "threshold": "Not applicable: no state personal income tax.",
+    "dueDates": [],
+    "safeHarbor": "Not applicable.",
+    "form": "None"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$150 Articles of Organization filed online ($165 on paper) with the South Dakota Secretary of State.",
+    "annualReportFee": "$55 annual report filed online ($70 on paper), due every year; $55 late fee if delinquent.",
+    "franchiseOrMinimumTax": "None. South Dakota has no corporate, unitary or personal income tax and no franchise tax on LLCs.",
+    "grossReceiptsTax": "None for a typical freelancer. (Contractor's excise tax of 2% applies only to construction services; municipal gross receipts tax applies only to alcohol, eating establishments, lodging and admissions.)"
+  },
+  "sources": [
+    {
+      "title": "Sales and Use Tax Guide, July 2026 - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/avyep2sr/2026-7_sales-use-tax-guide.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Business Tax - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/businesses/taxes/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Filing Fees - South Dakota Secretary of State",
+      "url": "https://sdsos.gov/general-information/filing-fees.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Sales & Use Tax - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/businesses/taxes/sales-use-tax/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Facts: Accountants - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/svhj3y2p/accountants.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Facts: Attorneys - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/03zn1eje/attorneys.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Facts: Architects, Engineers, and Surveyors - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/dbhfnrtg/architects.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Facts: Internet - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/f3zcxwdp/internet.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Facts: Advertising Agencies - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/cpuocuwk/advertising.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Tax Facts: Photographers - South Dakota Department of Revenue",
+      "url": "https://dor.sd.gov/media/edyg11xz/photographers.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Annual Report Instructions - South Dakota Secretary of State",
+      "url": "https://sosenterprise.sd.gov/BusinessServices/Business/AnnualReportInstr.aspx",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

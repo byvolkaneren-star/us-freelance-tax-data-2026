@@ -1,0 +1,151 @@
+{
+  "code": "LA",
+  "name": "Louisiana",
+  "slug": "louisiana",
+  "taxYear": 2026,
+  "lastVerified": "2026-11-12",
+  "page": "https://hourfloor.com/states/louisiana",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.03
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.03
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.03
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 12875,
+      "mfj": 25750,
+      "hoh": 25750
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Flat 3% rate for tax periods beginning on or after Jan 1, 2025 (La. R.S. 47:32 as amended by Acts 2024, 3rd Ex. Sess., No. 11); graduated brackets repealed.",
+      "Standard deduction is CPI-indexed from 2026 (R.S. 47:294(B)); $12,875 single / $25,750 joint, HoH and qualifying surviving spouse are the 2026 amounts published by LDR on Form IT-540ESi (2026). LDR's earlier withholding rule cautioned final 2026 return amounts could differ slightly once January 2026 CPI-U data was applied.",
+      "The former combined personal exemption-standard deduction was replaced by the standard deduction; there is no separate personal exemption for 2025+.",
+      "Not modeled: Louisiana subtractions/exempt income (e.g., retirement income exemption for age 65+, net capital gains deduction for qualifying sales), and nonrefundable/refundable credits."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Louisiana starts from federal AGI, so the deductible half of SE tax (an above-the-line federal adjustment) is already excluded."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are above-the-line federal adjustments inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it does not reduce the state base."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "Louisiana parishes and municipalities do not levy a local individual income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Estimated Louisiana income tax after credits and withholding reasonably expected to exceed $1,000 (single) or $2,000 (joint filers) (La. R.S. 47:116)",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment penalty if timely payments equal the lesser of 90% of the current-year Louisiana tax liability or 100% of the prior-year liability (prior year must be a full 12-month year with a liability). Underpayment penalty is 12% per year under R.S. 47:118 (Form R-210R).",
+    "form": "IT-540ES (voucher) / IT-540ESi instructions; payments also via LaTAP"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$125 Articles of Organization (Louisiana LLC), effective Oct 1, 2026 under Act 921 of 2026 (previously $100)",
+    "annualReportFee": "$35 annual report, filed every year (effective Oct 1, 2026; previously $30)",
+    "franchiseOrMinimumTax": "None. The corporation franchise tax is repealed for periods beginning on or after Jan 1, 2026 (Act 6, 2024 3rd Ex. Sess.); it never applied to LLCs taxed as disregarded entities or partnerships.",
+    "grossReceiptsTax": "None"
+  },
+  "sources": [
+    {
+      "title": "La. R.S. 47:32 - Rates of tax (Louisiana State Legislature, archived copy of legis.la.gov)",
+      "url": "https://legis.la.gov/Legis/Law.aspx?d=101946",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "La. R.S. 47:294 - Standard deduction (Louisiana State Legislature, archived copy of legis.la.gov)",
+      "url": "https://www.legis.la.gov/Legis/Law.aspx?d=101761",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LDR FAQ: What are the individual income tax rates and brackets?",
+      "url": "https://revenue.louisiana.gov/tax-education-and-faqs/faqs/income-tax-reform/what-are-the-individual-income-tax-rates-and-brackets/",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LDR Form IT-540ESi (2026) Declaration of Estimated Tax for Individuals - instructions and worksheet",
+      "url": "https://dam.ldr.la.gov/taxforms/IT540ESi-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LDR Form R-210R-i (1/26) Underpayment of Individual Income Tax Penalty instructions",
+      "url": "https://dam.ldr.la.gov/taxforms/210Ri-1-26.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LDR CIT-620i (2025) Corporation Income Tax instructions - franchise tax repeal",
+      "url": "https://dam.ldr.la.gov/taxforms/Cift620i-2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Louisiana Secretary of State Fee Schedule Effective 10/1/26",
+      "url": "https://static.sos.la.gov/shared/fee_changes_2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "LDR Business Tax Tip #29 - Sales of Digital Products and Related Services",
+      "url": "https://dam.ldr.la.gov/lawspolicies/Digital%20Products%20Guidance.Final.pdf",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "LDR Revenue Information Bulletin 25-007 - State Sales Tax Rate",
+      "url": "https://dam.ldr.la.gov/lawspolicies/RIB%2025-007%20-%20State%20Sales%20Tax%20Rate.pdf",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "LDR Parish E-File - About",
+      "url": "https://parishe-file.revenue.louisiana.gov/aboutus.aspx",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "City of New Orleans Bureau of Revenue - Occupational License Tax Tables",
+      "url": "https://nola.gov/nola/media/One-Stop-Shop/Revenue/BOR-Occupational-LicenseTax-Tables.pdf",
+      "retrieved": "2026-11-12"
+    }
+  ]
+}

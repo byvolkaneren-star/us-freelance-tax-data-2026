@@ -1,0 +1,135 @@
+{
+  "code": "ND",
+  "name": "North Dakota",
+  "slug": "north-dakota",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/north-dakota",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalTaxableIncome",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 49575,
+          "rate": 0.0195
+        },
+        {
+          "over": 250400,
+          "rate": 0.025
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 82800,
+          "rate": 0.0195
+        },
+        {
+          "over": 304850,
+          "rate": 0.025
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0
+        },
+        {
+          "over": 66400,
+          "rate": 0.0195
+        },
+        {
+          "over": 277600,
+          "rate": 0.025
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 brackets are from the official 2026 Form ND-1ES (SFN 28709, 12-2025) tax rate schedules.",
+      "North Dakota starts from federal taxable income (after the federal standard or itemized deduction and the QBI deduction), so no separate state standard deduction or exemption is applied here.",
+      "ND adjustments not modeled: exclusion of U.S. obligation interest, 40% long-term capital gain exclusion, Social Security and military retirement exclusions, and state income tax add-back for itemizers.",
+      "Credits not modeled: marriage penalty credit, credit for income tax paid to another state, and others."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Federal taxable income already reflects the deductible half of SE tax; no ND add-back."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal taxable income; no ND add-back."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP/solo 401(k) deductions reduce federal taxable income and flow through."
+    },
+    "qbi": {
+      "allowed": true,
+      "note": "Because ND starts from federal taxable income (Form 1040 line 15), the federal QBI deduction is retained; ND has no QBI add-back."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "North Dakota cities and counties do not levy income taxes."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required only if all apply: you must pay federal estimated tax for 2026; your 2025 ND net tax liability was $1,000 or more; you expect to owe $1,000 or more for 2026 after ND withholding; and withholding will be less than the smaller of 90% of the 2026 liability or 100% of the 2025 liability",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "Pay the smaller of 90% of the 2026 ND net tax liability (66 2/3% for qualified farmers) or 100% of the 2025 liability; underpayments accrue 12% annual interest.",
+    "form": "Form ND-1ES"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$135 registration (Articles of Organization), North Dakota Secretary of State.",
+    "annualReportFee": "$50 annual report, due November 15 each year.",
+    "franchiseOrMinimumTax": "None.",
+    "grossReceiptsTax": "None."
+  },
+  "sources": [
+    {
+      "title": "ND Office of State Tax Commissioner - 2026 Form ND-1ES (incl. 2026 tax rate schedules)",
+      "url": "https://www.tax.nd.gov/sites/www/files/documents/forms/individual/2025-iit/28709-form-nd-1es-2026.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "ND Office of State Tax Commissioner - Individual Income Tax",
+      "url": "https://www.tax.nd.gov/individual-income-tax",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "ND Secretary of State - Limited Liability Company (fees and annual report)",
+      "url": "https://www.sos.nd.gov/business/business-services/business-structures/limited-liability-company-llc",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}

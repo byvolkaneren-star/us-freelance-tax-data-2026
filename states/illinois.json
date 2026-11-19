@@ -1,0 +1,171 @@
+{
+  "code": "IL",
+  "name": "Illinois",
+  "slug": "illinois",
+  "taxYear": 2026,
+  "lastVerified": "2026-11-12",
+  "page": "https://hourfloor.com/states/illinois",
+  "incomeTax": {
+    "type": "flat",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0495
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0495
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0495
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 2925,
+      "mfj": 5850,
+      "hoh": 2925
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "Flat 4.95% on net income (35 ILCS 5/201). 2026 exemption allowance is $2,925 per person (2026 Booklet IL-700-T; IL-1040-ES 2026 worksheet multiplies net income by 4.95%).",
+      "No exemption is allowed if federal AGI exceeds $250,000 ($500,000 MFJ) (35 ILCS 5/204; Form IL-W-4). Modeled as a cliff via personalExemptionPhaseout; the related $1,000 age 65+/blind allowances are not modeled.",
+      "Illinois has no standard deduction. Not modeled: dependent exemptions, Illinois additions/subtractions (e.g., retirement income subtraction), property tax, education, EITC and other credits."
+    ],
+    "personalExemptionPhaseout": {
+      "single": [
+        {
+          "from": 250000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "mfj": [
+        {
+          "from": 500000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ],
+      "hoh": [
+        {
+          "from": 250000.01,
+          "ref": 0,
+          "base": 0,
+          "rate": 0
+        }
+      ]
+    }
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "Inherited: Illinois base income starts from federal AGI."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "Inherited through federal AGI."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) deductions are inherited through federal AGI."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is below AGI and does not enter Illinois base income."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No Illinois city or county (including Chicago) levies a local income tax."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if you reasonably expect 2026 Illinois tax liability to exceed $1,000 after withholding, pass-through withholding and allowed credits.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No late-payment penalty if you pay at least 90% of this year's tax or at least 100% of last year's tax in four equal timely installments (IL-1040-ES); annualize on IL-2210 if income is uneven.",
+    "form": "Form IL-1040-ES"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$150 Articles of Organization (805 ILCS 180/50-10).",
+    "annualReportFee": "$75 annual report (yearly), plus penalty if delinquent.",
+    "franchiseOrMinimumTax": "None for an LLC (Illinois franchise tax applies to corporations). Personal Property Replacement Tax (1.5% for partnerships/S corps, 2.5% for corporations) does not apply to a sole proprietor or a disregarded single-member LLC.",
+    "grossReceiptsTax": "None at the state level for professional services."
+  },
+  "sources": [
+    {
+      "title": "Illinois DOR - Income Tax Rates",
+      "url": "https://tax.illinois.gov/research/taxrates/income.html",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Illinois DOR - 2026 Form IL-1040-ES",
+      "url": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/incometax/documents/currentyear/individual/il-1040-es.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Illinois DOR - 2026 Booklet IL-700-T Withholding Tax Tables",
+      "url": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/withholding/documents/currentyear/il-700-t.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "Illinois DOR - Form IL-W-4 (exemption AGI limits)",
+      "url": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/withholding/documents/currentyear/il-w-4.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "805 ILCS 180/50-10 - LLC Act fees (fetched via r.jina.ai)",
+      "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/080501800K50-10.htm",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "City of Chicago - Home Based Business License",
+      "url": "https://www.chicago.gov/city/en/sites/chicago-business-licensing/home/homebasedbusiness.html",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "Illinois DOR - What is the tax rate for businesses, trusts, and estates? (replacement tax)",
+      "url": "https://tax.illinois.gov/questionsandanswers/answer.83.html",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "Illinois DOR - Does Illinois tax sales of service?",
+      "url": "https://tax.illinois.gov/questionsandanswers/answer.129.html",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "805 ILCS 405/1 - Assumed Business Name Act (Illinois General Assembly)",
+      "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/080504050K1.htm",
+      "retrieved": "2026-11-12"
+    },
+    {
+      "title": "805 ILCS 180/1-20 - LLC assumed name (Illinois General Assembly)",
+      "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/080501800K1-20.htm",
+      "retrieved": "2026-11-12"
+    }
+  ]
+}

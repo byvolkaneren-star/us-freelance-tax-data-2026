@@ -1,0 +1,180 @@
+{
+  "code": "WV",
+  "name": "West Virginia",
+  "slug": "west-virginia",
+  "taxYear": 2026,
+  "lastVerified": "2026-10-22",
+  "page": "https://hourfloor.com/states/west-virginia",
+  "incomeTax": {
+    "type": "progressive",
+    "base": "federalAGI",
+    "brackets": {
+      "single": [
+        {
+          "over": 0,
+          "rate": 0.0211
+        },
+        {
+          "over": 10000,
+          "rate": 0.0281
+        },
+        {
+          "over": 25000,
+          "rate": 0.0316
+        },
+        {
+          "over": 40000,
+          "rate": 0.0422
+        },
+        {
+          "over": 60000,
+          "rate": 0.0458
+        }
+      ],
+      "mfj": [
+        {
+          "over": 0,
+          "rate": 0.0211
+        },
+        {
+          "over": 10000,
+          "rate": 0.0281
+        },
+        {
+          "over": 25000,
+          "rate": 0.0316
+        },
+        {
+          "over": 40000,
+          "rate": 0.0422
+        },
+        {
+          "over": 60000,
+          "rate": 0.0458
+        }
+      ],
+      "hoh": [
+        {
+          "over": 0,
+          "rate": 0.0211
+        },
+        {
+          "over": 10000,
+          "rate": 0.0281
+        },
+        {
+          "over": 25000,
+          "rate": 0.0316
+        },
+        {
+          "over": 40000,
+          "rate": 0.0422
+        },
+        {
+          "over": 60000,
+          "rate": 0.0458
+        }
+      ]
+    },
+    "standardDeduction": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "personalExemption": {
+      "single": 2000,
+      "mfj": 4000,
+      "hoh": 2000
+    },
+    "exemptionCredit": {
+      "single": 0,
+      "mfj": 0,
+      "hoh": 0
+    },
+    "valuesYear": 2026,
+    "notes": [
+      "2026 rates are from SB 392 (2026), new W. Va. Code § 11-21-4j: a 5% across-the-board cut applying to taxable years beginning on or after January 1, 2026. Single, MFJ and HoH share one table; married filing separately uses half the thresholds.",
+      "Future cuts: under amended § 11-21-4h, additional rate reductions (capped) may be triggered for tax years beginning on or after January 1, 2027 based on revenue determinations each August 15; not applicable to 2026.",
+      "West Virginia has no standard deduction. Exemption is $2,000 per exemption (dependents also $2,000 each, not modeled).",
+      "Low-income earned income exclusion of up to $10,000 (married filing separately $5,000) for filers whose federal AGI is $10,000 or less is not modeled.",
+      "Not modeled: WV modifications (e.g. Social Security and retirement income subtractions, U.S. obligation interest), senior citizen deductions, family tax credit, and credit for taxes paid to other states."
+    ]
+  },
+  "conformity": {
+    "seDeduction": {
+      "allowed": true,
+      "note": "West Virginia starts from federal AGI, which already reflects the deduction for one-half of self-employment tax."
+    },
+    "seHealthInsurance": {
+      "allowed": true,
+      "note": "The self-employed health insurance deduction is an above-the-line federal adjustment included in federal AGI, West Virginia's starting point."
+    },
+    "retirementContributions": {
+      "allowed": true,
+      "note": "SEP-IRA and solo 401(k) contributions reduce federal AGI and therefore West Virginia income."
+    },
+    "qbi": {
+      "allowed": false,
+      "note": "The federal QBI deduction is taken after AGI, so it never enters West Virginia's AGI-based computation."
+    }
+  },
+  "localIncomeTax": {
+    "exists": false,
+    "note": "No local income taxes. Some municipalities (e.g. Charleston, Huntington) levy a municipal business and occupation (B&O) tax on gross receipts and weekly city service fees, which are not modeled."
+  },
+  "estimatedTax": {
+    "required": true,
+    "threshold": "Required if estimated West Virginia tax liability after withholding and credits is $600 or more, unless withholding covers at least 90% of the tax (i.e. the unpaid balance is under 10% of the tax).",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "safeHarbor": "No underpayment penalty if timely payments equal at least the lesser of 90% of the current-year tax or 100% of the prior-year tax.",
+    "form": "Form IT-140ES (West Virginia Individual Estimated Income Tax Payment Voucher)"
+  },
+  "businessCosts": {
+    "llcFormationFee": "$100 (Articles of Organization, West Virginia Secretary of State; waived for veteran-owned businesses).",
+    "annualReportFee": "$25 per year, filed January 1 – June 30 each year after the year of formation ($75 including $50 late fee if late).",
+    "franchiseOrMinimumTax": "None (West Virginia's business franchise tax was repealed; no minimum tax for a single-member LLC).",
+    "grossReceiptsTax": "No state gross receipts tax. Some municipalities impose a local B&O tax on gross receipts (rates vary, not modeled)."
+  },
+  "sources": [
+    {
+      "title": "West Virginia Legislature – Enrolled Committee Substitute for SB 392 (2026), W. Va. Code § 11-21-4j",
+      "url": "https://www.wvlegislature.gov/Bill_Text_HTML/2026_SESSIONS/RS/bills/sb392%20sub1%20enr.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "West Virginia Tax Division – 2026 Income Tax Rate Cut",
+      "url": "https://tax.wv.gov/Individuals/Pages/PersonalIncomeTaxReductionBill.aspx",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "West Virginia Tax Division – 2025 Personal Income Tax Forms and Instructions (IT-140)",
+      "url": "https://tax.wv.gov/Documents/PIT/2025/it140.PersonalIncomeTaxFormsAndInstructions.2025.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "West Virginia Tax Division – IT-140ESI Estimated Tax Instructions",
+      "url": "https://tax.wv.gov/Documents/TaxForms/it140esi.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "West Virginia Secretary of State – Articles of Organization (Form LLD-1)",
+      "url": "https://sos.wv.gov/sites/default/files/2026-07/lld-1_0.pdf",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "West Virginia Secretary of State – Register a new WV business",
+      "url": "https://sos.wv.gov/register-new-wv-business",
+      "retrieved": "2026-10-22"
+    },
+    {
+      "title": "West Virginia Secretary of State – Annual Reports",
+      "url": "https://sos.wv.gov/business/updates-and-changes/annual-reports",
+      "retrieved": "2026-10-22"
+    }
+  ]
+}
